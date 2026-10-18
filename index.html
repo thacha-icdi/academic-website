@@ -518,7 +518,75 @@ International College of Digital Innovation-Chiang Mai University, Thailand
 </p>
 
 </footer>
+<!-- CHAT BUTTON -->
+<button id="chatButton" onclick="openChat()">💬</button>
 
+<!-- CHAT BOX -->
+<div id="chatBox">
+
+    <div id="chatHeader">
+        <span>Chat with Dr. Thacha</span>
+        <span onclick="closeChat()" style="cursor:pointer;">✕</span>
+    </div>
+
+    <div id="chatContent">
+        <p>👋 Hello! Welcome to my academic website.</p>
+
+        <p>
+            Please leave your question about research,
+            collaboration, courses, or academic activities.
+        </p>
+    </div>
+
+    <div id="chatInputArea">
+
+        <input
+            type="text"
+            id="messageInput"
+            placeholder="Type your message..."
+        >
+
+        <button onclick="sendMessage()">Send</button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function openChat() {
+    document.getElementById("chatBox").style.display = "block";
+}
+
+function closeChat() {
+    document.getElementById("chatBox").style.display = "none";
+}
+
+function sendMessage() {
+
+    const input = document.getElementById("messageInput");
+    const chat = document.getElementById("chatContent");
+
+    if (input.value.trim() === "") return;
+
+    const message = document.createElement("p");
+
+    message.textContent = input.value;
+
+    message.style.background = "#163a63";
+    message.style.color = "white";
+    message.style.padding = "10px";
+    message.style.borderRadius = "8px";
+
+    chat.appendChild(message);
+
+    input.value = "";
+
+    chat.scrollTop = chat.scrollHeight;
+}
+
+</script>
 </body>
 
 </html>
