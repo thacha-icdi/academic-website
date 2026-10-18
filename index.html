@@ -616,6 +616,36 @@ function sendMessage() {
 }
 
 </script>
-</body>
 
+<!-- REAL VISITOR COUNTER -->
+<script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const counter = new Counter({
+        workspace: "thacha-academic"
+    });
+
+    counter.up("website-visitors")
+        .then(function(result) {
+
+            const count =
+                result?.data?.up_count ??
+                result?.value ??
+                result?.data ??
+                0;
+
+            document.getElementById("visitorCount").textContent =
+                Number(count).toLocaleString();
+        })
+        .catch(function(error) {
+            console.error("Visitor counter error:", error);
+            document.getElementById("visitorCount").textContent = "—";
+        });
+
+});
+</script>
+
+</body>
 </html>
