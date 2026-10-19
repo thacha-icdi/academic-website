@@ -318,6 +318,10 @@ footer {
     <button onclick="setLanguage('en')">English</button>
     <button onclick="setLanguage('th')">ไทย</button>
     <button onclick="setLanguage('zh')">中文</button>
+    <button id="musicToggle" onclick="toggleMusic(event)"
+        aria-pressed="false">
+    🔊 ปิดเสียงเพลง
+</button>
 </div>
 <!-- MENU -->
 
@@ -755,6 +759,26 @@ try {
     setLanguage(localStorage.getItem("websiteLanguage") || "en");
 } catch (error) {
     setLanguage("en");
+}
+</script>
+    <script>
+function toggleMusic(event) {
+    event.stopPropagation();
+
+    const music = document.getElementById("backgroundMusic");
+    const button = document.getElementById("musicToggle");
+
+    music.muted = !music.muted;
+
+    button.textContent = music.muted
+        ? "🔇 เปิดเสียงเพลง"
+        : "🔊 ปิดเสียงเพลง";
+
+    button.setAttribute("aria-pressed", String(music.muted));
+
+    if (!music.muted) {
+        music.play().catch(() => {});
+    }
 }
 </script>
 </body>
