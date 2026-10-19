@@ -656,6 +656,24 @@ fetch('https://api.countapi.xyz/hit/thacha-lawanna-academic/visits')
     });
 </script>
 
+<audio id="backgroundMusic" autoplay loop preload="auto">
+    <source src="./CMU-HIST-S04-13.mp3" type="audio/mpeg">
+</audio>
 
+<script>
+const backgroundMusic = document.getElementById("backgroundMusic");
+backgroundMusic.volume = 0.3;
+
+function startBackgroundMusic() {
+    backgroundMusic.play().then(() => {
+        document.removeEventListener("click", startBackgroundMusic);
+        document.removeEventListener("keydown", startBackgroundMusic);
+    }).catch(() => {});
+}
+
+startBackgroundMusic();
+document.addEventListener("click", startBackgroundMusic);
+document.addEventListener("keydown", startBackgroundMusic);
+</script>
 </body>
 </html>
