@@ -358,6 +358,25 @@ footer {
         transform: translateY(-18px);
     }
 }
+    .hero .floating-title {
+    position: relative;
+    width: max-content;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    animation: moveSideways 8s linear infinite alternate;
+}
+
+@keyframes moveSideways {
+    from {
+        left: 0;
+        transform: translateX(0);
+    }
+    to {
+        left: 100%;
+        transform: translateX(-100%);
+    }
+}
 </style>
 </head>
 
