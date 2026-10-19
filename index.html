@@ -304,7 +304,11 @@ footer {
 </head>
 
 <body>
-
+<div style="text-align:right; padding:12px 20px; background:#102f50;">
+    <button onclick="setLanguage('en')">English</button>
+    <button onclick="setLanguage('th')">ไทย</button>
+    <button onclick="setLanguage('zh')">中文</button>
+</div>
 <!-- MENU -->
 
 <nav>
@@ -674,6 +678,70 @@ function startBackgroundMusic() {
 startBackgroundMusic();
 document.addEventListener("click", startBackgroundMusic);
 document.addEventListener("keydown", startBackgroundMusic);
+</script>
+    <script>
+const translations = {
+    en: {
+        menu: ["Home", "About", "Research", "Publications",
+               "Courses", "E-Books", "Contact"],
+        headings: {
+            about: "About Me",
+            research: "Research Areas",
+            publications: "Some of My Publications",
+            courses: "Courses",
+            contact: "Contact"
+        }
+    },
+    th: {
+        menu: ["หน้าแรก", "เกี่ยวกับฉัน", "งานวิจัย", "ผลงานตีพิมพ์",
+               "รายวิชา", "หนังสืออิเล็กทรอนิกส์", "ติดต่อ"],
+        headings: {
+            about: "เกี่ยวกับฉัน",
+            research: "สาขาการวิจัย",
+            publications: "ผลงานตีพิมพ์บางส่วน",
+            courses: "รายวิชา",
+            contact: "ติดต่อ"
+        }
+    },
+    zh: {
+        menu: ["首页", "关于我", "研究", "学术出版物",
+               "课程", "电子书", "联系方式"],
+        headings: {
+            about: "关于我",
+            research: "研究领域",
+            publications: "部分学术出版物",
+            courses: "课程",
+            contact: "联系方式"
+        }
+    }
+};
+
+function setLanguage(lang) {
+    const text = translations[lang];
+    if (!text) return;
+
+    document.documentElement.lang =
+        lang === "zh" ? "zh-CN" : lang;
+
+    document.querySelectorAll("nav a").forEach((link, index) => {
+        if (text.menu[index]) link.textContent = text.menu[index];
+    });
+
+    Object.entries(text.headings).forEach(([id, title]) => {
+        const heading = document.querySelector("#" + id + " h2");
+        if (heading) heading.textContent = title;
+    });
+
+    try {
+        localStorage.setItem("websiteLanguage", lang);
+    } catch (error) {}
+}
+
+try {
+    setLanguage(localStorage.getItem("websiteLanguage") || "en");
+} catch (error) {
+    setLanguage("en");
+}
 </script>
 </body>
 </html>
