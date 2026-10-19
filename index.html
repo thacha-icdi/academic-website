@@ -377,6 +377,22 @@ footer {
         transform: translateX(-100%);
     }
 }
+    .hero > h1:first-of-type,
+.hero > h1:first-of-type + p {
+    animation: nameSparkle 3s ease-in-out infinite;
+}
+
+@keyframes nameSparkle {
+    0%, 100% {
+        text-shadow: 0 0 3px white;
+    }
+    50% {
+        text-shadow:
+            0 0 6px white,
+            0 0 14px #ffe082,
+            0 0 25px #ffd700;
+    }
+}
 </style>
 </head>
 
