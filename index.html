@@ -661,7 +661,7 @@ International College of Digital Innovation-Chiang Mai University, Thailand
             placeholder="Type your message..."
         >
 
-        <button onclick="sendMessage()">Send</button>
+       <button onclick="sendMessage()">ส่งทางอีเมล</button>
 
     </div>
 
@@ -678,28 +678,7 @@ function closeChat() {
     document.getElementById("chatBox").style.display = "none";
 }
 
-function sendMessage() {
 
-    const input = document.getElementById("messageInput");
-    const chat = document.getElementById("chatContent");
-
-    if (input.value.trim() === "") return;
-
-    const message = document.createElement("p");
-
-    message.textContent = input.value;
-
-    message.style.background = "#163a63";
-    message.style.color = "white";
-    message.style.padding = "10px";
-    message.style.borderRadius = "8px";
-
-    chat.appendChild(message);
-
-    input.value = "";
-
-    chat.scrollTop = chat.scrollHeight;
-}
 
 </script>
 
