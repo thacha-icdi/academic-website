@@ -11,6 +11,13 @@
 <body>
 <header><div class="brand">RESEARCH TOOLS / ICDI CMU</div><h1>Find data. Build evidence.</h1><p>Search research datasets by topic, review their metadata and keep a shortlist for your next study.</p></header>
 <main>
+<section aria-labelledby="source-heading">
+<h2 id="source-heading" style="margin-top:0">Search for Data Sources</h2>
+<p class="muted">Enter a keyword and click Find to get website search links for research data repositories.</p>
+<form id="source-form"><div class="row"><div class="query"><label for="source-keyword">Keyword</label><input id="source-keyword" type="search" required maxlength="250" placeholder="e.g. healthcare, fraud detection, climate change"></div><div style="align-self:end"><button type="submit">Find</button></div></div></form>
+<p id="source-status" class="muted" role="status" aria-live="polite">Your data source links will appear here.</p>
+<ol id="source-results" style="padding-left:24px;line-height:1.8"></ol>
+</section>
 <section aria-label="Dataset search">
 <form id="form">
 <div class="row">
@@ -97,6 +104,35 @@ const cell=value=>{let s=String(value??'');if(/^[\s]*[=+@-]/.test(s))s="'"+s;ret
 const csv='\uFEFF'+[fields.join(','),...list.map(r=>fields.map(f=>cell(f==='searchQuery'?(r.searchQuery||lastQuery):r[f])).join(','))].join('\r\n');
 const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));const a=node('a');a.href=url;a.download='research-datasets-'+new Date().toISOString().slice(0,10)+'.csv';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
 };
+
+$('source-form').onsubmit=e=>{
+e.preventDefault();
+const keyword=$('source-keyword').value.trim();
+if(!keyword){$('source-keyword').setCustomValidity('Please enter a keyword.');$('source-keyword').reportValidity();return;}
+$('source-keyword').setCustomValidity('');
+const q=encodeURIComponent(keyword);
+const providers=[
+['Google Dataset Search','https://datasetsearch.research.google.com/search?query='+q,'Search for datasets across repositories'],
+['Kaggle','https://www.kaggle.com/datasets?search='+q,'Community datasets and machine learning'],
+['UCI Machine Learning Repository','https://archive.ics.uci.edu/datasets?search='+q,'Machine learning datasets'],
+['Zenodo','https://zenodo.org/search?q='+q,'Research data and supporting materials'],
+['Harvard Dataverse','https://dataverse.harvard.edu/dataverse/harvard?q='+q,'Research datasets across disciplines'],
+['Hugging Face','https://huggingface.co/datasets?search='+q,'AI and machine learning datasets'],
+['Thailand Open Data','https://data.go.th/dataset?q='+q,'Thai government open data'],
+['DataCite Commons','https://commons.datacite.org/?query='+q,'DOI-linked research outputs and data']
+];
+$('source-results').replaceChildren();
+providers.forEach(([name,url,description])=>{
+const item=node('li');item.style.marginBottom='14px';
+const a=link(name+' ↗',url);a.style.fontWeight='bold';
+item.append(a,node('div',description,'muted'));
+const address=link(url,url);address.style.cssText='font-size:12px;overflow-wrap:anywhere';item.append(address);
+$('source-results').append(item);
+});
+$('source-status').textContent=providers.length+' data source search links for “'+keyword+'”. Each link searches the keyword on that website; matching datasets have not been verified.';
+};
+$('source-keyword').oninput=()=>$('source-keyword').setCustomValidity('');
+
 updateSaved();sourceLinks();
 </script>
 </body></html>
