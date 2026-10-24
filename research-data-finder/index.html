@@ -19,7 +19,7 @@
 <section aria-labelledby="reference-heading">
 <h2 id="reference-heading" style="margin-top:0">Search for Reference (Elsevier or Crossref)</h2>
 <p class="muted">Enter keywords to find research references. Crossref shows article metadata here; Elsevier opens a ScienceDirect search.</p>
-<form id="reference-form"><div class="row"><div class="query"><label for="reference-keyword">Keyword</label><input id="reference-keyword" type="search" required maxlength="250" placeholder="e.g. explainable artificial intelligence"></div><div><label for="reference-provider">Source</label><select id="reference-provider"><option value="crossref">Crossref</option><option value="elsevier">Elsevier (ScienceDirect)</option></select></div><div style="align-self:end"><button type="submit">Find</button> <button type="button" id="reference-clear" class="secondary">Clear</button></div></div></form>
+<form id="reference-form"><div class="row"><div class="query"><label for="reference-keyword">Keyword</label><input id="reference-keyword" type="search" required maxlength="250" placeholder="e.g. explainable artificial intelligence"></div><div><label for="reference-from">From year</label><input id="reference-from" type="number" min="1000" max="2100" step="1" placeholder="Any" style="width:120px"></div><div><label for="reference-to">To year</label><input id="reference-to" type="number" min="1000" max="2100" step="1" placeholder="Any" style="width:120px"></div><div><label for="reference-provider">Source</label><select id="reference-provider"><option value="crossref">Crossref</option><option value="elsevier">Elsevier (ScienceDirect)</option></select></div><div style="align-self:end"><button type="submit">Find</button> <button type="button" id="reference-clear" class="secondary">Clear</button></div></div></form>
 <div id="reference-output" hidden style="margin-top:18px"><p id="reference-status" role="status" aria-live="polite" class="muted"></p><div id="reference-results" class="grid"></div></div>
 </section>
 <section aria-labelledby="dataset-recommend-heading" hidden><h2 id="dataset-recommend-heading">Matching Datasets (up to 10)</h2><p id="dataset-status" role="status" aria-live="polite" class="muted"></p><div id="matched-datasets" class="grid"></div><p class="muted">Searches: Figshare, Data.gov, Thailand Open Data, Data.gov.uk, Data.gov.au, Zenodo, Harvard Dataverse, World Bank and Hugging Face, plus a small verified UCI catalogue. Only whole-word keyword matches with CSV, JSON or Excel access are shown. Source availability is reported above; fewer than 10 results may be found. Review documentation and licensing before use.</p></section>
@@ -184,24 +184,37 @@ function clearReferences(){
 referenceGeneration++;if(referenceController)referenceController.abort();
 $('reference-results').replaceChildren();$('reference-status').textContent='';$('reference-output').hidden=true;
 }
-$('reference-clear').onclick=()=>{$('reference-form').reset();clearReferences();$('reference-keyword').focus();};
+$('reference-clear').onclick=()=>{$('reference-form').reset();$('reference-to').setCustomValidity('');clearReferences();$('reference-keyword').focus();};
 $('reference-keyword').oninput=clearReferences;
 $('reference-provider').onchange=clearReferences;
+function resetReferenceYears(){ $('reference-to').setCustomValidity('');clearReferences(); }
+$('reference-from').oninput=resetReferenceYears;
+$('reference-to').oninput=resetReferenceYears;
 $('reference-form').onsubmit=async e=>{
 e.preventDefault();clearReferences();
 const keyword=$('reference-keyword').value.trim();if(!keyword)return;
 const provider=$('reference-provider').value;
+const fromYear=$('reference-from').value,toYear=$('reference-to').value;
+$('reference-to').setCustomValidity('');
+if(fromYear&&toYear&&Number(fromYear)>Number(toYear)){$('reference-to').setCustomValidity('To year must be greater than or equal to From year.');$('reference-to').reportValidity();return;}
+if(!$('reference-form').reportValidity())return;
+const yearLabel=fromYear||toYear?' · Publication years: '+(fromYear||'any')+'–'+(toYear||'any'):'';
 $('reference-output').hidden=false;
 if(provider==='elsevier'){
-const url='https://www.sciencedirect.com/search?'+new URLSearchParams({qs:keyword});
-$('reference-status').textContent='Search Elsevier / ScienceDirect for “'+keyword+'”. Results open on ScienceDirect.';
+const sourceParams=new URLSearchParams({qs:keyword});
+if(fromYear||toYear)sourceParams.set('date',(fromYear||'1000')+'-'+(toYear||'2100'));
+const url='https://www.sciencedirect.com/search?'+sourceParams;
+$('reference-status').textContent='Search Elsevier / ScienceDirect for “'+keyword+'”. Results open on ScienceDirect.'+yearLabel;
 $('reference-results').append(link('Open matching references on ScienceDirect ↗',url));return;
 }
 const id=referenceGeneration,controller=new AbortController();referenceController=controller;
 const timer=setTimeout(()=>controller.abort(),25000);
 $('reference-status').textContent='Searching Crossref for “'+keyword+'”…';
 try{
-const params=new URLSearchParams({'query.title':keyword,rows:'50',filter:'type:journal-article',sort:'relevance'});
+const filters=['type:journal-article'];
+if(fromYear)filters.push('from-pub-date:'+fromYear+'-01-01');
+if(toYear)filters.push('until-pub-date:'+toYear+'-12-31');
+const params=new URLSearchParams({'query.title':keyword,rows:'50',filter:filters.join(','),sort:'relevance'});
 const json=await getJson('https://api.crossref.org/works?'+params,controller.signal);
 if(id!==referenceGeneration)return;
 if(!Array.isArray(json.message?.items))throw new Error('Unexpected Crossref response');
@@ -214,7 +227,7 @@ card.append(node('h3',(r.title||[]).join(' ')),node('span','Crossref · '+(year|
 card.append(link('Open reference ↗','https://doi.org/'+encodeURIComponent(r.DOI)));
 $('reference-results').append(card);
 }
-$('reference-status').textContent=items.length?items.length+' reference(s) matching the title keywords “'+keyword+'”. Check each article before citing.':'No article titles match all keywords. Try broader keywords or select Elsevier.';
+$('reference-status').textContent=items.length?items.length+' reference(s) matching the title keywords “'+keyword+'”. Check each article before citing.'+yearLabel:'No article titles match all keywords in the selected years. Try broader keywords or select Elsevier.';
 }catch(err){if(id!==referenceGeneration)return;
 $('reference-status').textContent='Crossref search is unavailable'+(controller.signal.aborted?' (timeout)':'')+'. Retry or search Crossref directly.';
 $('reference-results').append(link('Search Crossref ↗','https://search.crossref.org/?q='+encodeURIComponent(keyword)));
