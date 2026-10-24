@@ -18,6 +18,21 @@
 <p id="source-status" class="muted" role="status" aria-live="polite">Your data source website links will appear here.</p>
 <ol id="source-results" style="padding-left:24px;line-height:1.8"></ol>
 </section>
+<section aria-labelledby="recommend-heading">
+<h2 id="recommend-heading">5 Recommended Data Sources</h2>
+<p class="muted">Repositories offering JSON, CSV or Excel data. Available formats vary by dataset. Enter a keyword above and click Find to update the search links.</p>
+<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;text-align:left">
+<thead><tr><th style="padding:12px">Data source</th><th style="padding:12px">Formats</th><th style="padding:12px">Best for</th><th style="padding:12px">Website</th></tr></thead>
+<tbody>
+<tr><td style="padding:12px">UCI Machine Learning Repository</td><td>CSV (selected datasets)</td><td>Classification, regression and benchmarking</td><td><a id="rec-uci" href="https://archive.ics.uci.edu/datasets" target="_blank" rel="noopener noreferrer">Browse data ↗</a></td></tr>
+<tr><td style="padding:12px">Kaggle</td><td>CSV, JSON (dataset-dependent)</td><td>Business, finance and machine learning</td><td><a id="rec-kaggle" href="https://www.kaggle.com/datasets" target="_blank" rel="noopener noreferrer">Browse data ↗</a></td></tr>
+<tr><td style="padding:12px">Hugging Face Datasets</td><td>CSV, JSON / JSONL (dataset-dependent)</td><td>AI, language and text analysis</td><td><a id="rec-hf" href="https://huggingface.co/datasets" target="_blank" rel="noopener noreferrer">Browse data ↗</a></td></tr>
+<tr><td style="padding:12px">World Bank Open Data</td><td>CSV, Excel; JSON via API</td><td>Economics, development and country indicators</td><td><a href="https://data.worldbank.org/" target="_blank" rel="noopener noreferrer">Browse data ↗</a></td></tr>
+<tr><td style="padding:12px">Thailand Open Data</td><td>CSV, Excel (XLSX), JSON (dataset-dependent)</td><td>Thai government and public sector research</td><td><a id="rec-thai" href="https://data.go.th/dataset" target="_blank" rel="noopener noreferrer">Browse data ↗</a></td></tr>
+</tbody></table></div>
+<p class="muted">Use the dataset's Files or Download section to check the actual format. Some downloads are ZIP archives or require sign-in. JSON API responses may require code to retrieve. World Bank opens its indicator catalogue; use its search for your topic.</p>
+<details><summary>Format documentation</summary><div class="sources"><a href="https://www.kaggle.com/docs/datasets" target="_blank" rel="noopener noreferrer">Kaggle</a><a href="https://huggingface.co/docs/datasets/en/loading" target="_blank" rel="noopener noreferrer">Hugging Face</a><a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/898581" target="_blank" rel="noopener noreferrer">World Bank API</a><a href="https://data.go.th/dataset?res_format=CSV" target="_blank" rel="noopener noreferrer">Thailand file formats</a></div></details>
+</section>
 <section><h2 style="font-size:18px">Using a data source</h2><p class="muted">Open a repository link to browse datasets matching your keyword. Check the original dataset's license, variables, collection method and access conditions before using it.</p></section>
 </main><footer>Created by Assoc. Prof. Dr. Thacha Lawanna · Digital Innovation, ICDI CMU<br><br>Data source directory · No account or API key required.</footer>
 <script>
@@ -31,6 +46,10 @@ const keyword=$('source-keyword').value.trim();
 if(!keyword){$('source-keyword').setCustomValidity('Please enter a keyword.');$('source-keyword').reportValidity();return;}
 $('source-keyword').setCustomValidity('');
 const q=encodeURIComponent(keyword);
+$('rec-uci').href='https://archive.ics.uci.edu/datasets?search='+q;
+$('rec-kaggle').href='https://www.kaggle.com/datasets?search='+q;
+$('rec-hf').href='https://huggingface.co/datasets?search='+q;
+$('rec-thai').href='https://data.go.th/dataset?q='+q;
 const providers=[
 ['Google Dataset Search','https://datasetsearch.research.google.com/search?query='+q,'Search for datasets across repositories'],
 ['Kaggle','https://www.kaggle.com/datasets?search='+q,'Community datasets and machine learning'],
