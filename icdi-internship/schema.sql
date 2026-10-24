@@ -9,7 +9,7 @@ create table public.profiles(
  id uuid primary key references auth.users(id) on delete cascade,
  student_id text unique not null, full_name text not null, english_name text not null,
  phone text not null, program text not null, year integer check(year between 1 and 8),
- gpa numeric check(gpa between 0 and 4), advisor text, address text,
+ gpa numeric check(gpa between 0 and 4), earned_credits numeric check(earned_credits between 0 and 300), nationality text, advisor text, address text,
  emergency_name text, emergency_phone text, emergency_relation text,
  skills text, languages text, interests text, preferred_location text,
  start_date date, end_date date, required_hours integer check(required_hours>0),
