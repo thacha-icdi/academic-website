@@ -37,7 +37,7 @@
 </section>
 <section aria-labelledby="dataset-recommend-heading" hidden><h2 id="dataset-recommend-heading">Matching Datasets (up to 10)</h2><p id="dataset-status" role="status" aria-live="polite" class="muted"></p><div id="matched-datasets" class="grid"></div><p class="muted">Searches: Figshare, Data.gov, Thailand Open Data, Data.gov.uk, Data.gov.au, Zenodo, Harvard Dataverse, World Bank and Hugging Face, plus a small verified UCI catalogue. Only whole-word keyword matches with CSV, JSON or Excel access are shown. Source availability is reported above; fewer than 10 results may be found. Review documentation and licensing before use.</p></section>
 <section><h2 style="font-size:18px">Using a data source</h2><p class="muted">Open a dataset link to view its data files and documentation. Check the original dataset's license, variables, collection method and access conditions before using it.</p></section>
-</main><footer>Created by Assoc. Prof. Dr. Thacha Lawanna · Digital Innovation, ICDI CMU<br><br>Data source directory · No account or API key required.</footer>
+</main><footer>Created by Assoc. Prof. Dr. Thacha Lawanna · Digital Innovation, ICDI CMU<br><br>Data source directory · No account or API key required.<div id="visitor-counter" style="margin-top:22px"><p style="font-size:16px;font-weight:bold;margin:0 0 10px">Visitors count</p><img id="visitor-badge" src="https://hits.sh/thacha-icdi.github.io/academic-website/research-data-finder.svg?label=Visits&amp;color=006b66&amp;labelColor=103c45" alt="Visitors count: total page views" referrerpolicy="no-referrer" style="height:24px;max-width:100%"><p id="visitor-count-note" style="margin:8px 0 0">Total page views since this counter was added. Repeat visits may be counted.</p></div></footer>
 <script>
 'use strict';
 const $=id=>document.getElementById(id);
@@ -341,5 +341,8 @@ $('title-search-status').textContent=items.length?items.length+' existing resear
 finally{clearTimeout(timer);}
 };
 
+const visitorBadge=$('visitor-badge');
+visitorBadge.addEventListener('error',()=>{visitorBadge.hidden=true;$('visitor-count-note').textContent='Visitor counter temporarily unavailable.';});
+if(visitorBadge.complete&&visitorBadge.naturalWidth===0){visitorBadge.hidden=true;$('visitor-count-note').textContent='Visitor counter temporarily unavailable.';}
 </script>
 </body></html>
