@@ -18,7 +18,7 @@
 <p id="source-status" class="muted" role="status" aria-live="polite">Your data source website links will appear here.</p>
 <ol id="source-results" style="padding-left:24px;line-height:1.8"></ol>
 </section>
-<section aria-labelledby="recommend-heading">
+<section aria-labelledby="recommend-heading" hidden>
 <h2 id="recommend-heading">5 Recommended Data Sources</h2>
 <p class="muted">Repositories offering JSON, CSV or Excel data. Available formats vary by dataset. Enter a keyword above and click Find to update the search links.</p>
 <div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;text-align:left">
@@ -33,7 +33,7 @@
 <p class="muted">Use the dataset's Files or Download section to check the actual format. Some downloads are ZIP archives or require sign-in. JSON API responses may require code to retrieve. World Bank opens its indicator catalogue; use its search for your topic.</p>
 <details><summary>Format documentation</summary><div class="sources"><a href="https://www.kaggle.com/docs/datasets" target="_blank" rel="noopener noreferrer">Kaggle</a><a href="https://huggingface.co/docs/datasets/en/loading" target="_blank" rel="noopener noreferrer">Hugging Face</a><a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/898581" target="_blank" rel="noopener noreferrer">World Bank API</a><a href="https://data.go.th/dataset?res_format=CSV" target="_blank" rel="noopener noreferrer">Thailand file formats</a></div></details>
 </section>
-<section aria-labelledby="dataset-recommend-heading"><h2 id="dataset-recommend-heading">10 Recommended Datasets</h2><p class="muted">A curated starting list with downloadable CSV or Excel data, plus World Bank JSON APIs. These recommendations are fixed examples, not keyword-matched search results.</p><div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;text-align:left"><thead><tr><th style="padding:12px">Dataset / Source</th><th style="padding:12px">Available formats</th><th style="padding:12px">Research use</th><th style="padding:12px">Links</th></tr></thead><tbody><tr><td style="padding:12px">1. Wine Quality<div class="muted">UCI</div></td><td style="padding:12px">CSV</td><td style="padding:12px">Quality prediction; classification and regression</td><td style="padding:12px"><a href="https://archive.ics.uci.edu/dataset/186/wine+quality" target="_blank" rel="noopener noreferrer">Open dataset ↗</a></td></tr>
+<section aria-labelledby="dataset-recommend-heading" hidden><h2 id="dataset-recommend-heading">10 Recommended Datasets</h2><p class="muted">A curated starting list with downloadable CSV or Excel data, plus World Bank JSON APIs. These recommendations are fixed examples, not keyword-matched search results.</p><div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;text-align:left"><thead><tr><th style="padding:12px">Dataset / Source</th><th style="padding:12px">Available formats</th><th style="padding:12px">Research use</th><th style="padding:12px">Links</th></tr></thead><tbody><tr><td style="padding:12px">1. Wine Quality<div class="muted">UCI</div></td><td style="padding:12px">CSV</td><td style="padding:12px">Quality prediction; classification and regression</td><td style="padding:12px"><a href="https://archive.ics.uci.edu/dataset/186/wine+quality" target="_blank" rel="noopener noreferrer">Open dataset ↗</a></td></tr>
 <tr><td style="padding:12px">2. Bank Marketing<div class="muted">UCI</div></td><td style="padding:12px">CSV inside ZIP</td><td style="padding:12px">Marketing response prediction</td><td style="padding:12px"><a href="https://archive.ics.uci.edu/dataset/222/bank+marketing" target="_blank" rel="noopener noreferrer">Open dataset ↗</a></td></tr>
 <tr><td style="padding:12px">3. Online Shoppers Purchasing Intention<div class="muted">UCI</div></td><td style="padding:12px">CSV</td><td style="padding:12px">E-commerce purchase prediction</td><td style="padding:12px"><a href="https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset" target="_blank" rel="noopener noreferrer">Open dataset ↗</a></td></tr>
 <tr><td style="padding:12px">4. Default of Credit Card Clients<div class="muted">UCI</div></td><td style="padding:12px">Excel (.xls)</td><td style="padding:12px">Credit default prediction and explainability</td><td style="padding:12px"><a href="https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients" target="_blank" rel="noopener noreferrer">Open dataset ↗</a></td></tr>
@@ -82,7 +82,15 @@ $('source-results').append(item);
 });
 $('source-status').textContent=providers.length+' data source search links for “'+keyword+'”. Each link searches the keyword on that website; matching datasets have not been verified.';
 };
-$('source-keyword').oninput=()=>$('source-keyword').setCustomValidity('');
+$('source-keyword').oninput=()=>{
+$('source-keyword').setCustomValidity('');
+if(!$('source-keyword').value.trim()){
+document.querySelector('section[aria-labelledby="recommend-heading"]').hidden=true;
+document.querySelector('section[aria-labelledby="dataset-recommend-heading"]').hidden=true;
+$('source-results').replaceChildren();
+$('source-status').textContent='Your data source website links will appear here.';
+}
+};
 $('clear').onclick=()=>{
 $('source-form').reset();
 document.querySelector('section[aria-labelledby="recommend-heading"]').hidden=true;
