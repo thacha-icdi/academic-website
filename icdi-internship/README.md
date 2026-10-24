@@ -4,7 +4,7 @@ Website: https://thacha-icdi.github.io/academic-website/icdi-internship/
 ## Activate real accounts and shared records
 1. Create a Supabase project.
 2. In SQL Editor, execute schema.sql once.
-3. Enable email confirmation in Authentication settings. Set minimum password length to 12. Restrict signup email domains to cmu.ac.th in server-side authentication settings or a Before User Created hook; frontend domain validation is only a convenience.
+3. Enable email confirmation in Authentication settings. Set minimum password length to 9. Restrict signup email domains to cmu.ac.th in server-side authentication settings or a Before User Created hook; frontend domain validation is only a convenience.
 4. Set Authentication Site URL and allowed redirect URL to the website URL above.
 5. Edit config.js: enter Project URL and public anon key. Never enter service_role or secret keys.
 6. Register and confirm a coordinator account, then insert its Auth user UUID into public.staff using SQL Editor. Students cannot grant themselves coordinator rights.
