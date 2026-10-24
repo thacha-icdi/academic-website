@@ -55,6 +55,8 @@ e.preventDefault();
 const keyword=$('source-keyword').value.trim();
 if(!keyword){$('source-keyword').setCustomValidity('Please enter a keyword.');$('source-keyword').reportValidity();return;}
 $('source-keyword').setCustomValidity('');
+document.querySelector('section[aria-labelledby="recommend-heading"]').hidden=false;
+document.querySelector('section[aria-labelledby="dataset-recommend-heading"]').hidden=false;
 const q=encodeURIComponent(keyword);
 $('rec-uci').href='https://archive.ics.uci.edu/datasets?search='+q;
 $('rec-kaggle').href='https://www.kaggle.com/datasets?search='+q;
@@ -83,6 +85,8 @@ $('source-status').textContent=providers.length+' data source search links for â
 $('source-keyword').oninput=()=>$('source-keyword').setCustomValidity('');
 $('clear').onclick=()=>{
 $('source-form').reset();
+document.querySelector('section[aria-labelledby="recommend-heading"]').hidden=true;
+document.querySelector('section[aria-labelledby="dataset-recommend-heading"]').hidden=true;
 $('source-keyword').setCustomValidity('');
 $('source-results').replaceChildren();
 $('source-status').textContent='Your data source website links will appear here.';
