@@ -243,7 +243,17 @@ const card=node('article',undefined,'card');
 const year=(r.published?.['date-parts']||r.issued?.['date-parts'])?.[0]?.[0];
 const authors=(r.author||[]).map(a=>[a.given,a.family].filter(Boolean).join(' ')||a.name||'').filter(Boolean).join('; ');
 card.append(node('h3',(r.title||[]).join(' ')),node('span','Crossref · '+(year||'Year unavailable'),'tag'),node('p',authors||'Authors not listed','muted'),node('p',(r['container-title']||[]).join(' ')||r.publisher||''),node('p','DOI: '+r.DOI,'muted'));
-card.append(link('Open reference ↗','https://doi.org/'+encodeURIComponent(r.DOI)));
+const doiUrl='https://doi.org/'+encodeURIComponent(r.DOI);
+let publisherUrl=null;
+try{const u=new URL(r.resource?.primary?.URL);if(/^https?:$/.test(u.protocol))publisherUrl=u.href;}catch(e){}
+const actions=node('div',undefined,'actions');
+actions.append(link(publisherUrl?'Open publisher source ↗':'Open source via DOI ↗',publisherUrl||doiUrl));
+if(publisherUrl)actions.append(link('DOI ↗',doiUrl));
+card.append(actions);
+const sourceLine=node('p',undefined,'muted');
+sourceLine.style.overflowWrap='anywhere';
+sourceLine.append(node('span','Source: '),link(publisherUrl||doiUrl,publisherUrl||doiUrl));
+card.append(sourceLine);
 $('reference-results').append(card);
 }
 $('reference-status').textContent=items.length?items.length+' reference(s) matching the title keywords “'+keyword+'”. Check each article before citing.'+yearLabel:'No article titles match all keywords in the selected years. Try broader keywords or select Elsevier or Google Scholar.';
