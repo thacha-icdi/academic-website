@@ -3,108 +3,28 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Research Data Finder | Thacha Lawanna</title>
-<meta name="description" content="Find research datasets, inspect DOI metadata, save a shortlist and export your research search log.">
+<meta name="description" content="Find data source websites such as UCI, Kaggle and Zenodo using research keywords.">
 <style>
 :root{font-family:Arial,sans-serif;color:#183344;background:#f3f6f7;--teal:#006b66}*{box-sizing:border-box}body{margin:0}header{background:#103c45;color:white;padding:25px max(6vw,20px)}.brand{letter-spacing:2px;font-size:12px;color:#bce4de}header h1{font-size:clamp(30px,5vw,48px);margin:18px 0 10px}header p{color:#d4e6e6;max-width:760px;line-height:1.6}main{max-width:1180px;margin:auto;padding:26px 20px}section,.card{background:white;border:1px solid #dce5e8;border-radius:14px;padding:22px;margin-bottom:20px}form .row{display:flex;gap:12px;flex-wrap:wrap}label{display:block;font-size:13px;font-weight:bold;margin-bottom:8px}input,select,button,.link{font:inherit;border-radius:8px;padding:12px;border:1px solid #bacdd1}input,select{background:white;color:#183344}input[type=search]{width:100%}.query{flex:1;min-width:220px}button,.link{cursor:pointer;background:var(--teal);color:white;border-color:var(--teal);font-weight:bold}button:hover,.link:hover{filter:brightness(.9)}button:disabled{opacity:.5;cursor:wait}a{color:var(--teal)}.secondary{background:white;color:var(--teal)}.examples,.sources,.toolbar,.pager{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin-top:16px}.examples button{padding:7px 11px;font-size:12px;background:#ecf5f3;color:#12534f;border:0}.sources a{background:#edf3f6;padding:9px 12px;border-radius:7px;text-decoration:none;font-size:13px}.muted{color:#5d737f;font-size:13px;line-height:1.6}.toolbar{justify-content:space-between;margin-bottom:18px}.toolbar h2{margin:0;font-size:22px}.tools{display:flex;gap:8px;flex-wrap:wrap}.tools button{font-size:13px;padding:9px 12px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{margin:0;display:flex;flex-direction:column;gap:12px}.card h3{font-size:18px;line-height:1.45;margin:0}.card p{margin:0;line-height:1.6;font-size:14px}.tag{background:#e9f4f1;border-radius:5px;padding:5px 8px;font-size:12px;display:inline-block}.meta{display:flex;gap:7px;flex-wrap:wrap}.actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:auto}.actions a{font-weight:bold;font-size:14px}.actions button{margin-left:auto;padding:8px 12px;font-size:13px}#status{padding:17px;background:#e9f2f5;border-radius:9px;margin-bottom:18px;line-height:1.6}.pager{justify-content:center}footer{padding:25px;text-align:center;color:#5d737f;font-size:12px}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #e29e39;outline-offset:3px}@media(max-width:720px){.grid{grid-template-columns:1fr}section{padding:16px}.row>div{flex:1}header{padding:24px 20px}}
 </style>
 </head>
 <body>
-<header><div class="brand">RESEARCH TOOLS / ICDI CMU</div><h1>Find data. Build evidence.</h1><p>Search research datasets by topic, review their metadata and keep a shortlist for your next study.</p></header>
+<header><div class="brand">RESEARCH TOOLS / ICDI CMU</div><h1>Find your data sources.</h1><p>Enter your research keyword to find data repository websites such as UCI, Kaggle and Zenodo.</p></header>
 <main>
 <section aria-labelledby="source-heading">
 <h2 id="source-heading" style="margin-top:0">Search for Data Sources</h2>
 <p class="muted">Enter a keyword and click Find to get website search links for research data repositories.</p>
 <form id="source-form"><div class="row"><div class="query"><label for="source-keyword">Keyword</label><input id="source-keyword" type="search" required maxlength="250" placeholder="e.g. healthcare, fraud detection, climate change"></div><div style="align-self:end"><button type="submit">Find</button></div></div></form>
-<p id="source-status" class="muted" role="status" aria-live="polite">Your data source links will appear here.</p>
+<p id="source-status" class="muted" role="status" aria-live="polite">Your data source website links will appear here.</p>
 <ol id="source-results" style="padding-left:24px;line-height:1.8"></ol>
 </section>
-<section aria-label="Dataset search">
-<form id="form">
-<div class="row">
-<div class="query"><label for="q">Research topic or keywords / หัวข้อวิจัย</label><input id="q" type="search" required maxlength="250" placeholder="e.g. explainable AI, fraud detection, smart energy"></div>
-<div><label for="year">Published from</label><input id="year" type="number" min="1900" max="2100" placeholder="Any year" style="width:140px"></div>
-<div><label for="sort">Sort by</label><select id="sort"><option value="">Relevance</option><option value="-published">Newest published</option></select></div>
-<div style="align-self:end"><button id="search" type="submit">Search datasets</button></div>
-</div>
-</form>
-<div class="examples"><span class="muted">Try a topic:</span><button data-q="explainable artificial intelligence">Explainable AI</button><button data-q="fraud detection">Fraud detection</button><button data-q="smart energy">Smart energy</button><button data-q="tourism Thailand">Tourism Thailand</button><button data-q="education learning analytics">Learning analytics</button></div>
-<p class="muted">ผลการค้นหาจริงจาก DataCite • แนะนำใช้คำค้นภาษาอังกฤษ • DOI metadata may describe restricted data; access and reuse conditions must be checked at the source.</p>
-<details><summary>Search the same keywords in other sources</summary><div class="sources" id="sources"></div><p class="muted">These buttons open the source's own search page. Their results are not included in the list below.</p></details>
-</section>
-<div class="toolbar"><h2 id="heading">Dataset search</h2><div class="tools"><button id="saved" class="secondary">Saved (0)</button><button id="export" class="secondary">Export CSV</button></div></div>
-<div id="status" role="status" aria-live="polite">Enter a research topic above to start. บันทึกรายการที่สนใจด้วยปุ่ม Save และดาวน์โหลดรายการด้วย Export CSV</div>
-<div class="grid" id="results"></div>
-<div class="pager" id="pager"></div>
-<section style="margin-top:24px"><h2 style="font-size:18px">Before using a dataset</h2><p class="muted">Check the license, collection method, sample size, variables, missing values, geographic and time coverage, and potential bias. For machine learning, check train/test separation and data leakage. Cite the dataset DOI and version. A metadata record does not verify dataset quality or ethical suitability.</p><a href="https://support.datacite.org/docs/rest-api" target="_blank" rel="noopener noreferrer">DataCite API documentation</a></section>
-</main><footer>Created by Assoc. Prof. Dr. Thacha Lawanna · Digital Innovation, ICDI CMU<br><br>Saved items stay in this browser. No account or API key required.</footer>
+<section><h2 style="font-size:18px">Using a data source</h2><p class="muted">Open a repository link to browse datasets matching your keyword. Check the original dataset's license, variables, collection method and access conditions before using it.</p></section>
+</main><footer>Created by Assoc. Prof. Dr. Thacha Lawanna · Digital Innovation, ICDI CMU<br><br>Data source directory · No account or API key required.</footer>
 <script>
 'use strict';
 const $=id=>document.getElementById(id);
-let records=[],page=1,total=0,viewSaved=false,controller=null,requestId=0,lastQuery='',lastYear='',lastSort='';
-let saved=[];
-try{const data=JSON.parse(localStorage.getItem('research-data-shortlist-v1')||'[]');if(Array.isArray(data))saved=data.filter(x=>x&&typeof x.id==='string'&&typeof x.title==='string');}catch(e){}
 function node(tag,text,cls){const el=document.createElement(tag);if(text!==undefined)el.textContent=text;if(cls)el.className=cls;return el;}
-function safeUrl(url){try{const u=new URL(url);return u.protocol==='https:'||u.protocol==='http:'?u.href:null;}catch(e){return null;}}
-function link(text,url){const a=node('a',text);a.href=safeUrl(url)||'https://commons.datacite.org/';a.target='_blank';a.rel='noopener noreferrer';return a;}
-function plain(text){const d=new DOMParser().parseFromString(String(text||''),'text/html');return d.body.textContent||'';}
-function updateSaved(){ $('saved').textContent=(viewSaved?'Back to results':'Saved')+' ('+saved.length+')';}
-function persist(){try{localStorage.setItem('research-data-shortlist-v1',JSON.stringify(saved));return true;}catch(e){$('status').textContent='Browser storage unavailable. Your shortlist is available for this session only; export CSV to keep it.';return false;}}
-function sourceLinks(){
-const q=$('q').value.trim();const e=encodeURIComponent(q);
-$('sources').replaceChildren();
-[['Google Dataset Search','https://datasetsearch.research.google.com/search?query='+e],['Kaggle','https://www.kaggle.com/datasets?search='+e],['UCI','https://archive.ics.uci.edu/datasets?search='+e],['Zenodo','https://zenodo.org/search?q='+e],['Harvard Dataverse','https://dataverse.harvard.edu/dataverse/harvard?q='+e],['Hugging Face','https://huggingface.co/datasets?search='+e],['Thailand Open Data','https://data.go.th/dataset?q='+e]].forEach(([name,url])=>$('sources').append(link(name,url)));
-}
-function render(){
-const list=viewSaved?saved:records;$('results').replaceChildren();updateSaved();
-$('heading').textContent=viewSaved?'Saved datasets':'Dataset results';
-list.forEach(r=>{
-const c=node('article',undefined,'card'),meta=node('div',undefined,'meta');
-meta.append(node('span',String(r.year||'Year not listed'),'tag'),node('span',r.publisher||'Publisher not listed','tag'));
-c.append(meta,node('h3',r.title),node('p',r.authors||'Creators not listed','muted'),node('p',r.description?r.description.slice(0,420)+(r.description.length>420?'…':''):'No description supplied in this metadata record.'));
-c.append(node('p','License: '+(r.license||'Not stated — check the source'),'muted'));
-c.append(node('p','DOI: '+r.id,'muted'));
-const actions=node('div',undefined,'actions');actions.append(link('Open dataset ↗',r.url),link('DOI ↗','https://doi.org/'+r.id));
-const b=node('button',saved.some(s=>s.id===r.id)?'Remove saved':'Save','secondary');
-b.onclick=()=>{if(saved.some(s=>s.id===r.id))saved=saved.filter(s=>s.id!==r.id);else saved.push({...r,savedAt:new Date().toISOString(),searchQuery:lastQuery});persist();render();};actions.append(b);c.append(actions);$('results').append(c);
-});
-$('pager').replaceChildren();
-if(!viewSaved&&records.length){if(page>1){const b=node('button','← Previous','secondary');b.onclick=()=>search(page-1);$('pager').append(b);} $('pager').append(node('span','Page '+page,'muted'));if(page*20<total){const b=node('button','Next →','secondary');b.onclick=()=>search(page+1);$('pager').append(b);}}
-if(viewSaved)$('status').textContent=saved.length?saved.length+' saved datasets. Export CSV to preserve your shortlist.':'No saved datasets yet. Search and select Save.';
-}
-async function search(nextPage=1){
-if(!$('form').reportValidity())return;
-if(nextPage===1){lastQuery=$('q').value.trim();lastYear=$('year').value;lastSort=$('sort').value;}
-if(!lastQuery)return;
-if(controller)controller.abort();controller=new AbortController();const id=++requestId;const active=controller;let timedOut=false;
-const timer=setTimeout(()=>{timedOut=true;active.abort();},25000);
-viewSaved=false;page=nextPage;records=[];total=0;render();sourceLinks();
-$('search').disabled=true;$('status').textContent='Searching DataCite for “'+lastQuery+'”…';
-const params=new URLSearchParams({'query':lastYear?'('+lastQuery+') AND publicationYear:['+lastYear+' TO *]':lastQuery,'resource-type-id':'dataset','page[size]':'20','page[number]':String(page)});
-if(lastSort)params.set('sort',lastSort);
-try{
-const response=await fetch('https://api.datacite.org/dois?'+params,{signal:active.signal});
-if(!response.ok)throw new Error('HTTP '+response.status);
-const json=await response.json();if(id!==requestId)return;
-if(!Array.isArray(json.data))throw new Error('Unexpected API response');
-total=Number(json.meta?.total||0);
-records=json.data.map(item=>{const a=item.attributes||{};return {id:a.doi||item.id,title:a.titles?.[0]?.title||'Untitled dataset',year:a.publicationYear,publisher:typeof a.publisher==='object'?a.publisher?.name:a.publisher,authors:(a.creators||[]).map(c=>c.name||[c.givenName,c.familyName].filter(Boolean).join(' ')).join('; '),description:plain((a.descriptions||[]).find(d=>d.descriptionType==='Abstract')?.description||a.descriptions?.[0]?.description),license:(a.rightsList||[]).map(r=>r.rights||r.rightsIdentifier||r.rightsUri).filter(Boolean).join('; '),url:safeUrl(a.url)||'https://doi.org/'+(a.doi||item.id)};});
-render();$('status').textContent=total.toLocaleString()+' matching records • showing '+records.length+' on page '+page+' • Query: '+lastQuery+' • Retrieved '+new Date().toLocaleString()+'. '+(!records.length?'Try broader English keywords or use the external source links.':'');
-}catch(err){if(id!==requestId)return;if(err.name==='AbortError'&&!timedOut)return;$('status').textContent='Live search is unavailable'+(timedOut?' (request timed out)':'')+'. Please retry, or open “Search the same keywords in other sources” above. No sample results are being displayed.';}
-finally{clearTimeout(timer);if(id===requestId)$('search').disabled=false;}
-}
-$('form').onsubmit=e=>{e.preventDefault();search(1);};
-document.querySelectorAll('[data-q]').forEach(b=>b.onclick=()=>{$('q').value=b.dataset.q;search(1);});
-$('q').oninput=sourceLinks;
-$('saved').onclick=()=>{requestId++;if(controller)controller.abort();$('search').disabled=false;viewSaved=!viewSaved;render();if(!viewSaved)$('status').textContent=records.length?total.toLocaleString()+' matching records for “'+lastQuery+'”.':'Enter a topic and press Search datasets.';};
-$('export').onclick=()=>{
-const list=viewSaved?saved:records;
-if(!list.length){$('status').textContent='No datasets to export. Run a search or open a saved shortlist first.';return;}
-const fields=['title','id','year','publisher','authors','license','url','description','searchQuery','savedAt'];
-const cell=value=>{let s=String(value??'');if(/^[\s]*[=+@-]/.test(s))s="'"+s;return '"'+s.replace(/"/g,'""')+'"';};
-const csv='\uFEFF'+[fields.join(','),...list.map(r=>fields.map(f=>cell(f==='searchQuery'?(r.searchQuery||lastQuery):r[f])).join(','))].join('\r\n');
-const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));const a=node('a');a.href=url;a.download='research-datasets-'+new Date().toISOString().slice(0,10)+'.csv';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
-};
-
+function link(text,url){const a=node('a',text);a.href=url;a.target='_blank';a.rel='noopener noreferrer';return a;}
 $('source-form').onsubmit=e=>{
 e.preventDefault();
 const keyword=$('source-keyword').value.trim();
@@ -133,6 +53,6 @@ $('source-status').textContent=providers.length+' data source search links for �
 };
 $('source-keyword').oninput=()=>$('source-keyword').setCustomValidity('');
 
-updateSaved();sourceLinks();
+
 </script>
 </body></html>
