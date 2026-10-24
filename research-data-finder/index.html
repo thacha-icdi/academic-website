@@ -18,7 +18,6 @@
 <p id="source-status" class="muted" role="status" aria-live="polite">Your data source website links will appear here.</p>
 <ol id="source-results" style="padding-left:24px;line-height:1.8"></ol>
 </section>
-<section aria-labelledby="recommend-heading" hidden><h2 id="recommend-heading">Matching Data Sources</h2><p class="muted">Repositories containing the datasets listed below.</p><div id="matched-sources" class="sources"></div></section>
 <section aria-labelledby="dataset-recommend-heading" hidden><h2 id="dataset-recommend-heading">Matching Datasets (up to 10)</h2><p id="dataset-status" role="status" aria-live="polite" class="muted"></p><div id="matched-datasets" class="grid"></div><p class="muted">Search covers a small verified UCI catalogue and live Hugging Face repository search. Only matching UCI entries or repositories with listed CSV, JSON/JSONL or Excel data files are included. Fewer than 10 results may be found. Check licensing, documentation and access at the source.</p></section>
 <section><h2 style="font-size:18px">Using a data source</h2><p class="muted">Open a repository link to browse datasets matching your keyword. Check the original dataset's license, variables, collection method and access conditions before using it.</p></section>
 </main><footer>Created by Assoc. Prof. Dr. Thacha Lawanna · Digital Innovation, ICDI CMU<br><br>Data source directory · No account or API key required.</footer>
@@ -29,14 +28,13 @@ function node(tag,text,cls){const el=document.createElement(tag);if(text!==undef
 function link(text,url){const a=node('a',text);a.href=url;a.target='_blank';a.rel='noopener noreferrer';return a;}
 const catalogue=[["Wine Quality","CSV","quality wine chemistry classification regression",186,"wine+quality"],["Bank Marketing","CSV inside ZIP","bank marketing campaign finance business subscription classification",222,"bank+marketing"],["Online Shoppers Purchasing Intention","CSV","online shoppers shopping ecommerce e-commerce purchase intention marketing business classification",468,"online+shoppers+purchasing+intention+dataset"],["Default of Credit Card Clients","Excel (.xls)","credit card default finance banking risk classification",350,"default+of+credit+card+clients"],["Dry Bean","Excel (.xlsx)","dry bean agriculture grain classification",602,"dry+bean+dataset"],["Concrete Compressive Strength","Excel (.xls)","concrete strength engineering regression",165,"concrete+compressive+strength"],["Energy Efficiency","Excel (.xlsx)","energy efficiency building heating cooling regression",242,"energy+efficiency"],["Combined Cycle Power Plant","Excel (.xlsx)","energy power plant electricity generation regression",294,"combined+cycle+power+plant"]];
 let generation=0,active=null;
-const sections=()=>[document.querySelector('section[aria-labelledby="recommend-heading"]'),document.querySelector('section[aria-labelledby="dataset-recommend-heading"]')];
-function resetResults(){generation++;if(active)active.abort();sections().forEach(s=>s.hidden=true);$('source-results').replaceChildren();$('matched-datasets').replaceChildren();$('matched-sources').replaceChildren();$('dataset-status').textContent='';$('source-status').textContent='Your data source website links will appear here.';}
+const sections=()=>[document.querySelector('section[aria-labelledby="dataset-recommend-heading"]')];
+function resetResults(){generation++;if(active)active.abort();sections().forEach(s=>s.hidden=true);$('source-results').replaceChildren();$('matched-datasets').replaceChildren();$('dataset-status').textContent='';$('source-status').textContent='Your data source website links will appear here.';}
 function normalized(s){return s.toLowerCase().replace(/e-commerce/g,'ecommerce').replace(/[^\p{L}\p{N}]+/gu,' ').trim();}
 function renderMatches(items){
-$('matched-datasets').replaceChildren();$('matched-sources').replaceChildren();
+$('matched-datasets').replaceChildren();
 items.forEach(r=>{const card=node('article',undefined,'card');card.append(node('h3',r.title),node('span',r.source+' · '+r.format,'tag'),node('p',r.note,'muted'));const actions=node('div',undefined,'actions');actions.append(link('Open dataset ↗',r.url));if(r.file)actions.append(link('Open data file ↗',r.file));card.append(actions);$('matched-datasets').append(card);});
-[...new Set(items.map(r=>r.source))].forEach(s=>$('matched-sources').append(link(s,s==='UCI'?'https://archive.ics.uci.edu/':'https://huggingface.co/datasets')));
-sections()[0].hidden=!items.length;
+
 }
 async function getJson(url,signal){const response=await fetch(url,{signal});if(!response.ok)throw new Error('HTTP '+response.status);return response.json();}
 function isDataFile(path){return /\.(csv|jsonl|ndjson|xlsx|xls)(\.gz)?$/i.test(path)||(/\.json(\.gz)?$/i.test(path)&&!/(^|\/)(dataset_infos|dataset_info|config|metadata|package|tokenizer[^/]*|special_tokens_map|.*schema)\.json/i.test(path));}
@@ -45,7 +43,7 @@ e.preventDefault();const keyword=$('source-keyword').value.trim();
 if(!keyword){resetResults();return;}
 resetResults();const id=generation;active=new AbortController();const signal=active.signal;
 const timer=setTimeout(()=>active?.abort(),25000);
-sections()[1].hidden=false;$('dataset-status').textContent='Searching for datasets matching “'+keyword+'”…';
+sections()[0].hidden=false;$('dataset-status').textContent='Searching for datasets matching “'+keyword+'”…';
 const q=encodeURIComponent(keyword);
 const providers=[['UCI Machine Learning Repository','https://archive.ics.uci.edu/datasets?search='+q],['Kaggle','https://www.kaggle.com/datasets?search='+q],['Hugging Face','https://huggingface.co/datasets?search='+q],['Google Dataset Search','https://datasetsearch.research.google.com/search?query='+q],['Thailand Open Data','https://data.go.th/dataset?q='+q],['Zenodo','https://zenodo.org/search?q='+q]];
 providers.forEach(([name,url])=>{const item=node('li');item.style.marginBottom='10px';item.append(link(name+' ↗',url));$('source-results').append(item);});
