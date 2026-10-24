@@ -19,8 +19,8 @@
 </section>
 <section aria-labelledby="reference-heading">
 <h2 id="reference-heading" style="margin-top:0">Search for Reference (Elsevier, Crossref, Google Scholar)</h2>
-<p class="muted">Enter keywords to find research references. Crossref shows article metadata here; Elsevier and Google Scholar open search results with your keywords and selected years.</p>
-<form id="reference-form"><div class="row"><div class="query"><label for="reference-keyword">Keyword</label><input id="reference-keyword" type="search" required maxlength="250" placeholder="e.g. explainable artificial intelligence"></div><div><label for="reference-from">From year</label><input id="reference-from" type="number" min="1000" max="2100" step="1" placeholder="Any" style="width:120px"></div><div><label for="reference-to">To year</label><input id="reference-to" type="number" min="1000" max="2100" step="1" placeholder="Any" style="width:120px"></div><div><label for="reference-provider">Source</label><select id="reference-provider"><option value="elsevier">Elsevier (ScienceDirect)</option><option value="crossref">Crossref</option><option value="scholar">Google Scholar</option></select></div><div style="align-self:end"><button type="submit">Find</button> <button type="button" id="reference-clear" class="secondary">Clear</button></div></div></form>
+<p class="muted">Enter keywords to find research references. Crossref shows article metadata here; Other sources open their own search results with your keywords and selected years.</p>
+<form id="reference-form"><div class="row"><div class="query"><label for="reference-keyword">Keyword</label><input id="reference-keyword" type="search" required maxlength="250" placeholder="e.g. explainable artificial intelligence"></div><div><label for="reference-from">From year</label><input id="reference-from" type="number" min="1000" max="2100" step="1" placeholder="Any" style="width:120px"></div><div><label for="reference-to">To year</label><input id="reference-to" type="number" min="1000" max="2100" step="1" placeholder="Any" style="width:120px"></div><div><label for="reference-provider">Source</label><select id="reference-provider"><option value="elsevier">Elsevier (ScienceDirect)</option><option value="crossref">Crossref</option><option value="scholar">Google Scholar</option><option value="ieee">IEEE Xplore</option><option value="acm">ACM Digital Library</option><option value="springer">SpringerLink</option><option value="pubmed">PubMed</option></select></div><div style="align-self:end"><button type="submit">Find</button> <button type="button" id="reference-clear" class="secondary">Clear</button></div></div></form>
 <div id="reference-output" hidden style="margin-top:18px"><p id="reference-status" role="status" aria-live="polite" class="muted"></p><div id="reference-results" class="grid"></div></div>
 </section>
 <section aria-labelledby="title-search-heading">
@@ -223,6 +223,29 @@ if(fromYear&&toYear&&Number(fromYear)>Number(toYear)){$('reference-to').setCusto
 if(!$('reference-form').reportValidity())return;
 const yearLabel=fromYear||toYear?' · Publication years: '+(fromYear||'any')+'–'+(toYear||'any'):'';
 $('reference-output').hidden=false;
+if(['ieee','acm','springer','pubmed'].includes(provider)){
+let url,name;
+if(provider==='ieee'){
+name='IEEE Xplore';const params=new URLSearchParams({newsearch:'true',queryText:keyword});
+if(fromYear||toYear)params.set('ranges',(fromYear||'1000')+'_'+(toYear||'2100')+'_Year');
+url='https://ieeexplore.ieee.org/search/searchresult.jsp?'+params;
+}else if(provider==='acm'){
+name='ACM Digital Library';const params=new URLSearchParams({AllField:keyword});
+if(fromYear){params.set('AfterYear',fromYear);params.set('AfterMonth','1');}
+if(toYear){params.set('BeforeYear',toYear);params.set('BeforeMonth','12');}
+url='https://dl.acm.org/action/doSearch?'+params;
+}else if(provider==='springer'){
+name='SpringerLink';const params=new URLSearchParams({query:keyword});
+if(fromYear||toYear){params.set('date-facet-mode','between');params.set('facet-start-year',fromYear||'1000');params.set('facet-end-year',toYear||'2100');}
+url='https://link.springer.com/search?'+params;
+}else{
+name='PubMed';let term=keyword;
+if(fromYear||toYear)term='('+keyword+') AND ('+(fromYear||'1000')+'/01/01:'+(toYear||'2100')+'/12/31[dp])';
+url='https://pubmed.ncbi.nlm.nih.gov/?'+new URLSearchParams({term});
+}
+$('reference-status').textContent='Search '+name+' for “'+keyword+'”. Results open on '+name+'.'+yearLabel;
+$('reference-results').append(link('Open matching references on '+name+' ↗',url));return;
+}
 if(provider==='scholar'){
 const scholarParams=new URLSearchParams({q:keyword,hl:'en'});
 if(fromYear)scholarParams.set('as_ylo',fromYear);
