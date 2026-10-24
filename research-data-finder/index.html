@@ -16,7 +16,7 @@
 <p class="muted">Enter a keyword and click Find to search for matching datasets.</p>
 <form id="source-form"><div class="row"><div class="query"><label for="source-keyword">Keyword</label><input id="source-keyword" type="search" required maxlength="250" placeholder="e.g. healthcare, fraud detection, climate change"></div><div style="align-self:end"><button type="submit">Find</button> <button type="button" id="clear" class="secondary">Clear</button></div></div></form>
 </section>
-<section aria-labelledby="dataset-recommend-heading" hidden><h2 id="dataset-recommend-heading">Matching Datasets (up to 10)</h2><p id="dataset-status" role="status" aria-live="polite" class="muted"></p><div id="matched-datasets" class="grid"></div><p class="muted">Live searches: Zenodo, Harvard Dataverse, World Bank and Hugging Face, plus a small verified UCI catalogue. Only whole-word keyword matches with CSV, JSON or Excel access are shown. Source availability is reported above; fewer than 10 results may be found. Review documentation and licensing before use.</p></section>
+<section aria-labelledby="dataset-recommend-heading" hidden><h2 id="dataset-recommend-heading">Matching Datasets (up to 10)</h2><p id="dataset-status" role="status" aria-live="polite" class="muted"></p><div id="matched-datasets" class="grid"></div><p class="muted">Searches: Figshare, Data.gov, Thailand Open Data, Data.gov.uk, Data.gov.au, Zenodo, Harvard Dataverse, World Bank and Hugging Face, plus a small verified UCI catalogue. Only whole-word keyword matches with CSV, JSON or Excel access are shown. Source availability is reported above; fewer than 10 results may be found. Review documentation and licensing before use.</p></section>
 <section><h2 style="font-size:18px">Using a data source</h2><p class="muted">Open a dataset link to view its data files and documentation. Check the original dataset's license, variables, collection method and access conditions before using it.</p></section>
 </main><footer>Created by Assoc. Prof. Dr. Thacha Lawanna · Digital Innovation, ICDI CMU<br><br>Data source directory · No account or API key required.</footer>
 <script>
@@ -101,6 +101,37 @@ const json=await getJson('https://api.worldbank.org/v2/indicator?source=2&format
 if(!Array.isArray(json?.[1]))throw new Error('Unexpected World Bank response');
 return json[1].filter(r=>matchesKeyword(keyword,r.name||'')).slice(0,20).map(r=>({title:r.name,source:'World Bank',format:'JSON API, CSV, Excel',url:'https://data.worldbank.org/indicator/'+encodeURIComponent(r.id),file:'https://api.worldbank.org/v2/country/all/indicator/'+encodeURIComponent(r.id)+'?format=json&per_page=100',note:'Country indicator data. JSON response is paginated (100 records/page); CSV and Excel downloads are available on the indicator page.'}));
 }
+
+async function searchFigshare(keyword,signal){
+const response=await fetch('https://api.figshare.com/v2/articles/search',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({search_for:keyword,item_type:3,page_size:100,order:'relevance'}),signal});
+if(!response.ok)throw new Error('HTTP '+response.status);
+const items=await response.json();if(!Array.isArray(items))throw new Error('Unexpected Figshare response');
+const candidates=items.filter(r=>r.defined_type===3&&matchesKeyword(keyword,r.title||'')).slice(0,16);
+let cursor=0;const found=[];
+await Promise.all(Array.from({length:3},async()=>{
+while(cursor<candidates.length){const r=candidates[cursor++];try{
+const info=await getJson('https://api.figshare.com/v2/articles/'+r.id,signal);
+const files=(info.files||[]).filter(f=>!f.is_link_only&&isDataFile(f.name||''));
+if(!files.length)continue;
+found.push({title:info.title,source:'Figshare',format:formatsFor(files.map(f=>f.name)),url:info.url_public_html||r.url_public_html||info.doi,file:files[0].download_url,note:files.length+' CSV, JSON or Excel data file(s) listed. License: '+(info.license?.name||'check source')+'.'});
+}catch(err){if(signal.aborted)throw err;}}
+}));
+return found;
+}
+async function searchCKAN(keyword,signal,base,label){
+const json=await getJson(base+'/api/3/action/package_search?'+new URLSearchParams({q:keyword,rows:'100'}),signal);
+if(!json.success||!Array.isArray(json.result?.results))throw new Error('Unexpected catalogue response');
+return json.result.results.filter(r=>matchesKeyword(keyword,r.title||r.name||'')).flatMap(r=>{
+const resources=(r.resources||[]).filter(f=>{
+try{if(!/^https?:$/.test(new URL(f.url).protocol))return false;}catch(e){return false;}
+return isDataFile((f.name||'')+' '+(f.url||'').split('?')[0])||/^(CSV|JSON|JSONL|XLS|XLSX|EXCEL)$/i.test(String(f.format||'').trim());
+});
+if(!resources.length)return [];
+const format=[...new Set(resources.map(f=>{const t=(String(f.format||'')+' '+f.url).toLowerCase();return /csv/.test(t)?'CSV':/xlsx?|excel/.test(t)?'Excel':'JSON';}))].join(', ');
+return [{title:r.title||r.name,source:label,format,url:base+'/dataset/'+encodeURIComponent(r.name||r.id),file:resources[0].url,note:resources.length+' CSV, JSON or Excel resource(s) listed. Publisher: '+(r.organization?.title||'see dataset page')+'.'}];
+}).slice(0,20);
+}
+
 function balancedResults(groups){
 const result=[],seen=new Set();let offset=0;
 while(result.length<10&&groups.some(g=>g.length>offset)){
@@ -115,15 +146,20 @@ const id=generation;active=new AbortController();const current=active,signal=cur
 const timer=setTimeout(()=>current.abort(),35000);
 sections()[0].hidden=false;
 const uci=catalogue.filter(r=>matchesKeyword(keyword,r[0]+' '+r[2])).map(r=>({title:r[0],source:'UCI',format:r[1],url:'https://archive.ics.uci.edu/dataset/'+r[3]+'/'+r[4],note:'Keyword matches verified UCI catalogue topics. See the original file listing and documentation.'}));
-const groups=[uci,[],[],[],[]];
-const states=['UCI catalogue: '+uci.length,'Zenodo: searching','Harvard Dataverse: searching','World Bank: searching','Hugging Face: searching'];
+const groups=[uci,[],[],[],[],[],[],[],[],[]];
+const states=['UCI catalogue: '+uci.length,'Zenodo: searching','Harvard Dataverse: searching','World Bank: searching','Hugging Face: searching','Figshare: searching','Data.gov: searching','Thailand Open Data: searching','Data.gov.uk: searching','Data.gov.au: searching'];
 function update(){
 if(id!==generation)return;const list=balancedResults(groups);renderMatches(list);
 $('dataset-status').textContent=list.length+' dataset(s) for “'+keyword+'”. '+states.join(' · ')+'. Results are distributed across sources with matching data. Whole-word matching; no filler results.';
 }
 update();
 await Promise.allSettled([
-['Zenodo',searchZenodo,1],['Harvard Dataverse',searchDataverse,2],['World Bank',searchWorldBank,3],['Hugging Face',searchHuggingFace,4]
+['Zenodo',searchZenodo,1],['Harvard Dataverse',searchDataverse,2],['World Bank',searchWorldBank,3],['Hugging Face',searchHuggingFace,4],
+['Figshare',searchFigshare,5],
+['Data.gov',(q,s)=>searchCKAN(q,s,'https://catalog.data.gov','Data.gov'),6],
+['Thailand Open Data',(q,s)=>searchCKAN(q,s,'https://data.go.th','Thailand Open Data'),7],
+['Data.gov.uk',(q,s)=>searchCKAN(q,s,'https://data.gov.uk','Data.gov.uk'),8],
+['Data.gov.au',(q,s)=>searchCKAN(q,s,'https://data.gov.au/data','Data.gov.au'),9]
 ].map(async([name,fn,index])=>{
 try{const results=await fn(keyword,signal);if(id!==generation)return;groups[index]=results;states[index]=name+': '+results.length+' matches';}
 catch(err){if(id!==generation)return;states[index]=name+': unavailable'+(signal.aborted?' (timeout)':'');}
