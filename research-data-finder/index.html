@@ -14,7 +14,8 @@
 <section aria-labelledby="source-heading">
 <h2 id="source-heading" style="margin-top:0">Search for Data Sources</h2>
 <p class="muted">Enter a keyword and click Find to search for matching datasets.</p>
-<form id="source-form"><div class="row"><div class="query"><label for="source-keyword">Keyword</label><input id="source-keyword" type="search" required maxlength="250" placeholder="e.g. healthcare, fraud detection, climate change"></div><div style="align-self:end"><button type="submit">Find</button> <button type="button" id="clear" class="secondary">Clear</button></div></div></form>
+<form id="source-form"><div class="row"><div class="query"><label for="source-keyword">Keyword</label><input id="source-keyword" type="search" required maxlength="250" placeholder="e.g. healthcare, fraud detection, climate change"></div><div><label for="source-from">From year</label><input id="source-from" type="number" min="1000" max="2100" step="1" placeholder="Any" style="width:120px"></div><div><label for="source-to">To year</label><input id="source-to" type="number" min="1000" max="2100" step="1" placeholder="Any" style="width:120px"></div><div style="align-self:end"><button type="submit">Find</button> <button type="button" id="clear" class="secondary">Clear</button></div></div></form>
+<p class="muted">Optional year range: dataset publication year, or repository/catalogue creation year where publication date is unavailable. This does not filter the years covered by the data. Records without a known year are excluded when a year range is selected.</p>
 </section>
 <section aria-labelledby="reference-heading">
 <h2 id="reference-heading" style="margin-top:0">Search for Reference (Elsevier, Crossref, Google Scholar)</h2>
@@ -37,9 +38,11 @@ function resetResults(){generation++;if(active)active.abort();sections().forEach
 function normalized(s){return s.toLowerCase().replace(/e-commerce/g,'ecommerce').replace(/[^\p{L}\p{N}]+/gu,' ').trim();}
 function keywordTokens(text){return normalized(String(text).replace(/([a-z])([A-Z])/g,'$1 $2')).split(' ').filter(Boolean).map(w=>({cars:'car',vehicles:'vehicle',automobiles:'automobile'}[w]||w));}
 function matchesKeyword(keyword,text){const tokens=new Set(keywordTokens(text));return keywordTokens(keyword).every(w=>tokens.has(w));}
+function datasetYear(value){const match=String(value||'').match(/^(\d{4})(?:\D|$)/);return match?Number(match[1]):null;}
+function inDatasetYears(record,from,to){if(!from&&!to)return true;return Number.isInteger(record.year)&&(!from||record.year>=Number(from))&&(!to||record.year<=Number(to));}
 function renderMatches(items){
 $('matched-datasets').replaceChildren();
-items.forEach(r=>{const card=node('article',undefined,'card');card.append(node('h3',r.title),node('span',r.source+' · '+r.format,'tag'),node('p',r.note,'muted'));const actions=node('div',undefined,'actions');actions.append(link('Open dataset ↗',r.url));if(r.file)actions.append(link('Open data file ↗',r.file));card.append(actions);$('matched-datasets').append(card);});
+items.forEach(r=>{const card=node('article',undefined,'card');card.append(node('h3',r.title),node('span',r.source+' · '+r.format+' · '+(r.year?(r.yearKind||'Published')+' '+r.year:'Year unavailable'),'tag'),node('p',r.note,'muted'));const actions=node('div',undefined,'actions');actions.append(link('Open dataset ↗',r.url));if(r.file)actions.append(link('Open data file ↗',r.file));card.append(actions);$('matched-datasets').append(card);});
 
 }
 async function getJson(url,signal){const response=await fetch(url,{signal});if(!response.ok)throw new Error('HTTP '+response.status);return response.json();}
@@ -60,7 +63,7 @@ if(!matchesKeyword(keyword,String(info.id||item.id).split('/').pop()))continue;
 const files=(info.siblings||[]).map(f=>f.rfilename).filter(p=>typeof p==='string'&&isDataFile(p));
 if(!files.length)continue;
 const dataFile=files[0],formats=[...new Set(files.map(p=>/\.csv/i.test(p)?'CSV':/\.xlsx?/i.test(p)?'Excel':'JSON / JSONL'))].join(', ');
-fetched.push({title:item.id,source:'Hugging Face',format:formats,url:'https://huggingface.co/datasets/'+item.id,note:files.length+' CSV, JSON or Excel file(s) listed. '+(info.cardData?.license?'License: '+String(info.cardData.license):'Check license on the dataset page.'),file:'https://huggingface.co/datasets/'+item.id+'/blob/'+encodeURIComponent(info.sha||'main')+'/'+dataFile.split('/').map(encodeURIComponent).join('/'),rank:candidates.indexOf(item)});
+fetched.push({title:item.id,source:'Hugging Face',year:datasetYear(info.createdAt||item.createdAt),yearKind:'Repository created',format:formats,url:'https://huggingface.co/datasets/'+item.id,note:files.length+' CSV, JSON or Excel file(s) listed. '+(info.cardData?.license?'License: '+String(info.cardData.license):'Check license on the dataset page.'),file:'https://huggingface.co/datasets/'+item.id+'/blob/'+encodeURIComponent(info.sha||'main')+'/'+dataFile.split('/').map(encodeURIComponent).join('/'),rank:candidates.indexOf(item)});
 }catch(err){if(signal.aborted)throw err;}
 }
 }));
@@ -77,7 +80,7 @@ if(type!=='dataset')return [];
 const files=(Array.isArray(r.files)?r.files:Object.values(r.files?.entries||{})).filter(f=>isDataFile(f.key||f.filename||''));
 if(!files.length)return [];
 const file=files[0],direct=file.links?.self||file.links?.content||file.links?.download;
-return [{title:r.metadata.title,source:'Zenodo',format:formatsFor(files.map(f=>f.key||f.filename)),url:r.links?.self_html||'https://zenodo.org/records/'+r.id,file:direct,note:files.length+' CSV, JSON or Excel file(s) listed. Check the dataset license and documentation.'}];
+return [{title:r.metadata.title,source:'Zenodo',year:datasetYear(r.metadata.publication_date),format:formatsFor(files.map(f=>f.key||f.filename)),url:r.links?.self_html||'https://zenodo.org/records/'+r.id,file:direct,note:files.length+' CSV, JSON or Excel file(s) listed. Check the dataset license and documentation.'}];
 });
 }
 async function searchDataverse(keyword,signal,base='https://dataverse.harvard.edu',label='Harvard Dataverse'){
@@ -96,7 +99,7 @@ const version=detail.data?.latestVersion;
 const files=(version?.files||[]).filter(f=>!f.restricted&&isDataFile(f.dataFile?.originalFileName||f.dataFile?.filename||''));
 if(!files.length)continue;
 const f=files[0],paths=files.map(x=>x.dataFile.originalFileName||x.dataFile.filename);
-records.push({title:r.name,source:label,format:formatsFor(paths),url:r.url||base+'/dataset.xhtml?persistentId='+encodeURIComponent(persistent),file:base+'/api/access/datafile/'+f.dataFile.id+'?format=original',note:files.length+' unrestricted CSV, JSON or Excel file(s) listed. Check the dataset documentation and terms.'});
+records.push({title:r.name,source:label,year:datasetYear(r.published_at||version?.releaseTime),format:formatsFor(paths),url:r.url||base+'/dataset.xhtml?persistentId='+encodeURIComponent(persistent),file:base+'/api/access/datafile/'+f.dataFile.id+'?format=original',note:files.length+' unrestricted CSV, JSON or Excel file(s) listed. Check the dataset documentation and terms.'});
 }catch(err){if(signal.aborted)throw err;}
 }
 }));
@@ -119,7 +122,7 @@ while(cursor<candidates.length){const r=candidates[cursor++];try{
 const info=await getJson('https://api.figshare.com/v2/articles/'+r.id,signal);
 const files=(info.files||[]).filter(f=>!f.is_link_only&&isDataFile(f.name||''));
 if(!files.length)continue;
-found.push({title:info.title,source:'Figshare',format:formatsFor(files.map(f=>f.name)),url:info.url_public_html||r.url_public_html||info.doi,file:files[0].download_url,note:files.length+' CSV, JSON or Excel data file(s) listed. License: '+(info.license?.name||'check source')+'.'});
+found.push({title:info.title,source:'Figshare',year:datasetYear(info.published_date||r.published_date),format:formatsFor(files.map(f=>f.name)),url:info.url_public_html||r.url_public_html||info.doi,file:files[0].download_url,note:files.length+' CSV, JSON or Excel data file(s) listed. License: '+(info.license?.name||'check source')+'.'});
 }catch(err){if(signal.aborted)throw err;}}
 }));
 return found;
@@ -134,7 +137,7 @@ return isDataFile((f.name||'')+' '+(f.url||'').split('?')[0])||/^(CSV|JSON|JSONL
 });
 if(!resources.length)return [];
 const format=[...new Set(resources.map(f=>{const t=(String(f.format||'')+' '+f.url).toLowerCase();return /csv/.test(t)?'CSV':/xlsx?|excel/.test(t)?'Excel':'JSON';}))].join(', ');
-return [{title:r.title||r.name,source:label,format,url:base+'/dataset/'+encodeURIComponent(r.name||r.id),file:resources[0].url,note:resources.length+' CSV, JSON or Excel resource(s) listed. Publisher: '+(r.organization?.title||'see dataset page')+'.'}];
+return [{title:r.title||r.name,source:label,year:datasetYear(r.metadata_created),yearKind:'Catalogue created',format,url:base+'/dataset/'+encodeURIComponent(r.name||r.id),file:resources[0].url,note:resources.length+' CSV, JSON or Excel resource(s) listed. Publisher: '+(r.organization?.title||'see dataset page')+'.'}];
 }).slice(0,20);
 }
 
@@ -148,15 +151,22 @@ return result;
 }
 $('source-form').onsubmit=async e=>{
 e.preventDefault();const keyword=$('source-keyword').value.trim();resetResults();if(!keyword)return;
+const fromYear=$('source-from').value,toYear=$('source-to').value;
+$('source-to').setCustomValidity('');
+if(fromYear&&toYear&&Number(fromYear)>Number(toYear)){$('source-to').setCustomValidity('To year must be greater than or equal to From year.');$('source-to').reportValidity();return;}
+if(!$('source-form').reportValidity())return;
+const yearFilter=fromYear||toYear;
+const filterYears=items=>items.filter(r=>inDatasetYears(r,fromYear,toYear));
+const yearLabel=yearFilter?' Years: '+(fromYear||'any')+'–'+(toYear||'any')+'. Unknown years excluded.':'';
 const id=generation;active=new AbortController();const current=active,signal=current.signal;
 const timer=setTimeout(()=>current.abort(),35000);
 sections()[0].hidden=false;
 const uci=catalogue.filter(r=>matchesKeyword(keyword,r[0]+' '+r[2])).map(r=>({title:r[0],source:'UCI',format:r[1],url:'https://archive.ics.uci.edu/dataset/'+r[3]+'/'+r[4],note:'Keyword matches verified UCI catalogue topics. See the original file listing and documentation.'}));
-const groups=[uci,[],[],[],[],[],[],[],[],[],[],[]];
-const states=['UCI catalogue: '+uci.length,'Zenodo: searching','Harvard Dataverse: searching','World Bank: searching','Hugging Face: searching','Figshare: searching','Data.gov: searching','Thailand Open Data: searching','Data.gov.uk: searching','Data.gov.au: searching','Borealis (Canada): searching','DataverseNL: searching'];
+const groups=[filterYears(uci),[],[],[],[],[],[],[],[],[],[],[]];
+const states=['UCI catalogue: '+filterYears(uci).length,'Zenodo: searching','Harvard Dataverse: searching','World Bank: searching','Hugging Face: searching','Figshare: searching','Data.gov: searching','Thailand Open Data: searching','Data.gov.uk: searching','Data.gov.au: searching','Borealis (Canada): searching','DataverseNL: searching'];
 function update(){
 if(id!==generation)return;const list=balancedResults(groups);renderMatches(list);
-$('dataset-status').textContent=list.length+' dataset(s) for “'+keyword+'”. '+states.join(' · ')+'. Results are distributed across sources with matching data. Whole-word matching; no filler results.';
+$('dataset-status').textContent=list.length+' dataset(s) for “'+keyword+'”. '+states.join(' · ')+'.'+yearLabel+' Results are distributed across sources with matching data. Whole-word matching; no filler results.';
 }
 update();
 await Promise.allSettled([
@@ -169,7 +179,7 @@ await Promise.allSettled([
 ['Borealis (Canada)',(q,s)=>searchDataverse(q,s,'https://borealisdata.ca','Borealis (Canada)'),10],
 ['DataverseNL',(q,s)=>searchDataverse(q,s,'https://dataverse.nl','DataverseNL'),11]
 ].map(async([name,fn,index])=>{
-try{const results=await fn(keyword,signal);if(id!==generation)return;groups[index]=results;states[index]=name+': '+results.length+' matches';}
+try{const results=await fn(keyword,signal);if(id!==generation)return;groups[index]=filterYears(results);states[index]=name+': '+groups[index].length+' matches'+(yearFilter&&results.some(r=>!r.year)?' (unknown years excluded)':'');}
 catch(err){if(id!==generation)return;states[index]=name+': unavailable'+(signal.aborted?' (timeout)':'');}
 update();
 }));
@@ -177,7 +187,8 @@ clearTimeout(timer);
 if(id===generation){update();if(!balancedResults(groups).length)$('dataset-status').textContent+=' No matching datasets found in the available sources. Try shorter English keywords.';}
 };
 $('source-keyword').oninput=()=>{resetResults();$('source-keyword').setCustomValidity('');};
-$('clear').onclick=()=>{$('source-form').reset();resetResults();$('source-keyword').setCustomValidity('');$('source-keyword').focus();};
+$('source-from').oninput=$('source-to').oninput=()=>{$('source-to').setCustomValidity('');resetResults();};
+$('clear').onclick=()=>{$('source-form').reset();$('source-to').setCustomValidity('');resetResults();$('source-keyword').setCustomValidity('');$('source-keyword').focus();};
 
 let referenceGeneration=0,referenceController=null;
 function clearReferences(){
