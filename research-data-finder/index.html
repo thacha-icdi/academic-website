@@ -27,14 +27,14 @@ footer{color:#e9def7}footer>p:first-child{color:#dfc3ff!important}
 <div id="reference-output" hidden style="margin-top:18px"><p id="reference-status" role="status" aria-live="polite" class="muted"></p><div id="reference-results" class="grid"></div></div>
 </section>
 <section aria-labelledby="title-search-heading">
-<h2 id="title-search-heading" style="margin-top:0">Search for Research Title</h2>
-<p class="muted">Enter 3–4 keywords or short phrases in separate boxes to find existing research article titles containing all your keywords.</p>
+<h2 id="title-search-heading" style="margin-top:0">Generate Research Titles</h2>
+<p class="muted">Enter 3–4 keywords or short phrases to create three suggested research titles.</p>
 <form id="title-search-form"><div class="row">
-<div class="query"><label for="title-keyword-1">Keyword 1</label><input id="title-keyword-1" type="search" required maxlength="80" placeholder="e.g. artificial intelligence"></div>
-<div class="query"><label for="title-keyword-2">Keyword 2</label><input id="title-keyword-2" type="search" required maxlength="80" placeholder="e.g. education"></div>
-<div class="query"><label for="title-keyword-3">Keyword 3</label><input id="title-keyword-3" type="search" required maxlength="80" placeholder="e.g. learning"></div>
-<div class="query"><label for="title-keyword-4">Keyword 4 (optional)</label><input id="title-keyword-4" type="search" maxlength="80" placeholder="e.g. university"></div>
-<div style="align-self:end"><button type="submit">Find</button> <button type="button" id="title-search-clear" class="secondary">Clear</button></div>
+<div class="query"><label for="title-keyword-1">Keyword 1: Technology / method</label><input id="title-keyword-1" type="search" required maxlength="80" placeholder="e.g. artificial intelligence"></div>
+<div class="query"><label for="title-keyword-2">Keyword 2: Research area</label><input id="title-keyword-2" type="search" required maxlength="80" placeholder="e.g. education"></div>
+<div class="query"><label for="title-keyword-3">Keyword 3: Focus / outcome</label><input id="title-keyword-3" type="search" required maxlength="80" placeholder="e.g. learning"></div>
+<div class="query"><label for="title-keyword-4">Keyword 4: Context (optional)</label><input id="title-keyword-4" type="search" maxlength="80" placeholder="e.g. university"></div>
+<div style="align-self:end"><button type="submit">Generate 3 Titles</button> <button type="button" id="title-search-clear" class="secondary">Clear</button></div>
 </div></form>
 <div id="title-search-output" hidden style="margin-top:18px"><p id="title-search-status" class="muted" role="status" aria-live="polite"></p><div id="title-search-links" class="sources"></div><div id="title-search-results" class="grid" style="margin-top:16px"></div></div>
 </section>
@@ -310,38 +310,30 @@ $('title-search-output').hidden=true;$('title-search-results').replaceChildren()
 }
 titleInputs().forEach(input=>input.oninput=()=>{input.setCustomValidity('');clearTitleSearch();});
 $('title-search-clear').onclick=()=>{$('title-search-form').reset();titleInputs().forEach(input=>input.setCustomValidity(''));clearTitleSearch();$('title-keyword-1').focus();};
-$('title-search-form').onsubmit=async e=>{
+function proposeResearchTitles(keywords){
+const [method,area,focus,context]=keywords;
+const setting=context?' in '+context:'';
+return [
+method+' for '+focus+' in '+area+setting+': A Research Framework',
+'Integrating '+method+' into '+area+' to Support '+focus+setting,
+'Evaluating the Role of '+method+' in '+focus+' within '+area+setting
+].map(title=>title.charAt(0).toUpperCase()+title.slice(1));
+}
+$('title-search-form').onsubmit=e=>{
 e.preventDefault();clearTitleSearch();
 const inputs=titleInputs();
 inputs.forEach((input,i)=>input.setCustomValidity(i<3&&!input.value.trim()?'Please enter a keyword.':''));
 if(!$('title-search-form').reportValidity())return;
 const keywords=inputs.map(input=>input.value.trim()).filter(Boolean);
 if(keywords.length<3)return;
-const query=keywords.join(' '),id=titleSearchGeneration;
-const controller=new AbortController();titleSearchController=controller;
-const timer=setTimeout(()=>controller.abort(),25000);
+const titles=proposeResearchTitles(keywords);
 $('title-search-output').hidden=false;
-$('title-search-status').textContent='Searching existing article titles for: '+keywords.join(' + ')+'…';
-$('title-search-links').append(link('Search titles in Google Scholar ↗','https://scholar.google.com/scholar?'+new URLSearchParams({q:'allintitle: '+query,hl:'en'})));
-try{
-const params=new URLSearchParams({'query.title':query,filter:'type:journal-article',rows:'100',sort:'relevance'});
-const json=await getJson('https://api.crossref.org/works?'+params,controller.signal);
-if(id!==titleSearchGeneration)return;
-if(!Array.isArray(json.message?.items))throw new Error('Unexpected Crossref response');
-const items=json.message.items.filter(r=>r.DOI&&keywords.every(keyword=>matchesKeyword(keyword,(r.title||[]).join(' ')))).slice(0,10);
-for(const r of items){
-const card=node('article',undefined,'card'),year=(r.published?.['date-parts']||r.issued?.['date-parts'])?.[0]?.[0];
-const authors=(r.author||[]).map(a=>[a.given,a.family].filter(Boolean).join(' ')||a.name||'').filter(Boolean).join('; ');
-card.append(node('h3',(r.title||[]).join(' ')),node('span','Crossref · '+(year||'Year unavailable'),'tag'),node('p',authors||'Authors not listed','muted'),node('p',(r['container-title']||[]).join(' ')||r.publisher||''));
-const doiUrl='https://doi.org/'+encodeURIComponent(r.DOI);let source=doiUrl;
-try{const u=new URL(r.resource?.primary?.URL);if(/^https?:$/.test(u.protocol))source=u.href;}catch(e){}
-card.append(link('Open source ↗',source));
-const sourceLine=node('p',undefined,'muted');sourceLine.style.overflowWrap='anywhere';sourceLine.append(link(source,source));card.append(sourceLine);
+$('title-search-status').textContent='3 suggested research title drafts based on your keywords. Adjust the wording to match your planned study.';
+titles.forEach((title,i)=>{
+const card=node('article',undefined,'card');
+card.append(node('span','Suggested Title '+(i+1),'tag'),node('h3',title));
 $('title-search-results').append(card);
-}
-$('title-search-status').textContent=items.length?items.length+' existing research title(s) containing all keywords: '+keywords.join(' + ')+'.':'No titles containing all keywords were found among the returned Crossref records. Try broader terms or search Google Scholar above.';
-}catch(err){if(id!==titleSearchGeneration)return;$('title-search-status').textContent='Crossref title search is unavailable'+(controller.signal.aborted?' (timeout)':'')+'. Retry or use the Google Scholar title search above.';}
-finally{clearTimeout(timer);}
+});
 };
 
 const visitorBadge=$('visitor-badge');
