@@ -16,7 +16,7 @@
 <p class="muted">Enter a keyword and click Find to search for matching datasets.</p>
 <form id="source-form"><div class="row"><div class="query"><label for="source-keyword">Keyword</label><input id="source-keyword" type="search" required maxlength="250" placeholder="e.g. healthcare, fraud detection, climate change"></div><div style="align-self:end"><button type="submit">Find</button> <button type="button" id="clear" class="secondary">Clear</button></div></div></form>
 </section>
-<section aria-labelledby="dataset-recommend-heading" hidden><h2 id="dataset-recommend-heading">Matching Datasets (up to 10)</h2><p id="dataset-status" role="status" aria-live="polite" class="muted"></p><div id="matched-datasets" class="grid"></div><p class="muted">Search covers a small verified UCI catalogue and live Hugging Face repository search. Whole words must match curated UCI topics or the Hugging Face dataset name (excluding uploader names). Substrings such as car in card or cartography do not match. Listed CSV, JSON/JSONL or Excel files are required. Fewer than 10 results may be found. Check licensing, documentation and access at the source.</p></section>
+<section aria-labelledby="dataset-recommend-heading" hidden><h2 id="dataset-recommend-heading">Matching Datasets (up to 10)</h2><p id="dataset-status" role="status" aria-live="polite" class="muted"></p><div id="matched-datasets" class="grid"></div><p class="muted">Live searches: Zenodo, Harvard Dataverse, World Bank and Hugging Face, plus a small verified UCI catalogue. Only whole-word keyword matches with CSV, JSON or Excel access are shown. Source availability is reported above; fewer than 10 results may be found. Review documentation and licensing before use.</p></section>
 <section><h2 style="font-size:18px">Using a data source</h2><p class="muted">Open a dataset link to view its data files and documentation. Check the original dataset's license, variables, collection method and access conditions before using it.</p></section>
 </main><footer>Created by Assoc. Prof. Dr. Thacha Lawanna · Digital Innovation, ICDI CMU<br><br>Data source directory · No account or API key required.</footer>
 <script>
@@ -38,17 +38,9 @@ items.forEach(r=>{const card=node('article',undefined,'card');card.append(node('
 }
 async function getJson(url,signal){const response=await fetch(url,{signal});if(!response.ok)throw new Error('HTTP '+response.status);return response.json();}
 function isDataFile(path){return /\.(csv|jsonl|ndjson|xlsx|xls)(\.gz)?$/i.test(path)||(/\.json(\.gz)?$/i.test(path)&&!/(^|\/)(dataset_infos|dataset_info|config|metadata|package|tokenizer[^/]*|special_tokens_map|.*schema)\.json/i.test(path));}
-$('source-form').onsubmit=async e=>{
-e.preventDefault();const keyword=$('source-keyword').value.trim();
-if(!keyword){resetResults();return;}
-resetResults();const id=generation;active=new AbortController();const currentController=active;const signal=currentController.signal;
-const timer=setTimeout(()=>currentController.abort(),25000);
-sections()[0].hidden=false;$('dataset-status').textContent='Searching for datasets matching “'+keyword+'”…';
-const words=normalized(keyword).split(' ').filter(Boolean);
-let matches=catalogue.filter(r=>matchesKeyword(keyword,r[0]+' '+r[2])).map(r=>({title:r[0],source:'UCI',format:r[1],url:'https://archive.ics.uci.edu/dataset/'+r[3]+'/'+r[4],note:'Matched keyword: '+keyword+'. Formats checked against the UCI dataset file listing.'}));
-renderMatches(matches);
-let failed=false,checked=0,unavailable=0;
-try{
+
+function formatsFor(paths){return [...new Set(paths.map(p=>/\.csv/i.test(p)?'CSV':/\.xlsx?/i.test(p)?'Excel':'JSON / JSONL'))].join(', ');}
+async function searchHuggingFace(keyword,signal){
 const found=await getJson('https://huggingface.co/api/datasets?'+new URLSearchParams({search:keyword,limit:'100',sort:'downloads',direction:'-1'}),signal);
 if(!Array.isArray(found))throw new Error('Unexpected search response');
 let cursor=0;const candidates=found.filter(r=>!r.private&&!r.gated&&matchesKeyword(keyword,String(r.id||'').split('/').pop())).slice(0,24);
@@ -60,20 +52,85 @@ try{
 const info=await getJson('https://huggingface.co/api/datasets/'+item.id.split('/').map(encodeURIComponent).join('/'),signal);
 if(!matchesKeyword(keyword,String(info.id||item.id).split('/').pop()))continue;
 const files=(info.siblings||[]).map(f=>f.rfilename).filter(p=>typeof p==='string'&&isDataFile(p));
-checked++;if(!files.length)continue;
+if(!files.length)continue;
 const dataFile=files[0],formats=[...new Set(files.map(p=>/\.csv/i.test(p)?'CSV':/\.xlsx?/i.test(p)?'Excel':'JSON / JSONL'))].join(', ');
 fetched.push({title:item.id,source:'Hugging Face',format:formats,url:'https://huggingface.co/datasets/'+item.id,note:files.length+' CSV, JSON or Excel file(s) listed. '+(info.cardData?.license?'License: '+String(info.cardData.license):'Check license on the dataset page.'),file:'https://huggingface.co/datasets/'+item.id+'/blob/'+encodeURIComponent(info.sha||'main')+'/'+dataFile.split('/').map(encodeURIComponent).join('/'),rank:candidates.indexOf(item)});
-}catch(err){unavailable++;}
+}catch(err){if(signal.aborted)throw err;}
 }
 }));
-matches=matches.concat(fetched.sort((a,b)=>a.rank-b.rank)).slice(0,10);
-}catch(err){failed=true;}
-finally{
-clearTimeout(timer);
-if(id!==generation)return;
-renderMatches(matches);
-$('dataset-status').textContent=matches.length+' dataset(s) matching “'+keyword+'”. '+(failed?'Live search could not complete; only matching catalogue entries are shown. ':!matches.length?'No matching CSV, JSON or Excel datasets were found in the checked sources. Try shorter English keywords. ':'')+(unavailable?unavailable+' repositories could not be checked. ':'')+'Whole-word matches only; uploader names are excluded. Review the dataset documentation before use.';
+
+return fetched.sort((a,b)=>a.rank-b.rank);
 }
+async function searchZenodo(keyword,signal){
+const terms=keywordTokens(keyword).map(w=>'"'+w+'"').join(' AND ');
+const json=await getJson('https://zenodo.org/api/records?'+new URLSearchParams({q:'resource_type.type:dataset AND ('+terms+')',size:'40',sort:'bestmatch'}),signal);
+if(!Array.isArray(json.hits?.hits))throw new Error('Unexpected Zenodo response');
+return json.hits.hits.filter(r=>matchesKeyword(keyword,r.metadata?.title||'')).flatMap(r=>{
+const type=r.metadata?.resource_type?.type||r.metadata?.resource_type?.id;
+if(type!=='dataset')return [];
+const files=(Array.isArray(r.files)?r.files:Object.values(r.files?.entries||{})).filter(f=>isDataFile(f.key||f.filename||''));
+if(!files.length)return [];
+const file=files[0],direct=file.links?.self||file.links?.content||file.links?.download;
+return [{title:r.metadata.title,source:'Zenodo',format:formatsFor(files.map(f=>f.key||f.filename)),url:r.links?.self_html||'https://zenodo.org/records/'+r.id,file:direct,note:files.length+' CSV, JSON or Excel file(s) listed. Check the dataset license and documentation.'}];
+});
+}
+async function searchDataverse(keyword,signal){
+const params=new URLSearchParams({q:keyword,type:'dataset',per_page:'30',sort:'score',order:'desc'});
+const json=await getJson('https://dataverse.harvard.edu/api/search?'+params,signal);
+if(json.status!=='OK'||!Array.isArray(json.data?.items))throw new Error('Unexpected Dataverse response');
+const candidates=json.data.items.filter(r=>matchesKeyword(keyword,r.name||'')).slice(0,12);
+let cursor=0;const records=[];
+await Promise.all(Array.from({length:3},async()=>{
+while(cursor<candidates.length){
+const r=candidates[cursor++];if(signal.aborted)throw new Error('Request cancelled');
+const persistent=r.global_id||r.identifier;
+try{
+const detail=await getJson('https://dataverse.harvard.edu/api/datasets/:persistentId/?'+new URLSearchParams({persistentId:persistent}),signal);
+const version=detail.data?.latestVersion;
+const files=(version?.files||[]).filter(f=>!f.restricted&&isDataFile(f.dataFile?.originalFileName||f.dataFile?.filename||''));
+if(!files.length)continue;
+const f=files[0],paths=files.map(x=>x.dataFile.originalFileName||x.dataFile.filename);
+records.push({title:r.name,source:'Harvard Dataverse',format:formatsFor(paths),url:r.url||'https://dataverse.harvard.edu/dataset.xhtml?persistentId='+encodeURIComponent(persistent),file:'https://dataverse.harvard.edu/api/access/datafile/'+f.dataFile.id+'?format=original',note:files.length+' unrestricted CSV, JSON or Excel file(s) listed. Check the dataset documentation and terms.'});
+}catch(err){if(signal.aborted)throw err;}
+}
+}));
+return records;
+}
+async function searchWorldBank(keyword,signal){
+const json=await getJson('https://api.worldbank.org/v2/indicator?source=2&format=json&per_page=20000',signal);
+if(!Array.isArray(json?.[1]))throw new Error('Unexpected World Bank response');
+return json[1].filter(r=>matchesKeyword(keyword,r.name||'')).slice(0,20).map(r=>({title:r.name,source:'World Bank',format:'JSON API, CSV, Excel',url:'https://data.worldbank.org/indicator/'+encodeURIComponent(r.id),file:'https://api.worldbank.org/v2/country/all/indicator/'+encodeURIComponent(r.id)+'?format=json&per_page=100',note:'Country indicator data. JSON response is paginated (100 records/page); CSV and Excel downloads are available on the indicator page.'}));
+}
+function balancedResults(groups){
+const result=[],seen=new Set();let offset=0;
+while(result.length<10&&groups.some(g=>g.length>offset)){
+for(const group of groups){const r=group[offset];if(!r)continue;const key=r.url;if(seen.has(key))continue;seen.add(key);result.push(r);if(result.length===10)break;}
+offset++;
+}
+return result;
+}
+$('source-form').onsubmit=async e=>{
+e.preventDefault();const keyword=$('source-keyword').value.trim();resetResults();if(!keyword)return;
+const id=generation;active=new AbortController();const current=active,signal=current.signal;
+const timer=setTimeout(()=>current.abort(),35000);
+sections()[0].hidden=false;
+const uci=catalogue.filter(r=>matchesKeyword(keyword,r[0]+' '+r[2])).map(r=>({title:r[0],source:'UCI',format:r[1],url:'https://archive.ics.uci.edu/dataset/'+r[3]+'/'+r[4],note:'Keyword matches verified UCI catalogue topics. See the original file listing and documentation.'}));
+const groups=[uci,[],[],[],[]];
+const states=['UCI catalogue: '+uci.length,'Zenodo: searching','Harvard Dataverse: searching','World Bank: searching','Hugging Face: searching'];
+function update(){
+if(id!==generation)return;const list=balancedResults(groups);renderMatches(list);
+$('dataset-status').textContent=list.length+' dataset(s) for “'+keyword+'”. '+states.join(' · ')+'. Results are distributed across sources with matching data. Whole-word matching; no filler results.';
+}
+update();
+await Promise.allSettled([
+['Zenodo',searchZenodo,1],['Harvard Dataverse',searchDataverse,2],['World Bank',searchWorldBank,3],['Hugging Face',searchHuggingFace,4]
+].map(async([name,fn,index])=>{
+try{const results=await fn(keyword,signal);if(id!==generation)return;groups[index]=results;states[index]=name+': '+results.length+' matches';}
+catch(err){if(id!==generation)return;states[index]=name+': unavailable'+(signal.aborted?' (timeout)':'');}
+update();
+}));
+clearTimeout(timer);
+if(id===generation){update();if(!balancedResults(groups).length)$('dataset-status').textContent+=' No matching datasets found in the available sources. Try shorter English keywords.';}
 };
 $('source-keyword').oninput=()=>{resetResults();$('source-keyword').setCustomValidity('');};
 $('clear').onclick=()=>{$('source-form').reset();resetResults();$('source-keyword').setCustomValidity('');$('source-keyword').focus();};
