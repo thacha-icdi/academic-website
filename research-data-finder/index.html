@@ -28,7 +28,7 @@ footer{color:#e9def7}footer>p:first-child{color:#dfc3ff!important}
 </section>
 <section aria-labelledby="title-search-heading">
 <h2 id="title-search-heading" style="margin-top:0">Generate Research Titles</h2>
-<p class="muted">Enter 3–4 keywords or short phrases to create thirteen suggested research titles.</p>
+<p class="muted">Enter 3–4 keywords or short phrases to create thirteen suggested research titles, each 10–20 words. Keep your keywords to 11 words in total.</p>
 <form id="title-search-form"><div class="row">
 <div class="query"><label for="title-keyword-1">Keyword 1: Technology / method</label><input id="title-keyword-1" type="search" required maxlength="80" placeholder="e.g. artificial intelligence"></div>
 <div class="query"><label for="title-keyword-2">Keyword 2: Research area</label><input id="title-keyword-2" type="search" required maxlength="80" placeholder="e.g. education"></div>
@@ -308,8 +308,9 @@ function clearTitleSearch(){
 titleSearchGeneration++;if(titleSearchController)titleSearchController.abort();
 $('title-search-output').hidden=true;$('title-search-results').replaceChildren();$('title-search-links').replaceChildren();$('title-search-status').textContent='';
 }
-titleInputs().forEach(input=>input.oninput=()=>{input.setCustomValidity('');clearTitleSearch();});
+titleInputs().forEach(input=>input.oninput=()=>{titleInputs().forEach(field=>field.setCustomValidity(''));clearTitleSearch();});
 $('title-search-clear').onclick=()=>{$('title-search-form').reset();titleInputs().forEach(input=>input.setCustomValidity(''));clearTitleSearch();$('title-keyword-1').focus();};
+function titleWordCount(text){return text.trim().split(/\s+/).filter(Boolean).length;}
 function proposeResearchTitles(keywords){
 const [method,area,focus,context]=keywords;
 const setting=context?' in '+context:'';
@@ -327,7 +328,11 @@ method+' for '+focus+' in '+area+setting+': A Research Framework',
 'Implementation of '+method+' for '+focus+' in '+area+setting+': A Case Study',
 'Measuring the Effectiveness of '+method+' for '+focus+' in '+area+setting,
 'Toward a Practical Framework for '+focus+' Through '+method+' in '+area+setting
-].map(title=>title.charAt(0).toUpperCase()+title.slice(1));
+].map(title=>{
+title=title.replace(/\s+/g,' ').trim();
+if(titleWordCount(title)<10)title+=': A Proposed Research Study';
+return title.charAt(0).toUpperCase()+title.slice(1);
+});
 }
 $('title-search-form').onsubmit=e=>{
 e.preventDefault();clearTitleSearch();
@@ -336,12 +341,16 @@ inputs.forEach((input,i)=>input.setCustomValidity(i<3&&!input.value.trim()?'Plea
 if(!$('title-search-form').reportValidity())return;
 const keywords=inputs.map(input=>input.value.trim()).filter(Boolean);
 if(keywords.length<3)return;
+if(titleWordCount(keywords.join(' '))>11){
+inputs[0].setCustomValidity('Please shorten your keywords to 11 words in total so every title can stay within 10–20 words.');
+inputs[0].reportValidity();return;
+}
 const titles=proposeResearchTitles(keywords);
 $('title-search-output').hidden=false;
-$('title-search-status').textContent='13 suggested research title drafts based on your keywords. Adjust the wording to match your planned study.';
+$('title-search-status').textContent='13 suggested research title drafts, each 10–20 words, based on your keywords. Adjust the wording to match your planned study.';
 titles.forEach((title,i)=>{
 const card=node('article',undefined,'card');
-card.append(node('span','Suggested Title '+(i+1),'tag'),node('h3',title));
+card.append(node('span','Suggested Title '+(i+1)+' · '+titleWordCount(title)+' words','tag'),node('h3',title));
 $('title-search-results').append(card);
 });
 };
