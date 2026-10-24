@@ -74,9 +74,9 @@ const file=files[0],direct=file.links?.self||file.links?.content||file.links?.do
 return [{title:r.metadata.title,source:'Zenodo',format:formatsFor(files.map(f=>f.key||f.filename)),url:r.links?.self_html||'https://zenodo.org/records/'+r.id,file:direct,note:files.length+' CSV, JSON or Excel file(s) listed. Check the dataset license and documentation.'}];
 });
 }
-async function searchDataverse(keyword,signal){
+async function searchDataverse(keyword,signal,base='https://dataverse.harvard.edu',label='Harvard Dataverse'){
 const params=new URLSearchParams({q:keyword,type:'dataset',per_page:'30',sort:'score',order:'desc'});
-const json=await getJson('https://dataverse.harvard.edu/api/search?'+params,signal);
+const json=await getJson(base+'/api/search?'+params,signal);
 if(json.status!=='OK'||!Array.isArray(json.data?.items))throw new Error('Unexpected Dataverse response');
 const candidates=json.data.items.filter(r=>matchesKeyword(keyword,r.name||'')).slice(0,12);
 let cursor=0;const records=[];
@@ -85,12 +85,12 @@ while(cursor<candidates.length){
 const r=candidates[cursor++];if(signal.aborted)throw new Error('Request cancelled');
 const persistent=r.global_id||r.identifier;
 try{
-const detail=await getJson('https://dataverse.harvard.edu/api/datasets/:persistentId/?'+new URLSearchParams({persistentId:persistent}),signal);
+const detail=await getJson(base+'/api/datasets/:persistentId/?'+new URLSearchParams({persistentId:persistent}),signal);
 const version=detail.data?.latestVersion;
 const files=(version?.files||[]).filter(f=>!f.restricted&&isDataFile(f.dataFile?.originalFileName||f.dataFile?.filename||''));
 if(!files.length)continue;
 const f=files[0],paths=files.map(x=>x.dataFile.originalFileName||x.dataFile.filename);
-records.push({title:r.name,source:'Harvard Dataverse',format:formatsFor(paths),url:r.url||'https://dataverse.harvard.edu/dataset.xhtml?persistentId='+encodeURIComponent(persistent),file:'https://dataverse.harvard.edu/api/access/datafile/'+f.dataFile.id+'?format=original',note:files.length+' unrestricted CSV, JSON or Excel file(s) listed. Check the dataset documentation and terms.'});
+records.push({title:r.name,source:label,format:formatsFor(paths),url:r.url||base+'/dataset.xhtml?persistentId='+encodeURIComponent(persistent),file:base+'/api/access/datafile/'+f.dataFile.id+'?format=original',note:files.length+' unrestricted CSV, JSON or Excel file(s) listed. Check the dataset documentation and terms.'});
 }catch(err){if(signal.aborted)throw err;}
 }
 }));
@@ -103,7 +103,7 @@ return json[1].filter(r=>matchesKeyword(keyword,r.name||'')).slice(0,20).map(r=>
 }
 
 async function searchFigshare(keyword,signal){
-const response=await fetch('https://api.figshare.com/v2/articles/search',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({search_for:keyword,item_type:3,page_size:100,order:'relevance'}),signal});
+const response=await fetch('https://api.figshare.com/v2/articles/search',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({search_for:keyword,item_type:3,page_size:100,order:'published_date'}),signal});
 if(!response.ok)throw new Error('HTTP '+response.status);
 const items=await response.json();if(!Array.isArray(items))throw new Error('Unexpected Figshare response');
 const candidates=items.filter(r=>r.defined_type===3&&matchesKeyword(keyword,r.title||'')).slice(0,16);
@@ -146,8 +146,8 @@ const id=generation;active=new AbortController();const current=active,signal=cur
 const timer=setTimeout(()=>current.abort(),35000);
 sections()[0].hidden=false;
 const uci=catalogue.filter(r=>matchesKeyword(keyword,r[0]+' '+r[2])).map(r=>({title:r[0],source:'UCI',format:r[1],url:'https://archive.ics.uci.edu/dataset/'+r[3]+'/'+r[4],note:'Keyword matches verified UCI catalogue topics. See the original file listing and documentation.'}));
-const groups=[uci,[],[],[],[],[],[],[],[],[]];
-const states=['UCI catalogue: '+uci.length,'Zenodo: searching','Harvard Dataverse: searching','World Bank: searching','Hugging Face: searching','Figshare: searching','Data.gov: searching','Thailand Open Data: searching','Data.gov.uk: searching','Data.gov.au: searching'];
+const groups=[uci,[],[],[],[],[],[],[],[],[],[],[]];
+const states=['UCI catalogue: '+uci.length,'Zenodo: searching','Harvard Dataverse: searching','World Bank: searching','Hugging Face: searching','Figshare: searching','Data.gov: searching','Thailand Open Data: searching','Data.gov.uk: searching','Data.gov.au: searching','Borealis (Canada): searching','DataverseNL: searching'];
 function update(){
 if(id!==generation)return;const list=balancedResults(groups);renderMatches(list);
 $('dataset-status').textContent=list.length+' dataset(s) for “'+keyword+'”. '+states.join(' · ')+'. Results are distributed across sources with matching data. Whole-word matching; no filler results.';
@@ -159,7 +159,9 @@ await Promise.allSettled([
 ['Data.gov',(q,s)=>searchCKAN(q,s,'https://catalog.data.gov','Data.gov'),6],
 ['Thailand Open Data',(q,s)=>searchCKAN(q,s,'https://data.go.th','Thailand Open Data'),7],
 ['Data.gov.uk',(q,s)=>searchCKAN(q,s,'https://data.gov.uk','Data.gov.uk'),8],
-['Data.gov.au',(q,s)=>searchCKAN(q,s,'https://data.gov.au/data','Data.gov.au'),9]
+['Data.gov.au',(q,s)=>searchCKAN(q,s,'https://data.gov.au/data','Data.gov.au'),9],
+['Borealis (Canada)',(q,s)=>searchDataverse(q,s,'https://borealisdata.ca','Borealis (Canada)'),10],
+['DataverseNL',(q,s)=>searchDataverse(q,s,'https://dataverse.nl','DataverseNL'),11]
 ].map(async([name,fn,index])=>{
 try{const results=await fn(keyword,signal);if(id!==generation)return;groups[index]=results;states[index]=name+': '+results.length+' matches';}
 catch(err){if(id!==generation)return;states[index]=name+': unavailable'+(signal.aborted?' (timeout)':'');}
