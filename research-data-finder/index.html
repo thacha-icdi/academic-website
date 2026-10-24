@@ -14,7 +14,7 @@
 <section aria-labelledby="source-heading">
 <h2 id="source-heading" style="margin-top:0">Search for Data Sources</h2>
 <p class="muted">Enter a keyword and click Find to get website search links for research data repositories.</p>
-<form id="source-form"><div class="row"><div class="query"><label for="source-keyword">Keyword</label><input id="source-keyword" type="search" required maxlength="250" placeholder="e.g. healthcare, fraud detection, climate change"></div><div style="align-self:end"><button type="submit">Find</button></div></div></form>
+<form id="source-form"><div class="row"><div class="query"><label for="source-keyword">Keyword</label><input id="source-keyword" type="search" required maxlength="250" placeholder="e.g. healthcare, fraud detection, climate change"></div><div style="align-self:end"><button type="submit">Find</button> <button type="button" id="clear" class="secondary">Clear</button></div></div></form>
 <p id="source-status" class="muted" role="status" aria-live="polite">Your data source website links will appear here.</p>
 <ol id="source-results" style="padding-left:24px;line-height:1.8"></ol>
 </section>
@@ -81,6 +81,17 @@ $('source-results').append(item);
 $('source-status').textContent=providers.length+' data source search links for “'+keyword+'”. Each link searches the keyword on that website; matching datasets have not been verified.';
 };
 $('source-keyword').oninput=()=>$('source-keyword').setCustomValidity('');
+$('clear').onclick=()=>{
+$('source-form').reset();
+$('source-keyword').setCustomValidity('');
+$('source-results').replaceChildren();
+$('source-status').textContent='Your data source website links will appear here.';
+$('rec-uci').href='https://archive.ics.uci.edu/datasets';
+$('rec-kaggle').href='https://www.kaggle.com/datasets';
+$('rec-hf').href='https://huggingface.co/datasets';
+$('rec-thai').href='https://data.go.th/dataset';
+$('source-keyword').focus();
+};
 
 
 </script>
