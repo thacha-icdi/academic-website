@@ -18,31 +18,8 @@
 <p id="source-status" class="muted" role="status" aria-live="polite">Your data source website links will appear here.</p>
 <ol id="source-results" style="padding-left:24px;line-height:1.8"></ol>
 </section>
-<section aria-labelledby="recommend-heading" hidden>
-<h2 id="recommend-heading">5 Recommended Data Sources</h2>
-<p class="muted">Repositories offering JSON, CSV or Excel data. Available formats vary by dataset. Enter a keyword above and click Find to update the search links.</p>
-<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;text-align:left">
-<thead><tr><th style="padding:12px">Data source</th><th style="padding:12px">Formats</th><th style="padding:12px">Best for</th><th style="padding:12px">Website</th></tr></thead>
-<tbody>
-<tr><td style="padding:12px">UCI Machine Learning Repository</td><td>CSV (selected datasets)</td><td>Classification, regression and benchmarking</td><td><a id="rec-uci" href="https://archive.ics.uci.edu/datasets" target="_blank" rel="noopener noreferrer">Browse data ↗</a></td></tr>
-<tr><td style="padding:12px">Kaggle</td><td>CSV, JSON (dataset-dependent)</td><td>Business, finance and machine learning</td><td><a id="rec-kaggle" href="https://www.kaggle.com/datasets" target="_blank" rel="noopener noreferrer">Browse data ↗</a></td></tr>
-<tr><td style="padding:12px">Hugging Face Datasets</td><td>CSV, JSON / JSONL (dataset-dependent)</td><td>AI, language and text analysis</td><td><a id="rec-hf" href="https://huggingface.co/datasets" target="_blank" rel="noopener noreferrer">Browse data ↗</a></td></tr>
-<tr><td style="padding:12px">World Bank Open Data</td><td>CSV, Excel; JSON via API</td><td>Economics, development and country indicators</td><td><a href="https://data.worldbank.org/" target="_blank" rel="noopener noreferrer">Browse data ↗</a></td></tr>
-<tr><td style="padding:12px">Thailand Open Data</td><td>CSV, Excel (XLSX), JSON (dataset-dependent)</td><td>Thai government and public sector research</td><td><a id="rec-thai" href="https://data.go.th/dataset" target="_blank" rel="noopener noreferrer">Browse data ↗</a></td></tr>
-</tbody></table></div>
-<p class="muted">Use the dataset's Files or Download section to check the actual format. Some downloads are ZIP archives or require sign-in. JSON API responses may require code to retrieve. World Bank opens its indicator catalogue; use its search for your topic.</p>
-<details><summary>Format documentation</summary><div class="sources"><a href="https://www.kaggle.com/docs/datasets" target="_blank" rel="noopener noreferrer">Kaggle</a><a href="https://huggingface.co/docs/datasets/en/loading" target="_blank" rel="noopener noreferrer">Hugging Face</a><a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/898581" target="_blank" rel="noopener noreferrer">World Bank API</a><a href="https://data.go.th/dataset?res_format=CSV" target="_blank" rel="noopener noreferrer">Thailand file formats</a></div></details>
-</section>
-<section aria-labelledby="dataset-recommend-heading" hidden><h2 id="dataset-recommend-heading">10 Recommended Datasets</h2><p class="muted">A curated starting list with downloadable CSV or Excel data, plus World Bank JSON APIs. These recommendations are fixed examples, not keyword-matched search results.</p><div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;text-align:left"><thead><tr><th style="padding:12px">Dataset / Source</th><th style="padding:12px">Available formats</th><th style="padding:12px">Research use</th><th style="padding:12px">Links</th></tr></thead><tbody><tr><td style="padding:12px">1. Wine Quality<div class="muted">UCI</div></td><td style="padding:12px">CSV</td><td style="padding:12px">Quality prediction; classification and regression</td><td style="padding:12px"><a href="https://archive.ics.uci.edu/dataset/186/wine+quality" target="_blank" rel="noopener noreferrer">Open dataset ↗</a></td></tr>
-<tr><td style="padding:12px">2. Bank Marketing<div class="muted">UCI</div></td><td style="padding:12px">CSV inside ZIP</td><td style="padding:12px">Marketing response prediction</td><td style="padding:12px"><a href="https://archive.ics.uci.edu/dataset/222/bank+marketing" target="_blank" rel="noopener noreferrer">Open dataset ↗</a></td></tr>
-<tr><td style="padding:12px">3. Online Shoppers Purchasing Intention<div class="muted">UCI</div></td><td style="padding:12px">CSV</td><td style="padding:12px">E-commerce purchase prediction</td><td style="padding:12px"><a href="https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset" target="_blank" rel="noopener noreferrer">Open dataset ↗</a></td></tr>
-<tr><td style="padding:12px">4. Default of Credit Card Clients<div class="muted">UCI</div></td><td style="padding:12px">Excel (.xls)</td><td style="padding:12px">Credit default prediction and explainability</td><td style="padding:12px"><a href="https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients" target="_blank" rel="noopener noreferrer">Open dataset ↗</a></td></tr>
-<tr><td style="padding:12px">5. Dry Bean<div class="muted">UCI</div></td><td style="padding:12px">Excel (.xlsx)</td><td style="padding:12px">Multiclass classification from grain measurements</td><td style="padding:12px"><a href="https://archive.ics.uci.edu/dataset/602/dry+bean+dataset" target="_blank" rel="noopener noreferrer">Open dataset ↗</a></td></tr>
-<tr><td style="padding:12px">6. Concrete Compressive Strength<div class="muted">UCI</div></td><td style="padding:12px">Excel (.xls)</td><td style="padding:12px">Engineering regression</td><td style="padding:12px"><a href="https://archive.ics.uci.edu/dataset/165/concrete+compressive+strength" target="_blank" rel="noopener noreferrer">Open dataset ↗</a></td></tr>
-<tr><td style="padding:12px">7. Energy Efficiency<div class="muted">UCI</div></td><td style="padding:12px">Excel (.xlsx)</td><td style="padding:12px">Predict building heating and cooling loads</td><td style="padding:12px"><a href="https://archive.ics.uci.edu/dataset/242/energy+efficiency" target="_blank" rel="noopener noreferrer">Open dataset ↗</a></td></tr>
-<tr><td style="padding:12px">8. Combined Cycle Power Plant<div class="muted">UCI</div></td><td style="padding:12px">Excel (.xlsx)</td><td style="padding:12px">Predict electrical energy output</td><td style="padding:12px"><a href="https://archive.ics.uci.edu/dataset/294/combined+cycle+power+plant" target="_blank" rel="noopener noreferrer">Open dataset ↗</a></td></tr>
-<tr><td style="padding:12px">9. Population, total<div class="muted">World Bank</div></td><td style="padding:12px">CSV, Excel, JSON API</td><td style="padding:12px">Country population and demographic trends</td><td style="padding:12px"><a href="https://data.worldbank.org/indicator/SP.POP.TOTL" target="_blank" rel="noopener noreferrer">Open dataset ↗</a><br><a href="https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?format=json&amp;per_page=100" target="_blank" rel="noopener noreferrer">JSON API (100/page) ↗</a></td></tr>
-<tr><td style="padding:12px">10. GDP per capita (current US$)<div class="muted">World Bank</div></td><td style="padding:12px">CSV, Excel, JSON API</td><td style="padding:12px">Economic development and cross-country comparison</td><td style="padding:12px"><a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD" target="_blank" rel="noopener noreferrer">Open dataset ↗</a><br><a href="https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.CD?format=json&amp;per_page=100" target="_blank" rel="noopener noreferrer">JSON API (100/page) ↗</a></td></tr></tbody></table></div><p class="muted">On UCI, click Download and extract the ZIP if needed. On World Bank indicator pages, select CSV or Excel; JSON API results are paginated (follow the response metadata to retrieve all pages). Check the dataset documentation and license, and cite the original source.</p></section>
+<section aria-labelledby="recommend-heading" hidden><h2 id="recommend-heading">Matching Data Sources</h2><p class="muted">Repositories containing the datasets listed below.</p><div id="matched-sources" class="sources"></div></section>
+<section aria-labelledby="dataset-recommend-heading" hidden><h2 id="dataset-recommend-heading">Matching Datasets (up to 10)</h2><p id="dataset-status" role="status" aria-live="polite" class="muted"></p><div id="matched-datasets" class="grid"></div><p class="muted">Search covers a small verified UCI catalogue and live Hugging Face repository search. Only matching UCI entries or repositories with listed CSV, JSON/JSONL or Excel data files are included. Fewer than 10 results may be found. Check licensing, documentation and access at the source.</p></section>
 <section><h2 style="font-size:18px">Using a data source</h2><p class="muted">Open a repository link to browse datasets matching your keyword. Check the original dataset's license, variables, collection method and access conditions before using it.</p></section>
 </main><footer>Created by Assoc. Prof. Dr. Thacha Lawanna · Digital Innovation, ICDI CMU<br><br>Data source directory · No account or API key required.</footer>
 <script>
@@ -50,61 +27,60 @@
 const $=id=>document.getElementById(id);
 function node(tag,text,cls){const el=document.createElement(tag);if(text!==undefined)el.textContent=text;if(cls)el.className=cls;return el;}
 function link(text,url){const a=node('a',text);a.href=url;a.target='_blank';a.rel='noopener noreferrer';return a;}
-$('source-form').onsubmit=e=>{
-e.preventDefault();
-const keyword=$('source-keyword').value.trim();
-if(!keyword){$('source-keyword').setCustomValidity('Please enter a keyword.');$('source-keyword').reportValidity();return;}
-$('source-keyword').setCustomValidity('');
-document.querySelector('section[aria-labelledby="recommend-heading"]').hidden=false;
-document.querySelector('section[aria-labelledby="dataset-recommend-heading"]').hidden=false;
+const catalogue=[["Wine Quality","CSV","quality wine chemistry classification regression",186,"wine+quality"],["Bank Marketing","CSV inside ZIP","bank marketing campaign finance business subscription classification",222,"bank+marketing"],["Online Shoppers Purchasing Intention","CSV","online shoppers shopping ecommerce e-commerce purchase intention marketing business classification",468,"online+shoppers+purchasing+intention+dataset"],["Default of Credit Card Clients","Excel (.xls)","credit card default finance banking risk classification",350,"default+of+credit+card+clients"],["Dry Bean","Excel (.xlsx)","dry bean agriculture grain classification",602,"dry+bean+dataset"],["Concrete Compressive Strength","Excel (.xls)","concrete strength engineering regression",165,"concrete+compressive+strength"],["Energy Efficiency","Excel (.xlsx)","energy efficiency building heating cooling regression",242,"energy+efficiency"],["Combined Cycle Power Plant","Excel (.xlsx)","energy power plant electricity generation regression",294,"combined+cycle+power+plant"]];
+let generation=0,active=null;
+const sections=()=>[document.querySelector('section[aria-labelledby="recommend-heading"]'),document.querySelector('section[aria-labelledby="dataset-recommend-heading"]')];
+function resetResults(){generation++;if(active)active.abort();sections().forEach(s=>s.hidden=true);$('source-results').replaceChildren();$('matched-datasets').replaceChildren();$('matched-sources').replaceChildren();$('dataset-status').textContent='';$('source-status').textContent='Your data source website links will appear here.';}
+function normalized(s){return s.toLowerCase().replace(/e-commerce/g,'ecommerce').replace(/[^\p{L}\p{N}]+/gu,' ').trim();}
+function renderMatches(items){
+$('matched-datasets').replaceChildren();$('matched-sources').replaceChildren();
+items.forEach(r=>{const card=node('article',undefined,'card');card.append(node('h3',r.title),node('span',r.source+' · '+r.format,'tag'),node('p',r.note,'muted'));const actions=node('div',undefined,'actions');actions.append(link('Open dataset ↗',r.url));if(r.file)actions.append(link('Open data file ↗',r.file));card.append(actions);$('matched-datasets').append(card);});
+[...new Set(items.map(r=>r.source))].forEach(s=>$('matched-sources').append(link(s,s==='UCI'?'https://archive.ics.uci.edu/':'https://huggingface.co/datasets')));
+sections()[0].hidden=!items.length;
+}
+async function getJson(url,signal){const response=await fetch(url,{signal});if(!response.ok)throw new Error('HTTP '+response.status);return response.json();}
+function isDataFile(path){return /\.(csv|jsonl|ndjson|xlsx|xls)(\.gz)?$/i.test(path)||(/\.json(\.gz)?$/i.test(path)&&!/(^|\/)(dataset_infos|dataset_info|config|metadata|package|tokenizer[^/]*|special_tokens_map|.*schema)\.json/i.test(path));}
+$('source-form').onsubmit=async e=>{
+e.preventDefault();const keyword=$('source-keyword').value.trim();
+if(!keyword){resetResults();return;}
+resetResults();const id=generation;active=new AbortController();const signal=active.signal;
+const timer=setTimeout(()=>active?.abort(),25000);
+sections()[1].hidden=false;$('dataset-status').textContent='Searching for datasets matching “'+keyword+'”…';
 const q=encodeURIComponent(keyword);
-$('rec-uci').href='https://archive.ics.uci.edu/datasets?search='+q;
-$('rec-kaggle').href='https://www.kaggle.com/datasets?search='+q;
-$('rec-hf').href='https://huggingface.co/datasets?search='+q;
-$('rec-thai').href='https://data.go.th/dataset?q='+q;
-const providers=[
-['Google Dataset Search','https://datasetsearch.research.google.com/search?query='+q,'Search for datasets across repositories'],
-['Kaggle','https://www.kaggle.com/datasets?search='+q,'Community datasets and machine learning'],
-['UCI Machine Learning Repository','https://archive.ics.uci.edu/datasets?search='+q,'Machine learning datasets'],
-['Zenodo','https://zenodo.org/search?q='+q,'Research data and supporting materials'],
-['Harvard Dataverse','https://dataverse.harvard.edu/dataverse/harvard?q='+q,'Research datasets across disciplines'],
-['Hugging Face','https://huggingface.co/datasets?search='+q,'AI and machine learning datasets'],
-['Thailand Open Data','https://data.go.th/dataset?q='+q,'Thai government open data'],
-['DataCite Commons','https://commons.datacite.org/?query='+q,'DOI-linked research outputs and data']
-];
-$('source-results').replaceChildren();
-providers.forEach(([name,url,description])=>{
-const item=node('li');item.style.marginBottom='14px';
-const a=link(name+' ↗',url);a.style.fontWeight='bold';
-item.append(a,node('div',description,'muted'));
-const address=link(url,url);address.style.cssText='font-size:12px;overflow-wrap:anywhere';item.append(address);
-$('source-results').append(item);
-});
-$('source-status').textContent=providers.length+' data source search links for “'+keyword+'”. Each link searches the keyword on that website; matching datasets have not been verified.';
-};
-$('source-keyword').oninput=()=>{
-$('source-keyword').setCustomValidity('');
-if(!$('source-keyword').value.trim()){
-document.querySelector('section[aria-labelledby="recommend-heading"]').hidden=true;
-document.querySelector('section[aria-labelledby="dataset-recommend-heading"]').hidden=true;
-$('source-results').replaceChildren();
-$('source-status').textContent='Your data source website links will appear here.';
+const providers=[['UCI Machine Learning Repository','https://archive.ics.uci.edu/datasets?search='+q],['Kaggle','https://www.kaggle.com/datasets?search='+q],['Hugging Face','https://huggingface.co/datasets?search='+q],['Google Dataset Search','https://datasetsearch.research.google.com/search?query='+q],['Thailand Open Data','https://data.go.th/dataset?q='+q],['Zenodo','https://zenodo.org/search?q='+q]];
+providers.forEach(([name,url])=>{const item=node('li');item.style.marginBottom='10px';item.append(link(name+' ↗',url));$('source-results').append(item);});
+$('source-status').textContent='Search “'+keyword+'” on these source websites. These are external search links; matched datasets appear below.';
+const words=normalized(keyword).split(' ').filter(Boolean);
+let matches=catalogue.filter(r=>words.every(w=>normalized(r[0]+' '+r[2]).includes(w))).map(r=>({title:r[0],source:'UCI',format:r[1],url:'https://archive.ics.uci.edu/dataset/'+r[3]+'/'+r[4],note:'Matched keyword: '+keyword+'. Formats checked against the UCI dataset file listing.'}));
+renderMatches(matches);
+let failed=false,checked=0,unavailable=0;
+try{
+const found=await getJson('https://huggingface.co/api/datasets?'+new URLSearchParams({search:keyword,limit:'24',sort:'downloads',direction:'-1'}),signal);
+if(!Array.isArray(found))throw new Error('Unexpected search response');
+let cursor=0;const candidates=found.filter(r=>!r.private&&!r.gated);
+const fetched=[];
+await Promise.all(Array.from({length:4},async()=>{
+while(cursor<candidates.length){
+const item=candidates[cursor++];if(signal.aborted)return;
+try{
+const info=await getJson('https://huggingface.co/api/datasets/'+item.id.split('/').map(encodeURIComponent).join('/'),signal);
+const files=(info.siblings||[]).map(f=>f.rfilename).filter(p=>typeof p==='string'&&isDataFile(p));
+checked++;if(!files.length)continue;
+const dataFile=files[0],formats=[...new Set(files.map(p=>/\.csv/i.test(p)?'CSV':/\.xlsx?/i.test(p)?'Excel':'JSON / JSONL'))].join(', ');
+fetched.push({title:item.id,source:'Hugging Face',format:formats,url:'https://huggingface.co/datasets/'+item.id,note:files.length+' matching data file(s) listed. '+(info.cardData?.license?'License: '+String(info.cardData.license):'Check license on the dataset page.'),file:'https://huggingface.co/datasets/'+item.id+'/blob/'+encodeURIComponent(info.sha||'main')+'/'+dataFile.split('/').map(encodeURIComponent).join('/'),rank:candidates.indexOf(item)});
+}catch(err){unavailable++;}
+}
+}));
+matches=matches.concat(fetched.sort((a,b)=>a.rank-b.rank)).slice(0,10);
+}catch(err){failed=true;}
+finally{
+clearTimeout(timer);
+if(id!==generation)return;
+renderMatches(matches);
+$('dataset-status').textContent=matches.length+' dataset(s) matching “'+keyword+'”. '+(failed?'Live search could not complete; only matching catalogue entries are shown. ':!matches.length?'No matching CSV, JSON or Excel datasets were found in the checked sources. Try shorter English keywords. ':'')+(unavailable?unavailable+' repositories could not be checked. ':'')+'No unrelated examples have been added.';
 }
 };
-$('clear').onclick=()=>{
-$('source-form').reset();
-document.querySelector('section[aria-labelledby="recommend-heading"]').hidden=true;
-document.querySelector('section[aria-labelledby="dataset-recommend-heading"]').hidden=true;
-$('source-keyword').setCustomValidity('');
-$('source-results').replaceChildren();
-$('source-status').textContent='Your data source website links will appear here.';
-$('rec-uci').href='https://archive.ics.uci.edu/datasets';
-$('rec-kaggle').href='https://www.kaggle.com/datasets';
-$('rec-hf').href='https://huggingface.co/datasets';
-$('rec-thai').href='https://data.go.th/dataset';
-$('source-keyword').focus();
-};
-
-
+$('source-keyword').oninput=()=>{resetResults();$('source-keyword').setCustomValidity('');};
+$('clear').onclick=()=>{$('source-form').reset();resetResults();$('source-keyword').setCustomValidity('');$('source-keyword').focus();};
 </script>
 </body></html>
