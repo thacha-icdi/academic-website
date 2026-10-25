@@ -8,6 +8,7 @@ on:
     paths:
       - 'scripts/update_internships.py'
       - 'scripts/test_internship_feed.py'
+      - 'icdi-internship/data/reviewed-sources.json'
       - '.github/workflows/update-internships.yml'
 permissions:
   contents: write
