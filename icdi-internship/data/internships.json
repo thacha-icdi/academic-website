@@ -1,44 +1,165 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-25T02:43:37.020460+00:00",
+  "generated_at": "2026-10-25T03:05:26.992942+00:00",
   "sources": [
     {
       "id": "AccorHotel",
       "company": "Accor",
       "status": "ok",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "count": 2
+    },
+    {
+      "id": "reviewed-employer-pages",
+      "company": "Additional reviewed employer pages",
+      "status": "ok",
+      "checked_at": "2026-10-25T03:04:27.118939+00:00",
+      "count": 5
     },
     {
       "id": "agoda",
       "company": "Agoda",
       "status": "ok",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "count": 0
     },
     {
       "id": "BoschGroup",
       "company": "Bosch Group",
       "status": "ok",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "count": 83
+    },
+    {
+      "id": "cloudcommerce",
+      "company": "CloudCommerce",
+      "status": "ok",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
+      "count": 15
     },
     {
       "id": "MinorInternational",
       "company": "Minor International",
       "status": "ok",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "count": 0
+    },
+    {
+      "id": "oocahq",
+      "company": "OOCA",
+      "status": "ok",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
+      "count": 1
     },
     {
       "id": "sertis",
       "company": "Sertis",
       "status": "ok",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "count": 5
     }
   ],
   "jobs": [
+    {
+      "id": "reviewed:abacus:ffdf0f40-c89c-438d-897e-dcf78355afcc",
+      "title": "[2027 Internship] Data Analyst (May-Jul 2027)",
+      "company": "ABACUS digital",
+      "location": "Bangkok, Thailand",
+      "province": "กรุงเทพมหานคร",
+      "country": "TH",
+      "url": "https://abacus-digital.careers-page.com/jobs/ffdf0f40-c89c-438d-897e-dcf78355afcc",
+      "source": "ABACUS digital — เว็บไซต์รับสมัครของบริษัท (ตรวจสอบเพิ่มเติม)",
+      "source_id": "abacus-digital",
+      "checked_at": "2026-10-25T03:04:27.118939+00:00",
+      "deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "start_month": "2027-05",
+      "end_month": "2027-07",
+      "period_label": "พ.ค.–ก.ค. 2570",
+      "employment_type": "Internship",
+      "discovery_only": true
+    },
+    {
+      "id": "reviewed:abacus:bfac2819-182c-4b6e-9233-40dfaef9fd6b",
+      "title": "[2027 Internship] Data Engineer (May-Jul 2027)",
+      "company": "ABACUS digital",
+      "location": "Bangkok, Thailand",
+      "province": "กรุงเทพมหานคร",
+      "country": "TH",
+      "url": "https://abacus-digital.careers-page.com/jobs/bfac2819-182c-4b6e-9233-40dfaef9fd6b",
+      "source": "ABACUS digital — เว็บไซต์รับสมัครของบริษัท (ตรวจสอบเพิ่มเติม)",
+      "source_id": "abacus-digital",
+      "checked_at": "2026-10-25T03:04:27.118939+00:00",
+      "deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "start_month": "2027-05",
+      "end_month": "2027-07",
+      "period_label": "พ.ค.–ก.ค. 2570",
+      "employment_type": "Internship",
+      "discovery_only": true
+    },
+    {
+      "id": "reviewed:abacus:36c5e034-8c77-4723-a507-3e961670fdc4",
+      "title": "[2027 Internship] Graphic Designer (May-Jul 2027)",
+      "company": "ABACUS digital",
+      "location": "Bangkok, Thailand",
+      "province": "กรุงเทพมหานคร",
+      "country": "TH",
+      "url": "https://abacus-digital.careers-page.com/jobs/36c5e034-8c77-4723-a507-3e961670fdc4",
+      "source": "ABACUS digital — เว็บไซต์รับสมัครของบริษัท (ตรวจสอบเพิ่มเติม)",
+      "source_id": "abacus-digital",
+      "checked_at": "2026-10-25T03:04:27.118939+00:00",
+      "deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "start_month": "2027-05",
+      "end_month": "2027-07",
+      "period_label": "พ.ค.–ก.ค. 2570",
+      "employment_type": "Internship",
+      "discovery_only": true
+    },
+    {
+      "id": "reviewed:abacus:4dd730ba-e19e-40dd-ac61-d1c61e50e4b2",
+      "title": "[2027 Internship] Quality Assurance Engineer (May-Jul 2027)",
+      "company": "ABACUS digital",
+      "location": "Bangkok, Thailand",
+      "province": "กรุงเทพมหานคร",
+      "country": "TH",
+      "url": "https://abacus-digital.careers-page.com/jobs/4dd730ba-e19e-40dd-ac61-d1c61e50e4b2",
+      "source": "ABACUS digital — เว็บไซต์รับสมัครของบริษัท (ตรวจสอบเพิ่มเติม)",
+      "source_id": "abacus-digital",
+      "checked_at": "2026-10-25T03:04:27.118939+00:00",
+      "deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "start_month": "2027-05",
+      "end_month": "2027-07",
+      "period_label": "พ.ค.–ก.ค. 2570",
+      "employment_type": "Internship",
+      "discovery_only": true
+    },
+    {
+      "id": "reviewed:abacus:fd556d2b-5d45-42c8-a4e0-3e52db0c62ca",
+      "title": "[2027 Internship] Software Engineer - Core Platform (May-Jul 2027)",
+      "company": "ABACUS digital",
+      "location": "Bangkok, Thailand",
+      "province": "กรุงเทพมหานคร",
+      "country": "TH",
+      "url": "https://abacus-digital.careers-page.com/jobs/fd556d2b-5d45-42c8-a4e0-3e52db0c62ca",
+      "source": "ABACUS digital — เว็บไซต์รับสมัครของบริษัท (ตรวจสอบเพิ่มเติม)",
+      "source_id": "abacus-digital",
+      "checked_at": "2026-10-25T03:04:27.118939+00:00",
+      "deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "start_month": "2027-05",
+      "end_month": "2027-07",
+      "period_label": "พ.ค.–ก.ค. 2570",
+      "employment_type": "Internship",
+      "discovery_only": true
+    },
     {
       "id": "smartrecruiters:AccorHotel:744000153168969",
       "title": "F&B Attendant - Internship",
@@ -49,11 +170,12 @@
       "url": "https://jobs.smartrecruiters.com/AccorHotel/744000153168969",
       "source": "Accor — smartrecruiters",
       "source_id": "AccorHotel",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:AccorHotel:744000153167559",
@@ -65,11 +187,12 @@
       "url": "https://jobs.smartrecruiters.com/AccorHotel/744000153167559",
       "source": "Accor — smartrecruiters",
       "source_id": "AccorHotel",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000142837878",
@@ -81,11 +204,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000142837878",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000096950524",
@@ -97,11 +221,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000096950524",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000103638294",
@@ -113,11 +238,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000103638294",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Full-time"
+      "employment_type": "Full-time",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000108679165",
@@ -129,11 +255,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000108679165",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Full-time"
+      "employment_type": "Full-time",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000105763984",
@@ -145,11 +272,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000105763984",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000146884899",
@@ -161,11 +289,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000146884899",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Full-time"
+      "employment_type": "Full-time",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000096950347",
@@ -177,11 +306,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000096950347",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Full-time"
+      "employment_type": "Full-time",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000116326926",
@@ -193,11 +323,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000116326926",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000095270759",
@@ -209,11 +340,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000095270759",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000105802665",
@@ -225,11 +357,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000105802665",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000094327084",
@@ -241,11 +374,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000094327084",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000119536647",
@@ -257,11 +391,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000119536647",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Full-time"
+      "employment_type": "Full-time",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000104379504",
@@ -273,11 +408,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000104379504",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Full-time"
+      "employment_type": "Full-time",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000109636694",
@@ -289,11 +425,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000109636694",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000109453254",
@@ -305,11 +442,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000109453254",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000096307357",
@@ -321,11 +459,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000096307357",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000137635958",
@@ -337,11 +476,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000137635958",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000109442105",
@@ -353,11 +493,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000109442105",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Full-time"
+      "employment_type": "Full-time",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000109442205",
@@ -369,11 +510,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000109442205",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Full-time"
+      "employment_type": "Full-time",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000126242363",
@@ -385,11 +527,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000126242363",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000105589254",
@@ -401,11 +544,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000105589254",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000149286121",
@@ -417,11 +561,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000149286121",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000155663798",
@@ -433,11 +578,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000155663798",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Full-time"
+      "employment_type": "Full-time",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000094327224",
@@ -449,11 +595,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000094327224",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000144437169",
@@ -465,11 +612,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000144437169",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Full-time"
+      "employment_type": "Full-time",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000119041257",
@@ -481,11 +629,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000119041257",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000113981536",
@@ -497,11 +646,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000113981536",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000119536396",
@@ -513,11 +663,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000119536396",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Full-time"
+      "employment_type": "Full-time",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000090751975",
@@ -529,11 +680,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000090751975",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000108953514",
@@ -545,11 +697,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000108953514",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000108951112",
@@ -561,11 +714,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000108951112",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000108952070",
@@ -577,11 +731,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000108952070",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000106986579",
@@ -593,11 +748,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000106986579",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Full-time"
+      "employment_type": "Full-time",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000099079364",
@@ -609,11 +765,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000099079364",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Full-time"
+      "employment_type": "Full-time",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000106743775",
@@ -625,11 +782,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000106743775",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000103638354",
@@ -641,11 +799,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000103638354",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Full-time"
+      "employment_type": "Full-time",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000108953440",
@@ -657,11 +816,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000108953440",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000108953664",
@@ -673,11 +833,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000108953664",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000108953894",
@@ -689,11 +850,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000108953894",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000108954254",
@@ -705,11 +867,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000108954254",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000101793142",
@@ -721,11 +884,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000101793142",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000102005504",
@@ -737,11 +901,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000102005504",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Full-time"
+      "employment_type": "Full-time",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000099079366",
@@ -753,11 +918,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000099079366",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000103637681",
@@ -769,11 +935,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000103637681",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000101797724",
@@ -785,11 +952,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000101797724",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000091999790",
@@ -801,11 +969,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000091999790",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000139201649",
@@ -817,11 +986,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000139201649",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000093625984",
@@ -833,11 +1003,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000093625984",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000113392892",
@@ -849,11 +1020,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000113392892",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000106019518",
@@ -865,11 +1037,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000106019518",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000108401379",
@@ -881,11 +1054,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000108401379",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000113980026",
@@ -897,11 +1071,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000113980026",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000072359295",
@@ -913,11 +1088,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000072359295",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000096066280",
@@ -929,11 +1105,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000096066280",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000096066484",
@@ -945,11 +1122,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000096066484",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000096950345",
@@ -961,11 +1139,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000096950345",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000105052540",
@@ -977,11 +1156,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000105052540",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Full-time"
+      "employment_type": "Full-time",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000105052049",
@@ -993,11 +1173,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000105052049",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Full-time"
+      "employment_type": "Full-time",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000142838168",
@@ -1009,11 +1190,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000142838168",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Full-time"
+      "employment_type": "Full-time",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000095267729",
@@ -1025,11 +1207,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000095267729",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000119535507",
@@ -1041,11 +1224,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000119535507",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000129100898",
@@ -1057,11 +1241,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000129100898",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Full-time"
+      "employment_type": "Full-time",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000104196714",
@@ -1073,11 +1258,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000104196714",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Full-time"
+      "employment_type": "Full-time",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000122198329",
@@ -1089,11 +1275,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000122198329",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000104194916",
@@ -1105,11 +1292,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000104194916",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Full-time"
+      "employment_type": "Full-time",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000105586047",
@@ -1121,11 +1309,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000105586047",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Full-time"
+      "employment_type": "Full-time",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000092208884",
@@ -1137,11 +1326,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000092208884",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000095016494",
@@ -1153,11 +1343,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000095016494",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000095016406",
@@ -1169,11 +1360,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000095016406",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000106768225",
@@ -1185,11 +1377,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000106768225",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000106011200",
@@ -1201,11 +1394,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000106011200",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000103641215",
@@ -1217,11 +1411,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000103641215",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000126044581",
@@ -1233,11 +1428,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000126044581",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000146427800",
@@ -1249,11 +1445,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000146427800",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000095016504",
@@ -1265,11 +1462,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000095016504",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Full-time"
+      "employment_type": "Full-time",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000106788838",
@@ -1281,11 +1479,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000106788838",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Full-time"
+      "employment_type": "Full-time",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000096950574",
@@ -1297,11 +1496,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000096950574",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Full-time"
+      "employment_type": "Full-time",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000101770096",
@@ -1313,11 +1513,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000101770096",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000153089795",
@@ -1329,11 +1530,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000153089795",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000156222849",
@@ -1345,11 +1547,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000156222849",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000154936021",
@@ -1361,11 +1564,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000154936021",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Intern"
+      "employment_type": "Intern",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000144682388",
@@ -1377,11 +1581,12 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000144682388",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Full-time"
+      "employment_type": "Full-time",
+      "discovery_only": false
     },
     {
       "id": "smartrecruiters:BoschGroup:744000146884669",
@@ -1393,11 +1598,284 @@
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000146884669",
       "source": "Bosch Group — smartrecruiters",
       "source_id": "BoschGroup",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Full-time"
+      "employment_type": "Full-time",
+      "discovery_only": false
+    },
+    {
+      "id": "breezy:cloudcommerce:0529d3108fce",
+      "title": "Accounting Intern",
+      "company": "CloudCommerce",
+      "location": "Bangkok, TH",
+      "province": "กรุงเทพมหานคร",
+      "country": "TH",
+      "url": "https://cloudcommerce.breezy.hr/p/0529d3108fce-accounting-intern",
+      "source": "CloudCommerce — breezy",
+      "source_id": "cloudcommerce",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
+      "deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "employment_type": "Internship",
+      "discovery_only": true
+    },
+    {
+      "id": "breezy:cloudcommerce:d9b5895d5534",
+      "title": "Business Development Intern",
+      "company": "CloudCommerce",
+      "location": "Bangkok, TH",
+      "province": "กรุงเทพมหานคร",
+      "country": "TH",
+      "url": "https://cloudcommerce.breezy.hr/p/d9b5895d5534-business-development-intern",
+      "source": "CloudCommerce — breezy",
+      "source_id": "cloudcommerce",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
+      "deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "employment_type": "Internship",
+      "discovery_only": true
+    },
+    {
+      "id": "breezy:cloudcommerce:a2cce0f7d3e3",
+      "title": "Customer Service Intern",
+      "company": "CloudCommerce",
+      "location": "Bangkok, TH",
+      "province": "กรุงเทพมหานคร",
+      "country": "TH",
+      "url": "https://cloudcommerce.breezy.hr/p/a2cce0f7d3e3-customer-service-intern",
+      "source": "CloudCommerce — breezy",
+      "source_id": "cloudcommerce",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
+      "deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "employment_type": "Internship",
+      "discovery_only": true
+    },
+    {
+      "id": "breezy:cloudcommerce:a2b0045d1d09",
+      "title": "E-Commerce Intern",
+      "company": "CloudCommerce",
+      "location": "Bangkok, TH",
+      "province": "กรุงเทพมหานคร",
+      "country": "TH",
+      "url": "https://cloudcommerce.breezy.hr/p/a2b0045d1d09-e-commerce-intern",
+      "source": "CloudCommerce — breezy",
+      "source_id": "cloudcommerce",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
+      "deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "employment_type": "Internship",
+      "discovery_only": true
+    },
+    {
+      "id": "breezy:cloudcommerce:a60a3a8e3173",
+      "title": "Fullstack Developer Intern",
+      "company": "CloudCommerce",
+      "location": "Bangkok, TH",
+      "province": "กรุงเทพมหานคร",
+      "country": "TH",
+      "url": "https://cloudcommerce.breezy.hr/p/a60a3a8e3173-fullstack-developer-intern",
+      "source": "CloudCommerce — breezy",
+      "source_id": "cloudcommerce",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
+      "deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "employment_type": "Internship",
+      "discovery_only": true
+    },
+    {
+      "id": "breezy:cloudcommerce:f6c4d166741d",
+      "title": "Graphic Design Intern",
+      "company": "CloudCommerce",
+      "location": "Bangkok, TH",
+      "province": "กรุงเทพมหานคร",
+      "country": "TH",
+      "url": "https://cloudcommerce.breezy.hr/p/f6c4d166741d-graphic-design-intern",
+      "source": "CloudCommerce — breezy",
+      "source_id": "cloudcommerce",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
+      "deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "employment_type": "Internship",
+      "discovery_only": true
+    },
+    {
+      "id": "breezy:cloudcommerce:1bd1ee3c4f69",
+      "title": "Graphic Design Intern [Cloudmall - Tuff]",
+      "company": "CloudCommerce",
+      "location": "Bangkok, TH",
+      "province": "กรุงเทพมหานคร",
+      "country": "TH",
+      "url": "https://cloudcommerce.breezy.hr/p/1bd1ee3c4f69-graphic-design-intern-cloudmall-tuff",
+      "source": "CloudCommerce — breezy",
+      "source_id": "cloudcommerce",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
+      "deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "employment_type": "Internship",
+      "discovery_only": true
+    },
+    {
+      "id": "breezy:cloudcommerce:e9d4fe3d5b08",
+      "title": "HR Intern - Recruitment",
+      "company": "CloudCommerce",
+      "location": "Bangkok, TH",
+      "province": "กรุงเทพมหานคร",
+      "country": "TH",
+      "url": "https://cloudcommerce.breezy.hr/p/e9d4fe3d5b08-hr-intern-recruitment",
+      "source": "CloudCommerce — breezy",
+      "source_id": "cloudcommerce",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
+      "deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "employment_type": "Internship",
+      "discovery_only": true
+    },
+    {
+      "id": "breezy:cloudcommerce:262d77607d69",
+      "title": "Influencer Coordinator Intern (Kollab)",
+      "company": "CloudCommerce",
+      "location": "Bangkok, TH",
+      "province": "กรุงเทพมหานคร",
+      "country": "TH",
+      "url": "https://cloudcommerce.breezy.hr/p/262d77607d69-influencer-coordinator-intern-kollab",
+      "source": "CloudCommerce — breezy",
+      "source_id": "cloudcommerce",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
+      "deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "employment_type": "Internship",
+      "discovery_only": true
+    },
+    {
+      "id": "breezy:cloudcommerce:b324fc1b138b",
+      "title": "Marketing Intern",
+      "company": "CloudCommerce",
+      "location": "Bangkok, TH",
+      "province": "กรุงเทพมหานคร",
+      "country": "TH",
+      "url": "https://cloudcommerce.breezy.hr/p/b324fc1b138b-marketing-intern",
+      "source": "CloudCommerce — breezy",
+      "source_id": "cloudcommerce",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
+      "deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "employment_type": "Internship",
+      "discovery_only": true
+    },
+    {
+      "id": "breezy:cloudcommerce:0ed4dbd3befe",
+      "title": "Operation Customer Service Intern (ประจำคลัง)",
+      "company": "CloudCommerce",
+      "location": "Nonthaburi, TH",
+      "province": "นนทบุรี",
+      "country": "TH",
+      "url": "https://cloudcommerce.breezy.hr/p/0ed4dbd3befe-operation-customer-service-intern-pracchamkhlang",
+      "source": "CloudCommerce — breezy",
+      "source_id": "cloudcommerce",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
+      "deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "employment_type": "Internship",
+      "discovery_only": true
+    },
+    {
+      "id": "breezy:cloudcommerce:32e68d415342",
+      "title": "Retail Intern",
+      "company": "CloudCommerce",
+      "location": "Bangkok, TH",
+      "province": "กรุงเทพมหานคร",
+      "country": "TH",
+      "url": "https://cloudcommerce.breezy.hr/p/32e68d415342-retail-intern",
+      "source": "CloudCommerce — breezy",
+      "source_id": "cloudcommerce",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
+      "deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "employment_type": "Internship",
+      "discovery_only": true
+    },
+    {
+      "id": "breezy:cloudcommerce:d53527ec31b8",
+      "title": "Software Tester Intern",
+      "company": "CloudCommerce",
+      "location": "Bangkok, TH",
+      "province": "กรุงเทพมหานคร",
+      "country": "TH",
+      "url": "https://cloudcommerce.breezy.hr/p/d53527ec31b8-software-tester-intern",
+      "source": "CloudCommerce — breezy",
+      "source_id": "cloudcommerce",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
+      "deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "employment_type": "Internship",
+      "discovery_only": true
+    },
+    {
+      "id": "breezy:cloudcommerce:d465584bd786",
+      "title": "Video Editor Intern",
+      "company": "CloudCommerce",
+      "location": "Bangkok, TH",
+      "province": "กรุงเทพมหานคร",
+      "country": "TH",
+      "url": "https://cloudcommerce.breezy.hr/p/d465584bd786-video-editor-intern",
+      "source": "CloudCommerce — breezy",
+      "source_id": "cloudcommerce",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
+      "deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "employment_type": "Internship",
+      "discovery_only": true
+    },
+    {
+      "id": "breezy:cloudcommerce:7d0d2d4ac758",
+      "title": "Warehouse Intern",
+      "company": "CloudCommerce",
+      "location": "Nonthaburi, TH",
+      "province": "นนทบุรี",
+      "country": "TH",
+      "url": "https://cloudcommerce.breezy.hr/p/7d0d2d4ac758-warehouse-intern",
+      "source": "CloudCommerce — breezy",
+      "source_id": "cloudcommerce",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
+      "deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "employment_type": "Internship",
+      "discovery_only": true
+    },
+    {
+      "id": "workable:oocahq:31A7081C8C",
+      "title": "Data Analyst Internship (Marketing Team)",
+      "company": "OOCA",
+      "location": "Bangkok, Bangkok, Thailand",
+      "province": "กรุงเทพมหานคร",
+      "country": "TH",
+      "url": "https://apply.workable.com/j/31A7081C8C",
+      "source": "OOCA — workable",
+      "source_id": "oocahq",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
+      "deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "employment_type": "Internship",
+      "discovery_only": true
     },
     {
       "id": "greenhouse:sertis:7847750002",
@@ -1409,11 +1887,12 @@
       "url": "https://job-boards.greenhouse.io/sertis/jobs/7847750002",
       "source": "Sertis — greenhouse",
       "source_id": "sertis",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Internship"
+      "employment_type": "Internship",
+      "discovery_only": false
     },
     {
       "id": "greenhouse:sertis:8836384002",
@@ -1425,11 +1904,12 @@
       "url": "https://job-boards.greenhouse.io/sertis/jobs/8836384002",
       "source": "Sertis — greenhouse",
       "source_id": "sertis",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Internship"
+      "employment_type": "Internship",
+      "discovery_only": false
     },
     {
       "id": "greenhouse:sertis:8844014002",
@@ -1441,11 +1921,12 @@
       "url": "https://job-boards.greenhouse.io/sertis/jobs/8844014002",
       "source": "Sertis — greenhouse",
       "source_id": "sertis",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Internship"
+      "employment_type": "Internship",
+      "discovery_only": false
     },
     {
       "id": "greenhouse:sertis:8843973002",
@@ -1457,11 +1938,12 @@
       "url": "https://job-boards.greenhouse.io/sertis/jobs/8843973002",
       "source": "Sertis — greenhouse",
       "source_id": "sertis",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Internship"
+      "employment_type": "Internship",
+      "discovery_only": false
     },
     {
       "id": "greenhouse:sertis:8857527002",
@@ -1473,11 +1955,12 @@
       "url": "https://job-boards.greenhouse.io/sertis/jobs/8857527002",
       "source": "Sertis — greenhouse",
       "source_id": "sertis",
-      "checked_at": "2026-10-25T02:43:37.020460+00:00",
+      "checked_at": "2026-10-25T03:05:26.992942+00:00",
       "deadline": null,
       "start_date": null,
       "end_date": null,
-      "employment_type": "Internship"
+      "employment_type": "Internship",
+      "discovery_only": false
     }
   ]
 }
