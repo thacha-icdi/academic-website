@@ -164,4 +164,21 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-print-lett
  const w=window.open('','_blank');if(!w)return message('กรุณาอนุญาตหน้าต่างพิมพ์');
  w.document.write('<!doctype html><html lang="th"><meta charset="utf-8"><title>รายงานขอออกจดหมายฝึกงาน</title><style>body{font:16px/1.6 sans-serif;margin:40px}td,th{border:1px solid #ccc;padding:10px;text-align:left}table{border-collapse:collapse;width:100%}</style><h2>ICDI-CMU — รายงานขอออกจดหมายฝึกงาน</h2><p>เลขที่คำขอ: '+esc(x.id)+'<br>วันที่ส่ง: '+esc(x.created_at)+'</p><table>'+[["student_name","ชื่อ–นามสกุล"],["student_number","รหัสนักศึกษา"],["program","หลักสูตร / สาขา"],["phone","โทรศัพท์นักศึกษา","tel"],["company","ชื่อบริษัท / หน่วยงาน"],["position","ตำแหน่งฝึกงาน"],["province","จังหวัด"],["address","ที่อยู่บริษัทสำหรับออกจดหมาย"],["recipient_name","ชื่อผู้รับจดหมาย"],["recipient_position","ตำแหน่งผู้รับจดหมาย"],["contact_name","ชื่อผู้ประสานงานบริษัท"],["contact_email","อีเมลบริษัท","email"],["contact_phone","โทรศัพท์บริษัท","tel"],["start_date","วันเริ่มฝึกงาน","date"],["end_date","วันสิ้นสุดฝึกงาน","date"],["source_url","ลิงก์ประกาศ (ถ้ามี)","url"],["notes","หมายเหตุ (ถ้ามี)"]].map(([n,l])=>'<tr><th>'+l+'</th><td>'+esc(x[n])+'</td></tr>').join('')+'</table><p>เอกสารรายงานประกอบการออกจดหมาย ยังไม่ใช่จดหมายทางการของมหาวิทยาลัย</p></html>');w.document.close();w.focus();w.print();
 });
+
+let internshipSearchSubmitted=false;
+const renderJobsAfterSubmit=renderJobs,renderRealAfterSubmit=renderRealResults;
+function clearInternshipResults(){
+ $('#realresults').replaceChildren();$('#joblist').replaceChildren();
+ $('#realcount').textContent='กรอกเงื่อนไขแล้วกดค้นหาฝึกงานเพื่อแสดงรายการ';
+}
+renderJobs=function(){if(!internshipSearchSubmitted)return clearInternshipResults();return renderJobsAfterSubmit()};
+renderRealResults=function(){if(!internshipSearchSubmitted)return clearInternshipResults();return renderRealAfterSubmit()};
+const submitInternshipSearch=$('#findreal').onclick;
+$('#findreal').onclick=()=>{if($('#jobstart').value&&$('#jobend').value&&$('#jobend').value<$('#jobstart').value){internshipSearchSubmitted=false;clearInternshipResults();return message('วันสิ้นสุดต้องไม่ก่อนวันเริ่มฝึกงาน')}internshipSearchSubmitted=true;return submitInternshipSearch()};
+const resetInternshipSearch=$('#clearreal').onclick;
+$('#clearreal').onclick=()=>{internshipSearchSubmitted=false;resetInternshipSearch();clearInternshipResults();message('')};
+for(const id of ['search','jobprovince','jobstart','jobend']){
+ $('#'+id).addEventListener(id==='search'?'input':'change',()=>{internshipSearchSubmitted=false;clearInternshipResults()},{capture:true});
+}
+clearInternshipResults();
 </script></body></html>
