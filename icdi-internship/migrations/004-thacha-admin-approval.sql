@@ -20,7 +20,7 @@ reviewed_at timestamptz not null default now());
 alter table public.admin_approval_history enable row level security;
 revoke all on public.admin_approval_history from anon,authenticated;
 create or replace function public.list_admin_requests()
-returns table(user_id uuid,email text,full_name text,position text,department text,phone text,email_verified boolean,request_status text)
+returns table(user_id uuid,email text,full_name text,"position" text,department text,phone text,email_verified boolean,request_status text)
 language plpgsql security definer set search_path='' as $$
 begin
 if not public.can_approve_admin() then raise exception 'Only Thacha Lawanna may approve Admin requests'; end if;
