@@ -1,5 +1,5 @@
 import unittest
-from update_internships import normalize, is_internship, province_for, reviewed_jobs
+from update_internships import normalize, is_internship, province_for, reviewed_jobs, jobpostings_from_html
 
 class InternshipFeedTests(unittest.TestCase):
     def test_internship_evidence(self):
@@ -62,6 +62,18 @@ class InternshipFeedTests(unittest.TestCase):
         self.assertEqual(len(reviewed_jobs([record], '2026-10-26T00:00:00+00:00')), 1)
         self.assertEqual(reviewed_jobs([record], '2026-11-02T00:00:00+00:00'), [])
         self.assertEqual(record['checked_at'], '2026-10-25T00:00:00+00:00')
+
+    def test_employer_schema_requires_thai_location_and_active_deadline(self):
+        page = '<script type="application/ld+json">{"@graph":[{"@type":"Organization"},{"@type":"JobPosting","title":"UX/UI Designer Internship","jobLocation":{"address":{"addressCountry":"TH","addressLocality":"Bangkok"}},"employmentType":"INTERN"}]}</script>'
+        rows = jobpostings_from_html(page)
+        self.assertEqual(len(rows), 1)
+        source = ('https://company.test/job', 'Company', 'jobposting')
+        self.assertIsNotNone(normalize(source, rows[0], '2026-10-25T00:00:00+00:00'))
+        rows[0]['jobLocation']['address']['addressCountry'] = 'VN'
+        self.assertIsNone(normalize(source, rows[0], '2026-10-25T00:00:00+00:00'))
+        rows[0]['jobLocation']['address']['addressCountry'] = 'TH'
+        rows[0]['validThrough'] = '2026-09-01'
+        self.assertIsNone(normalize(source, rows[0], '2026-10-25T00:00:00+00:00'))
 
 if __name__ == '__main__':
     unittest.main()
