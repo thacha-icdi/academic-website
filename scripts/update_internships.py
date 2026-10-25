@@ -19,6 +19,9 @@ SOURCES = [
     ('AccorHotel', 'Accor', 'smartrecruiters'),
     ('oocahq', 'OOCA', 'workable'),
     ('cloudcommerce', 'CloudCommerce', 'breezy'),
+    ('dsgpay', 'DSGPay', 'employer_html'),
+    ('https://mercil.co.th/careers/ux-ui-designer-internship', 'MERCIL', 'jobposting'),
+    ('https://sales-mind.ai/en/careers/ai-business-analyst-intern', 'SalesMind AI', 'jobposting'),
 ]
 PROVINCES = {
     'bangkok': 'กรุงเทพมหานคร', 'bangkok metropolis': 'กรุงเทพมหานคร',
@@ -58,6 +61,30 @@ def fetch_json(url):
     req = urllib.request.Request(url, headers={'User-Agent': 'ICDI-Internship-Feed/1.0', 'Accept': 'application/json'})
     with urllib.request.urlopen(req, timeout=25) as response:
         return json.load(response)
+
+def fetch_html(url):
+    req = urllib.request.Request(url, headers={'User-Agent': 'ICDI-Internship-Feed/1.0'})
+    with urllib.request.urlopen(req, timeout=25) as response:
+        return response.read().decode('utf-8')
+
+def jobpostings_from_html(page):
+    postings = []
+    def walk(value):
+        if isinstance(value, dict):
+            if value.get('@type') == 'JobPosting':
+                postings.append(value)
+            else:
+                for child in value.values():
+                    walk(child)
+        elif isinstance(value, list):
+            for child in value:
+                walk(child)
+    for script in re.findall(r'<script[^>]*application/ld\+json[^>]*>(.*?)</script>', page, re.S | re.I):
+        try:
+            walk(json.loads(script))
+        except ValueError:
+            continue
+    return postings
 
 def normalize(source, row, checked_at):
     slug, company, kind = source
@@ -101,6 +128,36 @@ def normalize(source, row, checked_at):
         employment = 'Internship' if row.get('department') == 'Internship' else ''
         url = row.get('url', '')
         deadline = None
+    elif kind == 'employer_html':
+        title = plain(row.get('title'))
+        location = plain(row.get('location'))
+        if not re.search(r'Chiang Mai,\s*Thailand', location, re.I):
+            return None
+        region = 'Chiang Mai'
+        employment = ''
+        url = row.get('url', '')
+        deadline = None
+    elif kind == 'jobposting':
+        title = plain(row.get('title'))
+        loc = row.get('jobLocation') or {}
+        if isinstance(loc, list):
+            loc = next((item for item in loc if (item.get('address') or {}).get('addressCountry') in ('TH', 'Thailand')), {})
+        address = loc.get('address') or {}
+        country = address.get('addressCountry') or ''
+        if isinstance(country, dict):
+            country = country.get('name', '')
+        locality = plain(address.get('addressLocality'))
+        if str(country).lower() not in ('th', 'thailand'):
+            if country or not re.search(r'\bBangkok\b|\bChiang Mai\b', locality, re.I):
+                return None
+        location = ', '.join(filter(None, [locality, address.get('addressRegion'), 'Thailand']))
+        region = address.get('addressRegion', '')
+        employment = row.get('employmentType', '')
+        if isinstance(employment, list):
+            employment = 'Internship' if any(str(t).lower() in ('intern', 'internship') for t in employment) else ''
+        url = row.get('url') or slug
+        deadline = row.get('validThrough')
+        row = {**row, 'id': row.get('@id') or url}
     else:
         return None
     if not is_internship(title, employment):
@@ -115,11 +172,11 @@ def normalize(source, row, checked_at):
     return {
         'id': kind + ':' + slug + ':' + str(row['id']), 'title': title, 'company': company,
         'location': location, 'province': province_for(location, region), 'country': 'TH',
-        'url': url, 'source': company + ' — ' + kind,
+        'url': url, 'source': company + ' — ประกาศรับสมัครของบริษัท',
         'source_id': slug, 'checked_at': checked_at,
         'deadline': deadline, 'start_date': None, 'end_date': None,
         'employment_type': employment or 'Internship',
-        'discovery_only': kind in ('workable', 'breezy'),
+        'discovery_only': kind in ('workable', 'breezy', 'employer_html', 'jobposting'),
     }
 
 def collect_source(source, checked_at):
@@ -138,6 +195,29 @@ def collect_source(source, checked_at):
         rows = fetch_json('https://' + slug + '.breezy.hr/json')
         if not isinstance(rows, list):
             raise ValueError('Invalid Breezy response')
+    elif kind == 'employer_html':
+        index = fetch_html('https://www.dsgpay.com/internship')
+        links = set(re.findall(r'href=[\"\x27]((?:https://www\.dsgpay\.com)?/jobs/[^\"\x27?#]+)', index))
+        if not links:
+            raise ValueError('No employer job links in internship index')
+        rows = []
+        for link in sorted(links):
+            url = urllib.parse.urljoin('https://www.dsgpay.com', link)
+            page = fetch_html(url)
+            headings = re.findall(r'<h1[^>]*>(.*?)</h1>', page, re.S | re.I)
+            title = plain(headings[0]) if headings else ''
+            if not is_internship(title) or title.lower() == 'internship opportunities':
+                continue
+            if not re.search(r'Chiang Mai,\s*Thailand', plain(page), re.I):
+                continue
+            if re.search(r'position (?:is )?filled|no longer accepting applications|job (?:has )?expired', plain(page), re.I):
+                continue
+            rows.append({'id': url.rsplit('/', 1)[-1], 'title': title,
+                         'location': 'Chiang Mai, Thailand', 'url': url})
+    elif kind == 'jobposting':
+        rows = jobpostings_from_html(fetch_html(slug))
+        if not rows:
+            raise ValueError('No structured JobPosting on employer page')
     else:
         rows = []
         # Fetch all Thai postings; keyword searches can also match "international".
