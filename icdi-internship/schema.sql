@@ -43,7 +43,7 @@ alter table public.applications enable row level security;
 alter table public.work_logs enable row level security;
 create policy profile_read on public.profiles for select to authenticated using(id=auth.uid() or public.is_staff());
 create policy profile_create on public.profiles for insert to authenticated with check(id=auth.uid());
-create policy profile_edit on public.profiles for update to authenticated using(id=auth.uid()) with check(id=auth.uid());
+create policy profile_edit on public.profiles for update to authenticated using(id=auth.uid() or public.is_staff()) with check(id=auth.uid() or public.is_staff());
 create policy jobs_read on public.opportunities for select to anon,authenticated using(active=true);
 create policy jobs_staff on public.opportunities for all to authenticated using(public.is_staff()) with check(public.is_staff());
 create policy application_read on public.applications for select to authenticated using(student_id=auth.uid() or public.is_staff());
