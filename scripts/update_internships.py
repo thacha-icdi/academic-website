@@ -17,6 +17,8 @@ SOURCES = [
     ('BoschGroup', 'Bosch Group', 'smartrecruiters'),
     ('MinorInternational', 'Minor International', 'smartrecruiters'),
     ('AccorHotel', 'Accor', 'smartrecruiters'),
+    ('oocahq', 'OOCA', 'workable'),
+    ('cloudcommerce', 'CloudCommerce', 'breezy'),
 ]
 PROVINCES = {
     'bangkok': 'กรุงเทพมหานคร', 'bangkok metropolis': 'กรุงเทพมหานคร',
@@ -69,7 +71,7 @@ def normalize(source, row, checked_at):
         region = ''
         url = row.get('absolute_url', '')
         deadline = row.get('application_deadline')
-    else:
+    elif kind == 'smartrecruiters':
         loc = row.get('location') or {}
         if str(loc.get('country', '')).lower() != 'th':
             return None
@@ -79,6 +81,28 @@ def normalize(source, row, checked_at):
         employment = (row.get('typeOfEmployment') or {}).get('label', '')
         url = row.get('postingUrl') or 'https://jobs.smartrecruiters.com/' + slug + '/' + str(row.get('id', ''))
         deadline = None
+    elif kind == 'workable':
+        if str(row.get('country', '')).lower() != 'thailand':
+            return None
+        title = plain(row.get('title'))
+        location = ', '.join(filter(None, [row.get('city'), row.get('state'), row.get('country')]))
+        region = row.get('state', '')
+        employment = row.get('experience', '')
+        url = row.get('url', '')
+        deadline = None
+        row = {**row, 'id': row.get('shortcode')}
+    elif kind == 'breezy':
+        loc = row.get('location') or {}
+        if str((loc.get('country') or {}).get('id', '')).upper() != 'TH':
+            return None
+        title = plain(row.get('name'))
+        location = plain(loc.get('name') or (loc.get('city', '') + ', Thailand'))
+        region = loc.get('city', '')
+        employment = 'Internship' if row.get('department') == 'Internship' else ''
+        url = row.get('url', '')
+        deadline = None
+    else:
+        return None
     if not is_internship(title, employment):
         return None
     years = [int(y) for y in re.findall(r'\b20\d{2}\b', title)]
@@ -95,6 +119,7 @@ def normalize(source, row, checked_at):
         'source_id': slug, 'checked_at': checked_at,
         'deadline': deadline, 'start_date': None, 'end_date': None,
         'employment_type': employment or 'Internship',
+        'discovery_only': kind in ('workable', 'breezy'),
     }
 
 def collect_source(source, checked_at):
@@ -104,6 +129,15 @@ def collect_source(source, checked_at):
         if not isinstance(payload.get('jobs'), list):
             raise ValueError('Invalid Greenhouse response')
         rows = payload['jobs']
+    elif kind == 'workable':
+        payload = fetch_json('https://apply.workable.com/api/v1/widget/accounts/' + slug)
+        if not isinstance(payload.get('jobs'), list):
+            raise ValueError('Invalid Workable response')
+        rows = payload['jobs']
+    elif kind == 'breezy':
+        rows = fetch_json('https://' + slug + '.breezy.hr/json')
+        if not isinstance(rows, list):
+            raise ValueError('Invalid Breezy response')
     else:
         rows = []
         # Fetch all Thai postings; keyword searches can also match "international".
@@ -121,6 +155,24 @@ def collect_source(source, checked_at):
     jobs = [j for row in rows if (j := normalize(source, row, checked_at))]
     return {'id': slug, 'company': company, 'status': 'ok', 'checked_at': checked_at,
             'count': len(jobs)}, jobs
+
+def reviewed_jobs(records, checked_at):
+    """Human-reviewed employer pages expire; scheduled runs never renew their dates."""
+    result = []
+    now = dt.datetime.fromisoformat(checked_at)
+    for record in records:
+        try:
+            age = now - dt.datetime.fromisoformat(record['checked_at'])
+            if not dt.timedelta(0) <= age < dt.timedelta(days=7):
+                continue
+            if record.get('country') != 'TH' or not is_internship(record.get('title', '')):
+                continue
+            if not record.get('url', '').startswith('https://'):
+                continue
+            result.append({**record, 'discovery_only': True})
+        except (KeyError, ValueError, TypeError):
+            continue
+    return result
 
 def main():
     checked_at = dt.datetime.now(dt.timezone.utc).isoformat()
@@ -141,6 +193,14 @@ def main():
                 print(source[1], 'unavailable:', type(error).__name__, file=sys.stderr)
     if not any(s['status'] == 'ok' for s in statuses):
         raise RuntimeError('Every source failed; keep previous snapshot, frontend hides snapshots older than seven days')
+    reviewed_path = ROOT / 'icdi-internship/data/reviewed-sources.json'
+    if reviewed_path.exists():
+        reviewed = reviewed_jobs(json.loads(reviewed_path.read_text(encoding='utf-8')), checked_at)
+        jobs.extend(reviewed)
+        statuses.append({'id': 'reviewed-employer-pages', 'company': 'Additional reviewed employer pages',
+                         'status': 'ok' if reviewed else 'unavailable',
+                         'checked_at': max((j['checked_at'] for j in reviewed), default=None),
+                         'count': len(reviewed)})
     unique = {j['url']: j for j in jobs}
     result = {'schema_version': 1, 'generated_at': checked_at,
               'sources': sorted(statuses, key=lambda x: x['company']),
