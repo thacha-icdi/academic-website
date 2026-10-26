@@ -10,6 +10,7 @@ class MatchingTests(unittest.TestCase):
 
     def test_senior_title_never_mislabeled_as_entry(self):
         self.assertEqual(level('Senior Associate Data Analyst'), 'experienced')
+        self.assertEqual(level('Staff Software Engineer'), 'experienced')
         self.assertEqual(level('Junior Data Analyst'), 'entry')
         self.assertEqual(level('Data Analyst'), 'unspecified')
         self.assertEqual(level('Analyst', {'id': 'entry_level'}), 'entry')
@@ -17,6 +18,8 @@ class MatchingTests(unittest.TestCase):
     def test_unrelated_roles_are_not_promoted_to_candidates(self):
         self.assertEqual(categorize('Executive Chef'), [])
         self.assertEqual(categorize('Luxury Hotel Chef'), [])
+        self.assertEqual(categorize('People Help Desk Analyst'), [])
+        self.assertEqual(categorize('Purchasing Project Management'), [])
         self.assertIn(17, categorize('Junior Data Analyst'))
         self.assertIn(0, categorize('Business Analyst'))
 
