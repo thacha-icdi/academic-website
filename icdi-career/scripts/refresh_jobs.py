@@ -22,12 +22,12 @@ def fetch(url):
 
 
 def categorize(title):
-    return [i for i, role in enumerate(ROLES) if any((bool(re.search(r'\b' + re.escape(keyword) + r'\b', title, re.I)) if len(keyword) <= 3 and keyword.isascii() and keyword.isalpha() else keyword.lower() in title.lower()) for keyword in role[3])]
+    return [i for i, role in enumerate(ROLES) if not (i == 21 and re.search(r'\bpeople\b|human resources', title, re.I)) and any((bool(re.search(r'\b' + re.escape(keyword) + r'\b', title, re.I)) if len(keyword) <= 3 and keyword.isascii() and keyword.isalpha() else keyword.lower() in title.lower()) for keyword in role[3])]
 
 
 def level(title, experience=None):
     label = ((experience or {}).get('id', '') + ' ' + (experience or {}).get('label', '')).lower()
-    if re.search(r'\b(senior|sr\.?|lead|head|director|manager|principal|supervisor)\b', title, re.I):
+    if re.search(r'\b(senior|sr\.?|lead|head|director|manager|principal|supervisor)\b|\bstaff\s+(software|engineer|data)', title, re.I):
         return 'experienced'
     if re.search(r'\b(junior|jr\.?|graduate|entry|internship|intern|trainee|associate)\b', title, re.I) or 'entry_level' in label or 'internship' in label:
         return 'entry'
