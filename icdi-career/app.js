@@ -97,3 +97,5 @@ document.querySelectorAll('[data-career-tool]').forEach(link=>link.addEventListe
   else{window.scrollTo({top:0,behavior:'smooth'});const field=target==='resume'?$('#resumeForm [name="full_name"]'):$('#portfolioForm [name="title"]');field?.focus({preventScroll:true});}
  });
 }));
+
+$('#clearSearch').onclick=()=>{$('#searchForm').reset();$('#ageFilter').value='30';['#entryOnly','#savedOnly','#includeIntern','#includeSenior'].forEach(s=>$(s).checked=false);category='';$$('[data-category]').forEach(b=>b.classList.toggle('active',b.dataset.category==='All'));hasSearchedJobs=false;pageSize=18;renderJobs();$('#query').focus();};
