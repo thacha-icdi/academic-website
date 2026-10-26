@@ -536,7 +536,7 @@ meta[2].value=new Date().toLocaleDateString('en-CA');
 function save(){try{localStorage.setItem(key,JSON.stringify({fields:fields.map(x=>x.value),meta:meta.map(x=>x.value)}));}catch{status.textContent='บันทึกไม่ได้ กรุณา Download BMC เพื่อเก็บร่าง';}}
 function openValue(){fields[3].hidden=false;document.getElementById('bmc-generate').hidden=false;document.getElementById('bmc-value-hint').hidden=true;toggle.setAttribute('aria-expanded','true');fields[3].focus();}
 toggle.onclick=openValue;
-document.getElementById('bmc-open').onclick=()=>d.showModal();document.getElementById('bmc-close').onclick=()=>d.close();
+document.getElementById('bmc-open').onclick=()=>d.showModal();document.getElementById('bmc-close').onclick=()=>d.close();if(location.hash==='#bmc'){requestAnimationFrame(()=>d.showModal());}
 try{const data=JSON.parse(localStorage.getItem(key)||'null');if(data){fields.forEach((x,i)=>x.value=typeof data.fields?.[i]==='string'?data.fields[i]:'');meta.forEach((x,i)=>{if(typeof data.meta?.[i]==='string')x.value=data.meta[i];});}else{const old=JSON.parse(localStorage.getItem('din-lab-bmc-v1')||'[]');fields.forEach((x,i)=>x.value=typeof old[i+1]==='string'?old[i+1]:'');meta[0].value=old[0]||'';}if(fields[3].value){fields[3].hidden=false;document.getElementById('bmc-generate').hidden=false;document.getElementById('bmc-value-hint').hidden=true;toggle.setAttribute('aria-expanded','true');}}catch{}
 [...fields,...meta].forEach(x=>x.addEventListener('input',save));
 function generate(){
