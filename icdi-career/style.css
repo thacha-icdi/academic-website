@@ -42,3 +42,6 @@ header{background:#2c3c8d;border-color:#2c3c8d;color:#fff}header nav a{color:#ff
 
 /* Dark purple career introduction */
 .hero{background:#291342;border-color:#402459;color:#fff}.hero h1{color:#fff}.hero h1 em{color:#dcc2ff}.hero .eyebrow,.hero p,.heroFoot span{color:#ded0ea}.heroFoot{border-color:#654679;color:#fff}.hero .textlink{color:#f1e6ff}.heroActions .lime{background:#e3ccff;color:#291342}.hero .pathCard{background:#3b2054;border-color:#624378;color:#fff}.hero .cardTop{color:#ddcbe9;border-color:#735389}.hero .pathRow{border-color:#624378}.hero .pathRow h3{color:#fff}.hero .pathRow p,.hero .pathBottom{color:#ded0ea}.hero .pathRow>span{background:#57346f;color:#eee0ff}.hero .pathCTA,.hero .pathArrow{color:#e4c9ff}.hero .pathArrow{background:transparent}.hero .pathAction:hover,.hero .pathAction:focus-visible{background:#503064}.hero .pathAction:focus-visible{outline-color:#e1bbff}.hero .dot{background:#d9b4ff}
+
+/* Golden search panel */
+.searchBar{background:#edc65a;border-color:#d5aa35}.searchBar label{color:#3e3011}.searchBar input,.searchBar select{background:#fffdf5;border-color:#c5a248;color:#30280f}.searchBar input::placeholder{color:#74623a}.searchBar #clearSearch{background:#fff9e7;border-color:#98751c;color:#46330b}
