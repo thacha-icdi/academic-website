@@ -78,3 +78,14 @@ async function renderJobManager(el){const data=await db('career_jobs?select=*&or
 async function fetchGreenhouse(board,company){try{const data=await fetchJSON('https://boards-api.greenhouse.io/v1/boards/'+board+'/jobs');if(!Array.isArray(data.jobs))throw Error('Invalid Greenhouse response');const found=data.jobs.map(p=>{const loc=p.location?.name||'';if(!/\bthailand\b/i.test(loc))return null;const ids=categorize(p.title||'');if(!ids.length||!safeURL(p.absolute_url))return null;return{id:'greenhouse:'+board+':'+p.id,title:p.title,company,company_id:'greenhouse:'+board,posting_id:String(p.id),location:loc,country:'th',published_at:null,modified_at:p.updated_at,date_kind:'modified',closes_at:sourceClosingDate(p),active:true,url:p.absolute_url,employment_type:'ดูที่ต้นทาง',level:levelOf(p.title),role_ids:ids,source:'Greenhouse',retrieved_at:new Date().toISOString()}}).filter(Boolean);return{company:'greenhouse:'+board,status:'ok',jobs:found,count:found.length,checked_at:new Date().toISOString()}}catch(e){return{company:'greenhouse:'+board,status:'error',message:errorText(e),jobs:[]}}}
 
 $('#togglePassword').onclick=()=>{const input=$('#loginPassword'),show=input.type==='password';input.type=show?'text':'password';$('#togglePassword').textContent=show?'ซ่อน':'แสดง';$('#togglePassword').setAttribute('aria-label',show?'ซ่อนรหัสผ่าน':'แสดงรหัสผ่าน')};
+
+// Actionable career toolkit: open the existing workspace for each task.
+document.querySelectorAll('[data-career-tool]').forEach(link=>link.addEventListener('click',event=>{
+ event.preventDefault();const target=link.dataset.careerTool;
+ if(location.hash!=='#'+target)location.hash=target;
+ route();
+ requestAnimationFrame(()=>{
+  if(target==='jobs'){$('#searchForm').scrollIntoView({behavior:'smooth',block:'start'});$('#query').focus({preventScroll:true});}
+  else{window.scrollTo({top:0,behavior:'smooth'});const field=target==='resume'?$('#resumeForm [name="full_name"]'):$('#portfolioForm [name="title"]');field?.focus({preventScroll:true});}
+ });
+}));
