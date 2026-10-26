@@ -1,0 +1,38 @@
+name: Refresh ICDI Thailand jobs
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 0 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'icdi-career/scripts/**'
+      - 'icdi-career/data/roles.json'
+      - '.github/workflows/icdi-career-jobs.yml'
+permissions:
+  contents: write
+concurrency:
+  group: icdi-career-job-feed
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s icdi-career/scripts -p 'test_*.py'
+      - name: Fetch public Thailand postings
+        run: python icdi-career/scripts/refresh_jobs.py
+      - name: Commit updated public feed
+        if: always()
+        run: |
+          if git diff --quiet -- icdi-career/data/jobs.json; then exit 0; fi
+          git config user.name 'ICDI Career Jobs'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add icdi-career/data/jobs.json
+          git commit -m "Update Thailand career postings"
+          git pull --rebase origin main
+          git push origin HEAD:main
