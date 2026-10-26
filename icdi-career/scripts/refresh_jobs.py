@@ -34,6 +34,29 @@ def level(title, experience=None):
     return 'unspecified'
 
 
+def closing_date(item):
+    for key in ['validThrough', 'closes_at', 'closingDate', 'applicationDeadline']:
+        value = item.get(key)
+        if isinstance(value, str) and re.match(r'^\d{4}-\d{2}-\d{2}', value):
+            return value + 'T23:59:59+07:00' if len(value) == 10 else value
+    return None
+
+
+def is_closed(item, now=None):
+    if item.get('active') is False:
+        return True
+    value = closing_date(item)
+    if not value:
+        return False
+    try:
+        timestamp = dt.datetime.fromisoformat(value.replace('Z', '+00:00'))
+        if timestamp.tzinfo is None:
+            timestamp = timestamp.replace(tzinfo=dt.timezone(dt.timedelta(hours=7)))
+        return timestamp < (now or dt.datetime.now(dt.timezone.utc))
+    except ValueError:
+        return True
+
+
 def company_jobs(company):
     jobs, offset, total = [], 0, 0
     try:
@@ -50,7 +73,7 @@ def company_jobs(company):
                     continue
                 # Fetch documented postingUrl rather than guess an application URL.
                 detail = fetch(f'https://api.smartrecruiters.com/v1/companies/{company}/postings/{item["id"]}')
-                if detail.get('active') is False:
+                if is_closed(detail):
                     continue
                 url = detail.get('postingUrl')
                 if not url or urllib.parse.urlparse(url).scheme != 'https':
@@ -59,7 +82,7 @@ def company_jobs(company):
                              'company': (item.get('company') or {}).get('name', company),
                              'company_id': company, 'posting_id': str(item['id']),
                              'location': ', '.join(dict.fromkeys(filter(None, [location.get('city'), location.get('region')]))),
-                             'country': 'th', 'published_at': item.get('releasedDate'),
+                             'country': 'th', 'published_at': item.get('releasedDate'), 'date_kind': 'published', 'closes_at': closing_date(detail), 'active': True,
                              'url': url, 'employment_type': (item.get('typeOfEmployment') or {}).get('label', 'ดูที่ต้นทาง'),
                              'level': level(item['name'], item.get('experienceLevel')),
                              'role_ids': role_ids, 'source': 'SmartRecruiters',
@@ -81,14 +104,14 @@ def greenhouse_jobs(board, company):
         for item in data['jobs']:
             location = (item.get('location') or {}).get('name', '')
             ids = categorize(item.get('title', ''))
-            if not re.search(r'\bthailand\b', location, re.I) or not ids:
+            if not re.search(r'\bthailand\b', location, re.I) or not ids or is_closed(item):
                 continue
             url = item.get('absolute_url', '')
             if urllib.parse.urlparse(url).scheme != 'https':
                 continue
             jobs.append({'id': f'greenhouse:{board}:{item["id"]}', 'title': item['title'],
                          'company': company, 'company_id': f'greenhouse:{board}', 'posting_id': str(item['id']),
-                         'location': location, 'country': 'th', 'published_at': item.get('updated_at'),
+                         'location': location, 'country': 'th', 'published_at': None, 'modified_at': item.get('updated_at'), 'date_kind': 'modified', 'closes_at': closing_date(item), 'active': True,
                          'url': url, 'employment_type': 'ดูที่ต้นทาง', 'level': level(item['title']),
                          'role_ids': ids, 'source': 'Greenhouse',
                          'retrieved_at': dt.datetime.now(dt.timezone.utc).isoformat()})
