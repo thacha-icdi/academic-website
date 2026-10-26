@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-26T02:45:20.067351+00:00",
-  "attempted_at": "2026-10-26T02:45:20.067351+00:00",
+  "updated_at": "2026-10-26T02:47:44.625752+00:00",
+  "attempted_at": "2026-10-26T02:47:44.625752+00:00",
   "jobs": [
     {
       "id": "BoschGroup:744000150586129",
@@ -18,7 +18,7 @@
         6
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-26T02:45:13.906522+00:00"
+      "retrieved_at": "2026-10-26T02:47:36.839713+00:00"
     },
     {
       "id": "BoschGroup:744000149286121",
@@ -36,7 +36,7 @@
         14
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-26T02:45:14.511995+00:00"
+      "retrieved_at": "2026-10-26T02:47:37.529326+00:00"
     },
     {
       "id": "BoschGroup:744000142837878",
@@ -54,7 +54,7 @@
         6
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-26T02:45:15.133506+00:00"
+      "retrieved_at": "2026-10-26T02:47:38.249133+00:00"
     },
     {
       "id": "BoschGroup:744000119536647",
@@ -72,7 +72,7 @@
         17
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-26T02:45:15.743918+00:00"
+      "retrieved_at": "2026-10-26T02:47:38.928481+00:00"
     },
     {
       "id": "BoschGroup:744000106788838",
@@ -90,7 +90,7 @@
         24
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-26T02:45:16.537828+00:00"
+      "retrieved_at": "2026-10-26T02:47:39.614834+00:00"
     },
     {
       "id": "BoschGroup:744000103637681",
@@ -108,7 +108,7 @@
         1
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-26T02:45:17.158992+00:00"
+      "retrieved_at": "2026-10-26T02:47:40.370191+00:00"
     },
     {
       "id": "BoschGroup:744000103638354",
@@ -126,7 +126,7 @@
         1
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-26T02:45:18.494870+00:00"
+      "retrieved_at": "2026-10-26T02:47:41.784336+00:00"
     },
     {
       "id": "BoschGroup:744000093625984",
@@ -144,7 +144,7 @@
         10
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-26T02:45:19.124923+00:00"
+      "retrieved_at": "2026-10-26T02:47:42.465814+00:00"
     },
     {
       "id": "BoschGroup:744000072359295",
@@ -162,7 +162,7 @@
         3
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-26T02:45:19.732095+00:00"
+      "retrieved_at": "2026-10-26T02:47:43.156248+00:00"
     },
     {
       "id": "WesternDigital:744000156697071",
@@ -180,7 +180,7 @@
         17
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-26T02:45:13.836764+00:00"
+      "retrieved_at": "2026-10-26T02:47:36.818377+00:00"
     },
     {
       "id": "AccorHotel:744000150005779",
@@ -198,7 +198,7 @@
         13
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-26T02:45:14.621321+00:00"
+      "retrieved_at": "2026-10-26T02:47:37.570568+00:00"
     },
     {
       "id": "AccorHotel:744000140647530",
@@ -216,7 +216,7 @@
         3
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-26T02:45:15.236212+00:00"
+      "retrieved_at": "2026-10-26T02:47:38.222876+00:00"
     },
     {
       "id": "greenhouse:agoda:8241893",
@@ -234,7 +234,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:45:20.058157+00:00"
+      "retrieved_at": "2026-10-26T02:47:44.451336+00:00"
     },
     {
       "id": "greenhouse:agoda:6750678",
@@ -252,7 +252,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:45:20.059261+00:00"
+      "retrieved_at": "2026-10-26T02:47:44.452203+00:00"
     },
     {
       "id": "greenhouse:agoda:8305599",
@@ -270,7 +270,7 @@
         28
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:45:20.060671+00:00"
+      "retrieved_at": "2026-10-26T02:47:44.453282+00:00"
     },
     {
       "id": "greenhouse:agoda:8059327",
@@ -288,7 +288,7 @@
         4
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:45:20.061044+00:00"
+      "retrieved_at": "2026-10-26T02:47:44.453560+00:00"
     },
     {
       "id": "greenhouse:agoda:8248603",
@@ -306,7 +306,7 @@
         27
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:45:20.061502+00:00"
+      "retrieved_at": "2026-10-26T02:47:44.453916+00:00"
     },
     {
       "id": "greenhouse:agoda:8280811",
@@ -324,7 +324,7 @@
         8
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:45:20.061607+00:00"
+      "retrieved_at": "2026-10-26T02:47:44.453981+00:00"
     },
     {
       "id": "greenhouse:agoda:7379324",
@@ -342,7 +342,7 @@
         19
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:45:20.062763+00:00"
+      "retrieved_at": "2026-10-26T02:47:44.454884+00:00"
     },
     {
       "id": "greenhouse:agoda:7962422",
@@ -360,7 +360,7 @@
         0
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:45:20.062819+00:00"
+      "retrieved_at": "2026-10-26T02:47:44.454925+00:00"
     },
     {
       "id": "greenhouse:agoda:8047686",
@@ -378,7 +378,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:45:20.063531+00:00"
+      "retrieved_at": "2026-10-26T02:47:44.455486+00:00"
     },
     {
       "id": "greenhouse:agoda:8173395",
@@ -396,7 +396,7 @@
         27
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:45:20.064184+00:00"
+      "retrieved_at": "2026-10-26T02:47:44.455979+00:00"
     },
     {
       "id": "greenhouse:agoda:7478051",
@@ -414,7 +414,7 @@
         27
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:45:20.064242+00:00"
+      "retrieved_at": "2026-10-26T02:47:44.456021+00:00"
     },
     {
       "id": "greenhouse:agoda:8224989",
@@ -432,7 +432,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:45:20.065232+00:00"
+      "retrieved_at": "2026-10-26T02:47:44.456773+00:00"
     },
     {
       "id": "greenhouse:agoda:7543802",
@@ -450,7 +450,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:45:20.065939+00:00"
+      "retrieved_at": "2026-10-26T02:47:44.457305+00:00"
     },
     {
       "id": "greenhouse:agoda:6750697",
@@ -468,7 +468,170 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:45:20.065997+00:00"
+      "retrieved_at": "2026-10-26T02:47:44.457347+00:00"
+    },
+    {
+      "id": "greenhouse:sertis:8835632002",
+      "title": "Business Development (Associate - Mid level)",
+      "company": "Sertis",
+      "company_id": "greenhouse:sertis",
+      "posting_id": "8835632002",
+      "location": "Bangkok, Bangkok Metropolis, Thailand",
+      "country": "th",
+      "published_at": "2026-09-30T02:53:23-04:00",
+      "url": "https://job-boards.greenhouse.io/sertis/jobs/8835632002",
+      "employment_type": "ดูที่ต้นทาง",
+      "level": "entry",
+      "role_ids": [
+        3
+      ],
+      "source": "Greenhouse",
+      "retrieved_at": "2026-10-26T02:47:44.534039+00:00"
+    },
+    {
+      "id": "greenhouse:sertis:8836384002",
+      "title": "Business Development Intern",
+      "company": "Sertis",
+      "company_id": "greenhouse:sertis",
+      "posting_id": "8836384002",
+      "location": "Bangkok, Bangkok Metropolis, Thailand",
+      "country": "th",
+      "published_at": "2026-09-25T01:08:13-04:00",
+      "url": "https://job-boards.greenhouse.io/sertis/jobs/8836384002",
+      "employment_type": "ดูที่ต้นทาง",
+      "level": "entry",
+      "role_ids": [
+        3
+      ],
+      "source": "Greenhouse",
+      "retrieved_at": "2026-10-26T02:47:44.534095+00:00"
+    },
+    {
+      "id": "greenhouse:sertis:8857527002",
+      "title": "Quality Assurance Engineer Intern",
+      "company": "Sertis",
+      "company_id": "greenhouse:sertis",
+      "posting_id": "8857527002",
+      "location": "Bangkok, Bangkok Metropolis, Thailand",
+      "country": "th",
+      "published_at": "2026-09-30T00:03:13-04:00",
+      "url": "https://job-boards.greenhouse.io/sertis/jobs/8857527002",
+      "employment_type": "ดูที่ต้นทาง",
+      "level": "entry",
+      "role_ids": [
+        24
+      ],
+      "source": "Greenhouse",
+      "retrieved_at": "2026-10-26T02:47:44.534284+00:00"
+    },
+    {
+      "id": "greenhouse:acommerce:8200499",
+      "title": "Business Development Manager/ Associate Manager",
+      "company": "aCommerce",
+      "company_id": "greenhouse:acommerce",
+      "posting_id": "8200499",
+      "location": "Bangkok, Thailand",
+      "country": "th",
+      "published_at": "2026-10-21T03:11:35-04:00",
+      "url": "https://job-boards.greenhouse.io/acommerce/jobs/8200499",
+      "employment_type": "ดูที่ต้นทาง",
+      "level": "experienced",
+      "role_ids": [
+        3
+      ],
+      "source": "Greenhouse",
+      "retrieved_at": "2026-10-26T02:47:44.623941+00:00"
+    },
+    {
+      "id": "greenhouse:acommerce:6480264",
+      "title": "Lead - Paid Performance Marketing (Digital Marketing)",
+      "company": "aCommerce",
+      "company_id": "greenhouse:acommerce",
+      "posting_id": "6480264",
+      "location": "Bangkok, Thailand",
+      "country": "th",
+      "published_at": "2026-10-21T03:11:35-04:00",
+      "url": "https://job-boards.greenhouse.io/acommerce/jobs/6480264",
+      "employment_type": "ดูที่ต้นทาง",
+      "level": "experienced",
+      "role_ids": [
+        13
+      ],
+      "source": "Greenhouse",
+      "retrieved_at": "2026-10-26T02:47:44.624477+00:00"
+    },
+    {
+      "id": "greenhouse:acommerce:5399315",
+      "title": "Paid Performance Marketing - Specialist",
+      "company": "aCommerce",
+      "company_id": "greenhouse:acommerce",
+      "posting_id": "5399315",
+      "location": "Bangkok, Thailand",
+      "country": "th",
+      "published_at": "2026-10-21T03:11:35-04:00",
+      "url": "https://job-boards.greenhouse.io/acommerce/jobs/5399315",
+      "employment_type": "ดูที่ต้นทาง",
+      "level": "unspecified",
+      "role_ids": [
+        13
+      ],
+      "source": "Greenhouse",
+      "retrieved_at": "2026-10-26T02:47:44.624918+00:00"
+    },
+    {
+      "id": "greenhouse:acommerce:5589273",
+      "title": "Senior Specialist - Digital Marketing",
+      "company": "aCommerce",
+      "company_id": "greenhouse:acommerce",
+      "posting_id": "5589273",
+      "location": "Bangkok, Thailand",
+      "country": "th",
+      "published_at": "2026-10-21T03:11:35-04:00",
+      "url": "https://job-boards.greenhouse.io/acommerce/jobs/5589273",
+      "employment_type": "ดูที่ต้นทาง",
+      "level": "experienced",
+      "role_ids": [
+        13
+      ],
+      "source": "Greenhouse",
+      "retrieved_at": "2026-10-26T02:47:44.625116+00:00"
+    },
+    {
+      "id": "greenhouse:acommerce:7869685",
+      "title": "Software Engineer (Full stack)",
+      "company": "aCommerce",
+      "company_id": "greenhouse:acommerce",
+      "posting_id": "7869685",
+      "location": "Bangkok, Thailand",
+      "country": "th",
+      "published_at": "2026-10-21T03:11:35-04:00",
+      "url": "https://job-boards.greenhouse.io/acommerce/jobs/7869685",
+      "employment_type": "ดูที่ต้นทาง",
+      "level": "unspecified",
+      "role_ids": [
+        25
+      ],
+      "source": "Greenhouse",
+      "retrieved_at": "2026-10-26T02:47:44.625273+00:00"
+    },
+    {
+      "id": "greenhouse:acommerce:6897184",
+      "title": "Tech Solutions Consultant (D2C & Ecommerce)",
+      "company": "aCommerce",
+      "company_id": "greenhouse:acommerce",
+      "posting_id": "6897184",
+      "location": "Bangkok, Thailand",
+      "country": "th",
+      "published_at": "2026-10-21T03:11:35-04:00",
+      "url": "https://job-boards.greenhouse.io/acommerce/jobs/6897184",
+      "employment_type": "ดูที่ต้นทาง",
+      "level": "unspecified",
+      "role_ids": [
+        4,
+        10
+      ],
+      "source": "Greenhouse",
+      "retrieved_at": "2026-10-26T02:47:44.625634+00:00"
     }
   ],
   "sources": [
@@ -506,6 +669,16 @@
       "company": "greenhouse:agoda",
       "status": "ok",
       "count": 14
+    },
+    {
+      "company": "greenhouse:sertis",
+      "status": "ok",
+      "count": 3
+    },
+    {
+      "company": "greenhouse:acommerce",
+      "status": "ok",
+      "count": 6
     }
   ]
 }
