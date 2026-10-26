@@ -102,7 +102,8 @@ def main():
     previous = json.loads(target.read_text()) if target.exists() else {'jobs': []}
     with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
         results = list(pool.map(company_jobs, COMPANIES))
-    results.append(greenhouse_jobs('agoda', 'Agoda'))
+    for board, name in [('agoda', 'Agoda'), ('sertis', 'Sertis'), ('acommerce', 'aCommerce')]:
+        results.append(greenhouse_jobs(board, name))
     succeeded = {r['company'] for r in results if r['status'] == 'ok'}
     # Keep the last snapshot on source failure, but surface the error and original retrieval time.
     jobs = [j for j in previous.get('jobs', []) if j['company_id'] not in succeeded]
