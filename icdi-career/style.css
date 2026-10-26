@@ -29,3 +29,7 @@ footer{max-width:1260px;padding:28px 30px 35px;border-color:#e2eae4;font-size:10
 
 /* Readable contrast for secondary text */
 .welcomeIntro{color:#607b68}.welcomeFeatures>div{color:#52705c}.welcomeInstitution{color:#617d68}.welcomeInstitution small{color:#6e8574}.welcomeForm label{color:#536e5c}.welcomeForm .hint,.loginPrivacy{color:#708176;font-size:11px}.loginOptions .check{color:#607768}.browseGuest{color:#587961}.welcomeForm .tabs button{color:#718478}.hint{color:#6d7e72}.jobCard small{color:#718477;font-size:11px}.jobCard .meta{color:#6b8071}.tag{color:#597361}footer{color:#738679}footer .brand small{color:#74897b}
+
+/* Full-row career toolkit actions, available to pointer, touch and keyboard. */
+.pathAction{position:relative;cursor:pointer;border-radius:10px;padding-left:8px;padding-right:8px;margin-left:-8px;margin-right:-8px;transition:background .18s,box-shadow .18s}
+.pathAction:hover{background:#e5f0e7}.pathAction:focus-visible{outline:2px solid #35825e;outline-offset:3px;background:#e5f0e7}.pathAction>div{flex:1;min-width:0}.pathCTA{display:block;font-size:11px;line-height:1.6;color:#32724e;margin-top:8px;font-weight:600}.pathAction .pathArrow{margin-left:auto;background:transparent;width:auto;height:auto;font-size:18px;color:#4e8b65;padding:0;align-self:center}.searchBar{scroll-margin-top:24px}@media(max-width:600px){.pathAction{min-height:90px}.pathCTA{font-size:11px}}
