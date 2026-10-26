@@ -23,5 +23,16 @@ class MatchingTests(unittest.TestCase):
         self.assertIn(17, categorize('Junior Data Analyst'))
         self.assertIn(0, categorize('Business Analyst'))
 
+class ClosingTests(unittest.TestCase):
+    def test_closed_and_bangkok_end_of_day(self):
+        import datetime as dt
+        from refresh_jobs import is_closed
+        now = dt.datetime(2026, 10, 26, 10, tzinfo=dt.timezone.utc)
+        self.assertTrue(is_closed({'active': False}, now))
+        self.assertTrue(is_closed({'validThrough': '2026-10-25'}, now))
+        self.assertFalse(is_closed({'validThrough': '2026-10-26'}, now))
+        self.assertTrue(is_closed({'closingDate': '2026-10-26T16:59:59Z'}, dt.datetime(2026, 10, 27, tzinfo=dt.timezone.utc)))
+        self.assertFalse(is_closed({}, now))
+
 if __name__ == '__main__':
     unittest.main()
