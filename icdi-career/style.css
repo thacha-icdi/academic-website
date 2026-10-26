@@ -48,3 +48,5 @@ header{background:#2c3c8d;border-color:#2c3c8d;color:#fff}header nav a{color:#ff
 
 /* Blue external job search panel */
 .externalSection{background:#263d89;border-color:#263d89;color:#fff}.externalSection h2{color:#fff}.externalSection .eyebrow,.externalSection p{color:#e1e8ff}.externalSection .chip{background:#fff;color:#203676;border-color:#cbd6f5}.externalSection .chip:hover{background:#e5ecff;color:#172b64}.externalSection a:focus-visible{outline:3px solid #f5d66f;outline-offset:3px}
+
+.careerSkillsBox{margin-top:24px;padding-top:22px;border-top:1px solid #654679}.careerSkillsBox h2{font-size:20px;color:#fff}.careerSkillsBox label{color:#e5d9ef}.careerSkillsBox input{background:#fff;color:#241334}.careerSkillsBox button{margin-top:12px}.careerSkillResult{margin-top:18px;padding:18px;background:#3b2054;border:1px solid #654679;border-radius:12px}.careerSkillResult h3,.careerSkillResult h4{color:#fff}.careerSkillResult h4{margin:16px 0 8px}.careerSkillResult ul{padding-left:20px;margin:6px 0;color:#eee4f6;font-size:13px}.careerSkillsBox .skillGuideNote{font-size:11px;line-height:1.7}.careerSkillsBox a{color:#e4c9ff;text-decoration:underline}
