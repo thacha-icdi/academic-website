@@ -75,7 +75,7 @@ python -m unittest discover -s icdi-career/scripts -p 'test_*.py'
 
 ## ข้อมูลประกาศงาน
 
-- แหล่งดึงอัตโนมัติ: Bosch Group, Western Digital, Minor International, Dentsu และ Accor ผ่าน Public Posting API และ Agoda ผ่าน Greenhouse Job Board API เท่าที่บริษัทนั้นเผยแพร่ในระบบ
+- แหล่งดึงอัตโนมัติ: Bosch Group, Western Digital, Minor International, Dentsu และ Accor ผ่าน Public Posting API และ Agoda, Sertis และ aCommerce ผ่าน Greenhouse Job Board API เท่าที่บริษัทนั้นเผยแพร่ในระบบ
 - กรอง `location.country == th` ทั้งฝั่งดึงข้อมูลและแสดงผล; ใช้คำสำคัญจับคู่ 30 กลุ่มตำแหน่ง ไม่รับประกันว่าทุกกลุ่มมีงานในทุกวัน
 - งานที่ระบุ Senior/Manager/Lead ไม่ติดป้ายเป็นงานเริ่มต้น งานที่ไม่ได้ระบุระดับแสดงให้ตรวจคุณสมบัติที่ต้นทาง
 - หน้าแสดงงานมีชื่อบริษัท เมือง แหล่งที่มา เวลาตรวจ และลิงก์ประกาศจริง การสมัครเกิดที่เว็บนายจ้าง ระบบไม่ส่งเรซูเม่อัตโนมัติ
