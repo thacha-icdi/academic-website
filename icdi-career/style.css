@@ -45,3 +45,6 @@ header{background:#2c3c8d;border-color:#2c3c8d;color:#fff}header nav a{color:#ff
 
 /* Golden search panel */
 .searchBar{background:#edc65a;border-color:#d5aa35}.searchBar label{color:#3e3011}.searchBar input,.searchBar select{background:#fffdf5;border-color:#c5a248;color:#30280f}.searchBar input::placeholder{color:#74623a}.searchBar #clearSearch{background:#fff9e7;border-color:#98751c;color:#46330b}
+
+/* Blue external job search panel */
+.externalSection{background:#263d89;border-color:#263d89;color:#fff}.externalSection h2{color:#fff}.externalSection .eyebrow,.externalSection p{color:#e1e8ff}.externalSection .chip{background:#fff;color:#203676;border-color:#cbd6f5}.externalSection .chip:hover{background:#e5ecff;color:#172b64}.externalSection a:focus-visible{outline:3px solid #f5d66f;outline-offset:3px}
