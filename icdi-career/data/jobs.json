@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-26T02:47:44.625752+00:00",
-  "attempted_at": "2026-10-26T02:47:44.625752+00:00",
+  "updated_at": "2026-10-26T03:34:24.647640+00:00",
+  "attempted_at": "2026-10-26T03:34:24.647640+00:00",
   "jobs": [
     {
       "id": "BoschGroup:744000150586129",
@@ -11,6 +11,9 @@
       "location": "Amata City Rayong Industrial Estate, RAYONG",
       "country": "th",
       "published_at": "2026-09-21T02:06:43.795Z",
+      "date_kind": "published",
+      "closes_at": null,
+      "active": true,
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000150586129-it-project-coordinator-1-year-contract-",
       "employment_type": "Full-time",
       "level": "unspecified",
@@ -18,7 +21,7 @@
         6
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-26T02:47:36.839713+00:00"
+      "retrieved_at": "2026-10-26T03:34:18.243067+00:00"
     },
     {
       "id": "BoschGroup:744000149286121",
@@ -29,6 +32,9 @@
       "location": "Klong Toei, Bangkok",
       "country": "th",
       "published_at": "2026-09-14T09:47:40.823Z",
+      "date_kind": "published",
+      "closes_at": null,
+      "active": true,
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000149286121-internship-2026-human-resources-content-creator-employer-branding-hr-admin-support-c-pj-hrsth-",
       "employment_type": "Intern",
       "level": "entry",
@@ -36,7 +42,7 @@
         14
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-26T02:47:37.529326+00:00"
+      "retrieved_at": "2026-10-26T03:34:18.857067+00:00"
     },
     {
       "id": "BoschGroup:744000142837878",
@@ -47,6 +53,9 @@
       "location": "Amata City Rayong Industrial Estate",
       "country": "th",
       "published_at": "2026-08-11T10:03:55.395Z",
+      "date_kind": "published",
+      "closes_at": null,
+      "active": true,
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000142837878-2026-internship-sap-s-4hana-transformation-project-coordinator-amap-ico-",
       "employment_type": "Intern",
       "level": "entry",
@@ -54,7 +63,7 @@
         6
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-26T02:47:38.249133+00:00"
+      "retrieved_at": "2026-10-26T03:34:19.493596+00:00"
     },
     {
       "id": "BoschGroup:744000119536647",
@@ -65,6 +74,9 @@
       "location": "Hemaraj Eastern Seaboard Industrial Estate, RAYONG",
       "country": "th",
       "published_at": "2026-04-09T07:33:15.772Z",
+      "date_kind": "published",
+      "closes_at": null,
+      "active": true,
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000119536647-internship-2026-data-analyst-engineer-power-solutions-hmjp-tef4-",
       "employment_type": "Full-time",
       "level": "entry",
@@ -72,7 +84,7 @@
         17
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-26T02:47:38.928481+00:00"
+      "retrieved_at": "2026-10-26T03:34:20.167192+00:00"
     },
     {
       "id": "BoschGroup:744000106788838",
@@ -83,6 +95,9 @@
       "location": "Amata City Rayong Industrial Estate , RAYONG",
       "country": "th",
       "published_at": "2026-02-02T09:52:18.301Z",
+      "date_kind": "published",
+      "closes_at": null,
+      "active": true,
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000106788838-internship-2026-test-engineering-vm-emh4-th-",
       "employment_type": "Full-time",
       "level": "entry",
@@ -90,7 +105,7 @@
         24
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-26T02:47:39.614834+00:00"
+      "retrieved_at": "2026-10-26T03:34:20.825930+00:00"
     },
     {
       "id": "BoschGroup:744000103637681",
@@ -101,6 +116,9 @@
       "location": "Amata City Rayong Industrial Estate, RAYONG",
       "country": "th",
       "published_at": "2026-01-15T02:15:59.017Z",
+      "date_kind": "published",
+      "closes_at": null,
+      "active": true,
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000103637681-internship-2026-manufacturing-digitalization-rbty-tef-",
       "employment_type": "Intern",
       "level": "entry",
@@ -108,7 +126,7 @@
         1
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-26T02:47:40.370191+00:00"
+      "retrieved_at": "2026-10-26T03:34:21.473792+00:00"
     },
     {
       "id": "BoschGroup:744000103638354",
@@ -119,6 +137,9 @@
       "location": "Hemaraj Eastern Seaboard Industrial Estate, RAYONG",
       "country": "th",
       "published_at": "2026-01-15T02:15:19.989Z",
+      "date_kind": "published",
+      "closes_at": null,
+      "active": true,
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000103638354-internship-2026-logistics-digitalization-power-solutions-hmjp-loi-",
       "employment_type": "Full-time",
       "level": "entry",
@@ -126,7 +147,7 @@
         1
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-26T02:47:41.784336+00:00"
+      "retrieved_at": "2026-10-26T03:34:22.854696+00:00"
     },
     {
       "id": "BoschGroup:744000093625984",
@@ -137,6 +158,9 @@
       "location": "Klong Toei, Bangkok",
       "country": "th",
       "published_at": "2025-11-14T06:38:32.881Z",
+      "date_kind": "published",
+      "closes_at": null,
+      "active": true,
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000093625984-internship-2026-marketing-communication-e-commerce-mobility-aftermarket-division",
       "employment_type": "Intern",
       "level": "entry",
@@ -144,7 +168,7 @@
         10
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-26T02:47:42.465814+00:00"
+      "retrieved_at": "2026-10-26T03:34:23.484310+00:00"
     },
     {
       "id": "BoschGroup:744000072359295",
@@ -155,6 +179,9 @@
       "location": "Klong Toei, Bangkok",
       "country": "th",
       "published_at": "2025-07-24T03:11:33.793Z",
+      "date_kind": "published",
+      "closes_at": null,
+      "active": true,
       "url": "https://jobs.smartrecruiters.com/BoschGroup/744000072359295-internship-2026-office-of-executive-management-business-development",
       "employment_type": "Intern",
       "level": "entry",
@@ -162,7 +189,7 @@
         3
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-26T02:47:43.156248+00:00"
+      "retrieved_at": "2026-10-26T03:34:24.103328+00:00"
     },
     {
       "id": "WesternDigital:744000156697071",
@@ -173,6 +200,9 @@
       "location": "BangPa-in, PHRA NAKHON SI AYUTTHAYA",
       "country": "th",
       "published_at": "2026-10-21T01:47:20.195Z",
+      "date_kind": "published",
+      "closes_at": null,
+      "active": true,
       "url": "https://jobs.smartrecruiters.com/WesternDigital/744000156697071-data-analyst-facilities",
       "employment_type": "Full-time",
       "level": "unspecified",
@@ -180,7 +210,7 @@
         17
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-26T02:47:36.818377+00:00"
+      "retrieved_at": "2026-10-26T03:34:18.177396+00:00"
     },
     {
       "id": "AccorHotel:744000150005779",
@@ -191,6 +221,9 @@
       "location": "Saku, PHUKET",
       "country": "th",
       "published_at": "2026-09-17T04:03:49.843Z",
+      "date_kind": "published",
+      "closes_at": null,
+      "active": true,
       "url": "https://jobs.smartrecruiters.com/AccorHotel/744000150005779-account-manager-digital-marketing",
       "employment_type": "Full-time",
       "level": "experienced",
@@ -198,7 +231,7 @@
         13
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-26T02:47:37.570568+00:00"
+      "retrieved_at": "2026-10-26T03:34:19.017772+00:00"
     },
     {
       "id": "AccorHotel:744000140647530",
@@ -209,6 +242,9 @@
       "location": "Phuket, จ.ภูเก็ต",
       "country": "th",
       "published_at": "2026-07-30T10:03:50.180Z",
+      "date_kind": "published",
+      "closes_at": null,
+      "active": true,
       "url": "https://jobs.smartrecruiters.com/AccorHotel/744000140647530-director-of-business-development",
       "employment_type": "Full-time",
       "level": "experienced",
@@ -216,7 +252,7 @@
         3
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-26T02:47:38.222876+00:00"
+      "retrieved_at": "2026-10-26T03:34:19.701114+00:00"
     },
     {
       "id": "greenhouse:agoda:8241893",
@@ -226,7 +262,11 @@
       "posting_id": "8241893",
       "location": "Bangkok, Thailand",
       "country": "th",
-      "published_at": "2026-10-22T03:52:37-04:00",
+      "published_at": null,
+      "modified_at": "2026-10-22T03:52:37-04:00",
+      "date_kind": "modified",
+      "closes_at": null,
+      "active": true,
       "url": "https://job-boards.greenhouse.io/agoda/jobs/8241893",
       "employment_type": "ดูที่ต้นทาง",
       "level": "experienced",
@@ -234,7 +274,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:47:44.451336+00:00"
+      "retrieved_at": "2026-10-26T03:34:24.469228+00:00"
     },
     {
       "id": "greenhouse:agoda:6750678",
@@ -244,7 +284,11 @@
       "posting_id": "6750678",
       "location": "Bangkok, Thailand",
       "country": "th",
-      "published_at": "2026-10-16T03:18:46-04:00",
+      "published_at": null,
+      "modified_at": "2026-10-16T03:18:46-04:00",
+      "date_kind": "modified",
+      "closes_at": null,
+      "active": true,
       "url": "https://job-boards.greenhouse.io/agoda/jobs/6750678",
       "employment_type": "ดูที่ต้นทาง",
       "level": "experienced",
@@ -252,7 +296,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:47:44.452203+00:00"
+      "retrieved_at": "2026-10-26T03:34:24.470113+00:00"
     },
     {
       "id": "greenhouse:agoda:8305599",
@@ -262,7 +306,11 @@
       "posting_id": "8305599",
       "location": "Bangkok, Thailand",
       "country": "th",
-      "published_at": "2026-10-21T06:21:03-04:00",
+      "published_at": null,
+      "modified_at": "2026-10-21T06:21:03-04:00",
+      "date_kind": "modified",
+      "closes_at": null,
+      "active": true,
       "url": "https://job-boards.greenhouse.io/agoda/jobs/8305599",
       "employment_type": "ดูที่ต้นทาง",
       "level": "experienced",
@@ -270,7 +318,7 @@
         28
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:47:44.453282+00:00"
+      "retrieved_at": "2026-10-26T03:34:24.471188+00:00"
     },
     {
       "id": "greenhouse:agoda:8059327",
@@ -280,7 +328,11 @@
       "posting_id": "8059327",
       "location": "Bangkok, Thailand",
       "country": "th",
-      "published_at": "2026-10-21T23:27:23-04:00",
+      "published_at": null,
+      "modified_at": "2026-10-21T23:27:23-04:00",
+      "date_kind": "modified",
+      "closes_at": null,
+      "active": true,
       "url": "https://job-boards.greenhouse.io/agoda/jobs/8059327",
       "employment_type": "ดูที่ต้นทาง",
       "level": "experienced",
@@ -288,7 +340,7 @@
         4
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:47:44.453560+00:00"
+      "retrieved_at": "2026-10-26T03:34:24.471458+00:00"
     },
     {
       "id": "greenhouse:agoda:8248603",
@@ -298,7 +350,11 @@
       "posting_id": "8248603",
       "location": "Bangkok, Thailand",
       "country": "th",
-      "published_at": "2026-10-21T05:11:21-04:00",
+      "published_at": null,
+      "modified_at": "2026-10-21T05:11:21-04:00",
+      "date_kind": "modified",
+      "closes_at": null,
+      "active": true,
       "url": "https://job-boards.greenhouse.io/agoda/jobs/8248603",
       "employment_type": "ดูที่ต้นทาง",
       "level": "unspecified",
@@ -306,7 +362,7 @@
         27
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:47:44.453916+00:00"
+      "retrieved_at": "2026-10-26T03:34:24.471821+00:00"
     },
     {
       "id": "greenhouse:agoda:8280811",
@@ -316,7 +372,11 @@
       "posting_id": "8280811",
       "location": "Bangkok, Thailand",
       "country": "th",
-      "published_at": "2026-10-16T03:18:45-04:00",
+      "published_at": null,
+      "modified_at": "2026-10-16T03:18:45-04:00",
+      "date_kind": "modified",
+      "closes_at": null,
+      "active": true,
       "url": "https://job-boards.greenhouse.io/agoda/jobs/8280811",
       "employment_type": "ดูที่ต้นทาง",
       "level": "unspecified",
@@ -324,7 +384,7 @@
         8
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:47:44.453981+00:00"
+      "retrieved_at": "2026-10-26T03:34:24.471888+00:00"
     },
     {
       "id": "greenhouse:agoda:7379324",
@@ -334,7 +394,11 @@
       "posting_id": "7379324",
       "location": "Bangkok, Thailand",
       "country": "th",
-      "published_at": "2026-10-16T03:18:44-04:00",
+      "published_at": null,
+      "modified_at": "2026-10-16T03:18:44-04:00",
+      "date_kind": "modified",
+      "closes_at": null,
+      "active": true,
       "url": "https://job-boards.greenhouse.io/agoda/jobs/7379324",
       "employment_type": "ดูที่ต้นทาง",
       "level": "experienced",
@@ -342,7 +406,7 @@
         19
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:47:44.454884+00:00"
+      "retrieved_at": "2026-10-26T03:34:24.472785+00:00"
     },
     {
       "id": "greenhouse:agoda:7962422",
@@ -352,7 +416,11 @@
       "posting_id": "7962422",
       "location": "Bangkok, Thailand",
       "country": "th",
-      "published_at": "2026-10-16T03:18:51-04:00",
+      "published_at": null,
+      "modified_at": "2026-10-16T03:18:51-04:00",
+      "date_kind": "modified",
+      "closes_at": null,
+      "active": true,
       "url": "https://job-boards.greenhouse.io/agoda/jobs/7962422",
       "employment_type": "ดูที่ต้นทาง",
       "level": "experienced",
@@ -360,7 +428,7 @@
         0
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:47:44.454925+00:00"
+      "retrieved_at": "2026-10-26T03:34:24.472827+00:00"
     },
     {
       "id": "greenhouse:agoda:8047686",
@@ -370,7 +438,11 @@
       "posting_id": "8047686",
       "location": "Bangkok, Thailand",
       "country": "th",
-      "published_at": "2026-10-16T03:18:51-04:00",
+      "published_at": null,
+      "modified_at": "2026-10-16T03:18:51-04:00",
+      "date_kind": "modified",
+      "closes_at": null,
+      "active": true,
       "url": "https://job-boards.greenhouse.io/agoda/jobs/8047686",
       "employment_type": "ดูที่ต้นทาง",
       "level": "experienced",
@@ -378,7 +450,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:47:44.455486+00:00"
+      "retrieved_at": "2026-10-26T03:34:24.473383+00:00"
     },
     {
       "id": "greenhouse:agoda:8173395",
@@ -388,7 +460,11 @@
       "posting_id": "8173395",
       "location": "Bangkok, Thailand",
       "country": "th",
-      "published_at": "2026-10-16T03:18:48-04:00",
+      "published_at": null,
+      "modified_at": "2026-10-16T03:18:48-04:00",
+      "date_kind": "modified",
+      "closes_at": null,
+      "active": true,
       "url": "https://job-boards.greenhouse.io/agoda/jobs/8173395",
       "employment_type": "ดูที่ต้นทาง",
       "level": "experienced",
@@ -396,7 +472,7 @@
         27
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:47:44.455979+00:00"
+      "retrieved_at": "2026-10-26T03:34:24.473891+00:00"
     },
     {
       "id": "greenhouse:agoda:7478051",
@@ -406,7 +482,11 @@
       "posting_id": "7478051",
       "location": "Bangkok, Thailand",
       "country": "th",
-      "published_at": "2026-10-16T03:18:48-04:00",
+      "published_at": null,
+      "modified_at": "2026-10-16T03:18:48-04:00",
+      "date_kind": "modified",
+      "closes_at": null,
+      "active": true,
       "url": "https://job-boards.greenhouse.io/agoda/jobs/7478051",
       "employment_type": "ดูที่ต้นทาง",
       "level": "experienced",
@@ -414,7 +494,7 @@
         27
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:47:44.456021+00:00"
+      "retrieved_at": "2026-10-26T03:34:24.473936+00:00"
     },
     {
       "id": "greenhouse:agoda:8224989",
@@ -424,7 +504,11 @@
       "posting_id": "8224989",
       "location": "Bangkok, Thailand",
       "country": "th",
-      "published_at": "2026-10-21T06:15:42-04:00",
+      "published_at": null,
+      "modified_at": "2026-10-21T06:15:42-04:00",
+      "date_kind": "modified",
+      "closes_at": null,
+      "active": true,
       "url": "https://job-boards.greenhouse.io/agoda/jobs/8224989",
       "employment_type": "ดูที่ต้นทาง",
       "level": "experienced",
@@ -432,7 +516,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:47:44.456773+00:00"
+      "retrieved_at": "2026-10-26T03:34:24.474677+00:00"
     },
     {
       "id": "greenhouse:agoda:7543802",
@@ -442,7 +526,11 @@
       "posting_id": "7543802",
       "location": "Bangkok, Thailand",
       "country": "th",
-      "published_at": "2026-10-16T03:18:46-04:00",
+      "published_at": null,
+      "modified_at": "2026-10-16T03:18:46-04:00",
+      "date_kind": "modified",
+      "closes_at": null,
+      "active": true,
       "url": "https://job-boards.greenhouse.io/agoda/jobs/7543802",
       "employment_type": "ดูที่ต้นทาง",
       "level": "experienced",
@@ -450,7 +538,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:47:44.457305+00:00"
+      "retrieved_at": "2026-10-26T03:34:24.475215+00:00"
     },
     {
       "id": "greenhouse:agoda:6750697",
@@ -460,7 +548,11 @@
       "posting_id": "6750697",
       "location": "Bangkok, Thailand",
       "country": "th",
-      "published_at": "2026-10-16T03:18:46-04:00",
+      "published_at": null,
+      "modified_at": "2026-10-16T03:18:46-04:00",
+      "date_kind": "modified",
+      "closes_at": null,
+      "active": true,
       "url": "https://job-boards.greenhouse.io/agoda/jobs/6750697",
       "employment_type": "ดูที่ต้นทาง",
       "level": "experienced",
@@ -468,7 +560,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:47:44.457347+00:00"
+      "retrieved_at": "2026-10-26T03:34:24.475259+00:00"
     },
     {
       "id": "greenhouse:sertis:8835632002",
@@ -478,7 +570,11 @@
       "posting_id": "8835632002",
       "location": "Bangkok, Bangkok Metropolis, Thailand",
       "country": "th",
-      "published_at": "2026-09-30T02:53:23-04:00",
+      "published_at": null,
+      "modified_at": "2026-09-30T02:53:23-04:00",
+      "date_kind": "modified",
+      "closes_at": null,
+      "active": true,
       "url": "https://job-boards.greenhouse.io/sertis/jobs/8835632002",
       "employment_type": "ดูที่ต้นทาง",
       "level": "entry",
@@ -486,7 +582,7 @@
         3
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:47:44.534039+00:00"
+      "retrieved_at": "2026-10-26T03:34:24.557432+00:00"
     },
     {
       "id": "greenhouse:sertis:8836384002",
@@ -496,7 +592,11 @@
       "posting_id": "8836384002",
       "location": "Bangkok, Bangkok Metropolis, Thailand",
       "country": "th",
-      "published_at": "2026-09-25T01:08:13-04:00",
+      "published_at": null,
+      "modified_at": "2026-09-25T01:08:13-04:00",
+      "date_kind": "modified",
+      "closes_at": null,
+      "active": true,
       "url": "https://job-boards.greenhouse.io/sertis/jobs/8836384002",
       "employment_type": "ดูที่ต้นทาง",
       "level": "entry",
@@ -504,7 +604,7 @@
         3
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:47:44.534095+00:00"
+      "retrieved_at": "2026-10-26T03:34:24.557528+00:00"
     },
     {
       "id": "greenhouse:sertis:8857527002",
@@ -514,7 +614,11 @@
       "posting_id": "8857527002",
       "location": "Bangkok, Bangkok Metropolis, Thailand",
       "country": "th",
-      "published_at": "2026-09-30T00:03:13-04:00",
+      "published_at": null,
+      "modified_at": "2026-09-30T00:03:13-04:00",
+      "date_kind": "modified",
+      "closes_at": null,
+      "active": true,
       "url": "https://job-boards.greenhouse.io/sertis/jobs/8857527002",
       "employment_type": "ดูที่ต้นทาง",
       "level": "entry",
@@ -522,7 +626,7 @@
         24
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:47:44.534284+00:00"
+      "retrieved_at": "2026-10-26T03:34:24.557718+00:00"
     },
     {
       "id": "greenhouse:acommerce:8200499",
@@ -532,7 +636,11 @@
       "posting_id": "8200499",
       "location": "Bangkok, Thailand",
       "country": "th",
-      "published_at": "2026-10-21T03:11:35-04:00",
+      "published_at": null,
+      "modified_at": "2026-10-21T03:11:35-04:00",
+      "date_kind": "modified",
+      "closes_at": null,
+      "active": true,
       "url": "https://job-boards.greenhouse.io/acommerce/jobs/8200499",
       "employment_type": "ดูที่ต้นทาง",
       "level": "experienced",
@@ -540,7 +648,7 @@
         3
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:47:44.623941+00:00"
+      "retrieved_at": "2026-10-26T03:34:24.645787+00:00"
     },
     {
       "id": "greenhouse:acommerce:6480264",
@@ -550,7 +658,11 @@
       "posting_id": "6480264",
       "location": "Bangkok, Thailand",
       "country": "th",
-      "published_at": "2026-10-21T03:11:35-04:00",
+      "published_at": null,
+      "modified_at": "2026-10-21T03:11:35-04:00",
+      "date_kind": "modified",
+      "closes_at": null,
+      "active": true,
       "url": "https://job-boards.greenhouse.io/acommerce/jobs/6480264",
       "employment_type": "ดูที่ต้นทาง",
       "level": "experienced",
@@ -558,7 +670,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:47:44.624477+00:00"
+      "retrieved_at": "2026-10-26T03:34:24.646312+00:00"
     },
     {
       "id": "greenhouse:acommerce:5399315",
@@ -568,7 +680,11 @@
       "posting_id": "5399315",
       "location": "Bangkok, Thailand",
       "country": "th",
-      "published_at": "2026-10-21T03:11:35-04:00",
+      "published_at": null,
+      "modified_at": "2026-10-21T03:11:35-04:00",
+      "date_kind": "modified",
+      "closes_at": null,
+      "active": true,
       "url": "https://job-boards.greenhouse.io/acommerce/jobs/5399315",
       "employment_type": "ดูที่ต้นทาง",
       "level": "unspecified",
@@ -576,7 +692,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:47:44.624918+00:00"
+      "retrieved_at": "2026-10-26T03:34:24.646779+00:00"
     },
     {
       "id": "greenhouse:acommerce:5589273",
@@ -586,7 +702,11 @@
       "posting_id": "5589273",
       "location": "Bangkok, Thailand",
       "country": "th",
-      "published_at": "2026-10-21T03:11:35-04:00",
+      "published_at": null,
+      "modified_at": "2026-10-21T03:11:35-04:00",
+      "date_kind": "modified",
+      "closes_at": null,
+      "active": true,
       "url": "https://job-boards.greenhouse.io/acommerce/jobs/5589273",
       "employment_type": "ดูที่ต้นทาง",
       "level": "experienced",
@@ -594,7 +714,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:47:44.625116+00:00"
+      "retrieved_at": "2026-10-26T03:34:24.646978+00:00"
     },
     {
       "id": "greenhouse:acommerce:7869685",
@@ -604,7 +724,11 @@
       "posting_id": "7869685",
       "location": "Bangkok, Thailand",
       "country": "th",
-      "published_at": "2026-10-21T03:11:35-04:00",
+      "published_at": null,
+      "modified_at": "2026-10-21T03:11:35-04:00",
+      "date_kind": "modified",
+      "closes_at": null,
+      "active": true,
       "url": "https://job-boards.greenhouse.io/acommerce/jobs/7869685",
       "employment_type": "ดูที่ต้นทาง",
       "level": "unspecified",
@@ -612,7 +736,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:47:44.625273+00:00"
+      "retrieved_at": "2026-10-26T03:34:24.647137+00:00"
     },
     {
       "id": "greenhouse:acommerce:6897184",
@@ -622,7 +746,11 @@
       "posting_id": "6897184",
       "location": "Bangkok, Thailand",
       "country": "th",
-      "published_at": "2026-10-21T03:11:35-04:00",
+      "published_at": null,
+      "modified_at": "2026-10-21T03:11:35-04:00",
+      "date_kind": "modified",
+      "closes_at": null,
+      "active": true,
       "url": "https://job-boards.greenhouse.io/acommerce/jobs/6897184",
       "employment_type": "ดูที่ต้นทาง",
       "level": "unspecified",
@@ -631,7 +759,7 @@
         10
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-26T02:47:44.625634+00:00"
+      "retrieved_at": "2026-10-26T03:34:24.647484+00:00"
     }
   ],
   "sources": [
