@@ -1,1 +1,511 @@
-{"updated_at":null,"jobs":[],"sources":[],"note":"กำลังรอการดึงข้อมูลครั้งแรก ไม่แสดงประกาศจำลอง"}
+{
+  "updated_at": "2026-10-26T02:45:20.067351+00:00",
+  "attempted_at": "2026-10-26T02:45:20.067351+00:00",
+  "jobs": [
+    {
+      "id": "BoschGroup:744000150586129",
+      "title": "IT Project Coordinator (1 year contract)",
+      "company": "Bosch Group",
+      "company_id": "BoschGroup",
+      "posting_id": "744000150586129",
+      "location": "Amata City Rayong Industrial Estate, RAYONG",
+      "country": "th",
+      "published_at": "2026-09-21T02:06:43.795Z",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000150586129-it-project-coordinator-1-year-contract-",
+      "employment_type": "Full-time",
+      "level": "unspecified",
+      "role_ids": [
+        6
+      ],
+      "source": "SmartRecruiters",
+      "retrieved_at": "2026-10-26T02:45:13.906522+00:00"
+    },
+    {
+      "id": "BoschGroup:744000149286121",
+      "title": "Internship 2026, Human Resources - Content Creator, Employer Branding & HR Admin Support (C/PJ-HRSTH)",
+      "company": "Bosch Group",
+      "company_id": "BoschGroup",
+      "posting_id": "744000149286121",
+      "location": "Klong Toei, Bangkok",
+      "country": "th",
+      "published_at": "2026-09-14T09:47:40.823Z",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000149286121-internship-2026-human-resources-content-creator-employer-branding-hr-admin-support-c-pj-hrsth-",
+      "employment_type": "Intern",
+      "level": "entry",
+      "role_ids": [
+        14
+      ],
+      "source": "SmartRecruiters",
+      "retrieved_at": "2026-10-26T02:45:14.511995+00:00"
+    },
+    {
+      "id": "BoschGroup:744000142837878",
+      "title": "2026 Internship, SAP S/4HANA Transformation Project Coordinator (AmaP/ICO)",
+      "company": "Bosch Group",
+      "company_id": "BoschGroup",
+      "posting_id": "744000142837878",
+      "location": "Amata City Rayong Industrial Estate",
+      "country": "th",
+      "published_at": "2026-08-11T10:03:55.395Z",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000142837878-2026-internship-sap-s-4hana-transformation-project-coordinator-amap-ico-",
+      "employment_type": "Intern",
+      "level": "entry",
+      "role_ids": [
+        6
+      ],
+      "source": "SmartRecruiters",
+      "retrieved_at": "2026-10-26T02:45:15.133506+00:00"
+    },
+    {
+      "id": "BoschGroup:744000119536647",
+      "title": "Internship 2026, Data Analyst Engineer, Power Solutions (HmjP/TEF4)",
+      "company": "Bosch Group",
+      "company_id": "BoschGroup",
+      "posting_id": "744000119536647",
+      "location": "Hemaraj Eastern Seaboard Industrial Estate, RAYONG",
+      "country": "th",
+      "published_at": "2026-04-09T07:33:15.772Z",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000119536647-internship-2026-data-analyst-engineer-power-solutions-hmjp-tef4-",
+      "employment_type": "Full-time",
+      "level": "entry",
+      "role_ids": [
+        17
+      ],
+      "source": "SmartRecruiters",
+      "retrieved_at": "2026-10-26T02:45:15.743918+00:00"
+    },
+    {
+      "id": "BoschGroup:744000106788838",
+      "title": "Internship 2026, Test Engineering (VM/EMH4-TH)",
+      "company": "Bosch Group",
+      "company_id": "BoschGroup",
+      "posting_id": "744000106788838",
+      "location": "Amata City Rayong Industrial Estate , RAYONG",
+      "country": "th",
+      "published_at": "2026-02-02T09:52:18.301Z",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000106788838-internship-2026-test-engineering-vm-emh4-th-",
+      "employment_type": "Full-time",
+      "level": "entry",
+      "role_ids": [
+        24
+      ],
+      "source": "SmartRecruiters",
+      "retrieved_at": "2026-10-26T02:45:16.537828+00:00"
+    },
+    {
+      "id": "BoschGroup:744000103637681",
+      "title": "Internship 2026, Manufacturing Digitalization (RBTY/TEF)",
+      "company": "Bosch Group",
+      "company_id": "BoschGroup",
+      "posting_id": "744000103637681",
+      "location": "Amata City Rayong Industrial Estate, RAYONG",
+      "country": "th",
+      "published_at": "2026-01-15T02:15:59.017Z",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000103637681-internship-2026-manufacturing-digitalization-rbty-tef-",
+      "employment_type": "Intern",
+      "level": "entry",
+      "role_ids": [
+        1
+      ],
+      "source": "SmartRecruiters",
+      "retrieved_at": "2026-10-26T02:45:17.158992+00:00"
+    },
+    {
+      "id": "BoschGroup:744000103638354",
+      "title": "Internship 2026, Logistics Digitalization, Power Solutions (HmjP/LOI)",
+      "company": "Bosch Group",
+      "company_id": "BoschGroup",
+      "posting_id": "744000103638354",
+      "location": "Hemaraj Eastern Seaboard Industrial Estate, RAYONG",
+      "country": "th",
+      "published_at": "2026-01-15T02:15:19.989Z",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000103638354-internship-2026-logistics-digitalization-power-solutions-hmjp-loi-",
+      "employment_type": "Full-time",
+      "level": "entry",
+      "role_ids": [
+        1
+      ],
+      "source": "SmartRecruiters",
+      "retrieved_at": "2026-10-26T02:45:18.494870+00:00"
+    },
+    {
+      "id": "BoschGroup:744000093625984",
+      "title": "Internship 2026, Marketing Communication & E-commerce, Mobility Aftermarket Division",
+      "company": "Bosch Group",
+      "company_id": "BoschGroup",
+      "posting_id": "744000093625984",
+      "location": "Klong Toei, Bangkok",
+      "country": "th",
+      "published_at": "2025-11-14T06:38:32.881Z",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000093625984-internship-2026-marketing-communication-e-commerce-mobility-aftermarket-division",
+      "employment_type": "Intern",
+      "level": "entry",
+      "role_ids": [
+        10
+      ],
+      "source": "SmartRecruiters",
+      "retrieved_at": "2026-10-26T02:45:19.124923+00:00"
+    },
+    {
+      "id": "BoschGroup:744000072359295",
+      "title": "Internship 2026, Office of Executive Management & Business Development",
+      "company": "Bosch Group",
+      "company_id": "BoschGroup",
+      "posting_id": "744000072359295",
+      "location": "Klong Toei, Bangkok",
+      "country": "th",
+      "published_at": "2025-07-24T03:11:33.793Z",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000072359295-internship-2026-office-of-executive-management-business-development",
+      "employment_type": "Intern",
+      "level": "entry",
+      "role_ids": [
+        3
+      ],
+      "source": "SmartRecruiters",
+      "retrieved_at": "2026-10-26T02:45:19.732095+00:00"
+    },
+    {
+      "id": "WesternDigital:744000156697071",
+      "title": "Data Analyst, Facilities",
+      "company": "Western Digital",
+      "company_id": "WesternDigital",
+      "posting_id": "744000156697071",
+      "location": "BangPa-in, PHRA NAKHON SI AYUTTHAYA",
+      "country": "th",
+      "published_at": "2026-10-21T01:47:20.195Z",
+      "url": "https://jobs.smartrecruiters.com/WesternDigital/744000156697071-data-analyst-facilities",
+      "employment_type": "Full-time",
+      "level": "unspecified",
+      "role_ids": [
+        17
+      ],
+      "source": "SmartRecruiters",
+      "retrieved_at": "2026-10-26T02:45:13.836764+00:00"
+    },
+    {
+      "id": "AccorHotel:744000150005779",
+      "title": "Account Manager - Digital Marketing",
+      "company": "AccorHotel",
+      "company_id": "AccorHotel",
+      "posting_id": "744000150005779",
+      "location": "Saku, PHUKET",
+      "country": "th",
+      "published_at": "2026-09-17T04:03:49.843Z",
+      "url": "https://jobs.smartrecruiters.com/AccorHotel/744000150005779-account-manager-digital-marketing",
+      "employment_type": "Full-time",
+      "level": "experienced",
+      "role_ids": [
+        13
+      ],
+      "source": "SmartRecruiters",
+      "retrieved_at": "2026-10-26T02:45:14.621321+00:00"
+    },
+    {
+      "id": "AccorHotel:744000140647530",
+      "title": "Director of Business Development",
+      "company": "AccorHotel",
+      "company_id": "AccorHotel",
+      "posting_id": "744000140647530",
+      "location": "Phuket, จ.ภูเก็ต",
+      "country": "th",
+      "published_at": "2026-07-30T10:03:50.180Z",
+      "url": "https://jobs.smartrecruiters.com/AccorHotel/744000140647530-director-of-business-development",
+      "employment_type": "Full-time",
+      "level": "experienced",
+      "role_ids": [
+        3
+      ],
+      "source": "SmartRecruiters",
+      "retrieved_at": "2026-10-26T02:45:15.236212+00:00"
+    },
+    {
+      "id": "greenhouse:agoda:8241893",
+      "title": "Frontend/Full Stack Engineer Manager (Bangkok based, Relocation provided)",
+      "company": "Agoda",
+      "company_id": "greenhouse:agoda",
+      "posting_id": "8241893",
+      "location": "Bangkok, Thailand",
+      "country": "th",
+      "published_at": "2026-10-22T03:52:37-04:00",
+      "url": "https://job-boards.greenhouse.io/agoda/jobs/8241893",
+      "employment_type": "ดูที่ต้นทาง",
+      "level": "experienced",
+      "role_ids": [
+        25
+      ],
+      "source": "Greenhouse",
+      "retrieved_at": "2026-10-26T02:45:20.058157+00:00"
+    },
+    {
+      "id": "greenhouse:agoda:6750678",
+      "title": "Lead Software Engineer - Full Stack (Bangkok based, relocation provided)",
+      "company": "Agoda",
+      "company_id": "greenhouse:agoda",
+      "posting_id": "6750678",
+      "location": "Bangkok, Thailand",
+      "country": "th",
+      "published_at": "2026-10-16T03:18:46-04:00",
+      "url": "https://job-boards.greenhouse.io/agoda/jobs/6750678",
+      "employment_type": "ดูที่ต้นทาง",
+      "level": "experienced",
+      "role_ids": [
+        25
+      ],
+      "source": "Greenhouse",
+      "retrieved_at": "2026-10-26T02:45:20.059261+00:00"
+    },
+    {
+      "id": "greenhouse:agoda:8305599",
+      "title": "Operational Excellence Coordinator/Senior Coordinator (10-month contract) (Bangkok-Based)",
+      "company": "Agoda",
+      "company_id": "greenhouse:agoda",
+      "posting_id": "8305599",
+      "location": "Bangkok, Thailand",
+      "country": "th",
+      "published_at": "2026-10-21T06:21:03-04:00",
+      "url": "https://job-boards.greenhouse.io/agoda/jobs/8305599",
+      "employment_type": "ดูที่ต้นทาง",
+      "level": "experienced",
+      "role_ids": [
+        28
+      ],
+      "source": "Greenhouse",
+      "retrieved_at": "2026-10-26T02:45:20.060671+00:00"
+    },
+    {
+      "id": "greenhouse:agoda:8059327",
+      "title": "People Development and Performance Senior Consultant (Culture)",
+      "company": "Agoda",
+      "company_id": "greenhouse:agoda",
+      "posting_id": "8059327",
+      "location": "Bangkok, Thailand",
+      "country": "th",
+      "published_at": "2026-10-21T23:27:23-04:00",
+      "url": "https://job-boards.greenhouse.io/agoda/jobs/8059327",
+      "employment_type": "ดูที่ต้นทาง",
+      "level": "experienced",
+      "role_ids": [
+        4
+      ],
+      "source": "Greenhouse",
+      "retrieved_at": "2026-10-26T02:45:20.061044+00:00"
+    },
+    {
+      "id": "greenhouse:agoda:8248603",
+      "title": "Product Designer L2 - Accommodation (Bangkok-Based)",
+      "company": "Agoda",
+      "company_id": "greenhouse:agoda",
+      "posting_id": "8248603",
+      "location": "Bangkok, Thailand",
+      "country": "th",
+      "published_at": "2026-10-21T05:11:21-04:00",
+      "url": "https://job-boards.greenhouse.io/agoda/jobs/8248603",
+      "employment_type": "ดูที่ต้นทาง",
+      "level": "unspecified",
+      "role_ids": [
+        27
+      ],
+      "source": "Greenhouse",
+      "retrieved_at": "2026-10-26T02:45:20.061502+00:00"
+    },
+    {
+      "id": "greenhouse:agoda:8280811",
+      "title": "Product Operations Analyst",
+      "company": "Agoda",
+      "company_id": "greenhouse:agoda",
+      "posting_id": "8280811",
+      "location": "Bangkok, Thailand",
+      "country": "th",
+      "published_at": "2026-10-16T03:18:45-04:00",
+      "url": "https://job-boards.greenhouse.io/agoda/jobs/8280811",
+      "employment_type": "ดูที่ต้นทาง",
+      "level": "unspecified",
+      "role_ids": [
+        8
+      ],
+      "source": "Greenhouse",
+      "retrieved_at": "2026-10-26T02:45:20.061607+00:00"
+    },
+    {
+      "id": "greenhouse:agoda:7379324",
+      "title": "Senior BI Analyst (Supply Analytics, Bangkok-based)",
+      "company": "Agoda",
+      "company_id": "greenhouse:agoda",
+      "posting_id": "7379324",
+      "location": "Bangkok, Thailand",
+      "country": "th",
+      "published_at": "2026-10-16T03:18:44-04:00",
+      "url": "https://job-boards.greenhouse.io/agoda/jobs/7379324",
+      "employment_type": "ดูที่ต้นทาง",
+      "level": "experienced",
+      "role_ids": [
+        19
+      ],
+      "source": "Greenhouse",
+      "retrieved_at": "2026-10-26T02:45:20.062763+00:00"
+    },
+    {
+      "id": "greenhouse:agoda:7962422",
+      "title": "Senior Business Analyst (Bangkok-based, Relocation Provided) ",
+      "company": "Agoda",
+      "company_id": "greenhouse:agoda",
+      "posting_id": "7962422",
+      "location": "Bangkok, Thailand",
+      "country": "th",
+      "published_at": "2026-10-16T03:18:51-04:00",
+      "url": "https://job-boards.greenhouse.io/agoda/jobs/7962422",
+      "employment_type": "ดูที่ต้นทาง",
+      "level": "experienced",
+      "role_ids": [
+        0
+      ],
+      "source": "Greenhouse",
+      "retrieved_at": "2026-10-26T02:45:20.062819+00:00"
+    },
+    {
+      "id": "greenhouse:agoda:8047686",
+      "title": "Senior Manager, Performance Marketing (Bangkok-based, relocation provided)",
+      "company": "Agoda",
+      "company_id": "greenhouse:agoda",
+      "posting_id": "8047686",
+      "location": "Bangkok, Thailand",
+      "country": "th",
+      "published_at": "2026-10-16T03:18:51-04:00",
+      "url": "https://job-boards.greenhouse.io/agoda/jobs/8047686",
+      "employment_type": "ดูที่ต้นทาง",
+      "level": "experienced",
+      "role_ids": [
+        13
+      ],
+      "source": "Greenhouse",
+      "retrieved_at": "2026-10-26T02:45:20.063531+00:00"
+    },
+    {
+      "id": "greenhouse:agoda:8173395",
+      "title": "Senior Product Designer - CEG (Bangkok - Based, Relocation Provided)",
+      "company": "Agoda",
+      "company_id": "greenhouse:agoda",
+      "posting_id": "8173395",
+      "location": "Bangkok, Thailand",
+      "country": "th",
+      "published_at": "2026-10-16T03:18:48-04:00",
+      "url": "https://job-boards.greenhouse.io/agoda/jobs/8173395",
+      "employment_type": "ดูที่ต้นทาง",
+      "level": "experienced",
+      "role_ids": [
+        27
+      ],
+      "source": "Greenhouse",
+      "retrieved_at": "2026-10-26T02:45:20.064184+00:00"
+    },
+    {
+      "id": "greenhouse:agoda:7478051",
+      "title": "Senior Product Designer - Trip Marketing (Bangkok - Based, Relocation Provided)",
+      "company": "Agoda",
+      "company_id": "greenhouse:agoda",
+      "posting_id": "7478051",
+      "location": "Bangkok, Thailand",
+      "country": "th",
+      "published_at": "2026-10-16T03:18:48-04:00",
+      "url": "https://job-boards.greenhouse.io/agoda/jobs/7478051",
+      "employment_type": "ดูที่ต้นทาง",
+      "level": "experienced",
+      "role_ids": [
+        27
+      ],
+      "source": "Greenhouse",
+      "retrieved_at": "2026-10-26T02:45:20.064242+00:00"
+    },
+    {
+      "id": "greenhouse:agoda:8224989",
+      "title": "Specialist/Senior Specialist, B2B Digital Marketing (Bangkok Based, relocation provided)",
+      "company": "Agoda",
+      "company_id": "greenhouse:agoda",
+      "posting_id": "8224989",
+      "location": "Bangkok, Thailand",
+      "country": "th",
+      "published_at": "2026-10-21T06:15:42-04:00",
+      "url": "https://job-boards.greenhouse.io/agoda/jobs/8224989",
+      "employment_type": "ดูที่ต้นทาง",
+      "level": "experienced",
+      "role_ids": [
+        13
+      ],
+      "source": "Greenhouse",
+      "retrieved_at": "2026-10-26T02:45:20.065232+00:00"
+    },
+    {
+      "id": "greenhouse:agoda:7543802",
+      "title": "Staff Software Engineer - Full Stack AI (Bangkok based, Relocation provided)",
+      "company": "Agoda",
+      "company_id": "greenhouse:agoda",
+      "posting_id": "7543802",
+      "location": "Bangkok, Thailand",
+      "country": "th",
+      "published_at": "2026-10-16T03:18:46-04:00",
+      "url": "https://job-boards.greenhouse.io/agoda/jobs/7543802",
+      "employment_type": "ดูที่ต้นทาง",
+      "level": "experienced",
+      "role_ids": [
+        25
+      ],
+      "source": "Greenhouse",
+      "retrieved_at": "2026-10-26T02:45:20.065939+00:00"
+    },
+    {
+      "id": "greenhouse:agoda:6750697",
+      "title": "Staff Software Engineer - Full Stack (Bangkok based, Relocation provided)",
+      "company": "Agoda",
+      "company_id": "greenhouse:agoda",
+      "posting_id": "6750697",
+      "location": "Bangkok, Thailand",
+      "country": "th",
+      "published_at": "2026-10-16T03:18:46-04:00",
+      "url": "https://job-boards.greenhouse.io/agoda/jobs/6750697",
+      "employment_type": "ดูที่ต้นทาง",
+      "level": "experienced",
+      "role_ids": [
+        25
+      ],
+      "source": "Greenhouse",
+      "retrieved_at": "2026-10-26T02:45:20.065997+00:00"
+    }
+  ],
+  "sources": [
+    {
+      "company": "BoschGroup",
+      "status": "ok",
+      "count": 9,
+      "truncated": false
+    },
+    {
+      "company": "WesternDigital",
+      "status": "ok",
+      "count": 1,
+      "truncated": false
+    },
+    {
+      "company": "MinorInternational",
+      "status": "ok",
+      "count": 0,
+      "truncated": false
+    },
+    {
+      "company": "Dentsu",
+      "status": "ok",
+      "count": 0,
+      "truncated": false
+    },
+    {
+      "company": "AccorHotel",
+      "status": "ok",
+      "count": 2,
+      "truncated": false
+    },
+    {
+      "company": "greenhouse:agoda",
+      "status": "ok",
+      "count": 14
+    }
+  ]
+}
