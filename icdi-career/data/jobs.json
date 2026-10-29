@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-28T01:12:06.759658+00:00",
-  "attempted_at": "2026-10-28T01:12:06.759658+00:00",
+  "updated_at": "2026-10-29T01:09:58.802265+00:00",
+  "attempted_at": "2026-10-29T01:09:58.802265+00:00",
   "jobs": [
     {
       "id": "BoschGroup:744000157965990",
@@ -21,7 +21,7 @@
         10
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-28T01:11:59.298195+00:00"
+      "retrieved_at": "2026-10-29T01:09:51.759314+00:00"
     },
     {
       "id": "BoschGroup:744000150586129",
@@ -42,7 +42,7 @@
         6
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-28T01:12:00.029604+00:00"
+      "retrieved_at": "2026-10-29T01:09:52.398842+00:00"
     },
     {
       "id": "BoschGroup:744000149286121",
@@ -63,7 +63,7 @@
         14
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-28T01:12:00.715970+00:00"
+      "retrieved_at": "2026-10-29T01:09:53.021546+00:00"
     },
     {
       "id": "BoschGroup:744000142837878",
@@ -84,7 +84,7 @@
         6
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-28T01:12:01.433226+00:00"
+      "retrieved_at": "2026-10-29T01:09:53.650574+00:00"
     },
     {
       "id": "BoschGroup:744000119536647",
@@ -105,7 +105,7 @@
         17
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-28T01:12:02.093852+00:00"
+      "retrieved_at": "2026-10-29T01:09:54.286062+00:00"
     },
     {
       "id": "BoschGroup:744000106788838",
@@ -126,7 +126,7 @@
         24
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-28T01:12:02.788755+00:00"
+      "retrieved_at": "2026-10-29T01:09:54.961145+00:00"
     },
     {
       "id": "BoschGroup:744000103637681",
@@ -147,7 +147,7 @@
         1
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-28T01:12:04.213846+00:00"
+      "retrieved_at": "2026-10-29T01:09:56.303496+00:00"
     },
     {
       "id": "BoschGroup:744000103638354",
@@ -168,7 +168,7 @@
         1
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-28T01:12:04.894390+00:00"
+      "retrieved_at": "2026-10-29T01:09:56.900117+00:00"
     },
     {
       "id": "BoschGroup:744000093625984",
@@ -189,7 +189,7 @@
         10
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-28T01:12:05.566159+00:00"
+      "retrieved_at": "2026-10-29T01:09:57.561123+00:00"
     },
     {
       "id": "BoschGroup:744000072359295",
@@ -210,7 +210,7 @@
         3
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-28T01:12:06.256894+00:00"
+      "retrieved_at": "2026-10-29T01:09:58.173132+00:00"
     },
     {
       "id": "WesternDigital:744000156697071",
@@ -231,7 +231,7 @@
         17
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-28T01:11:59.225394+00:00"
+      "retrieved_at": "2026-10-29T01:09:51.704322+00:00"
     },
     {
       "id": "AccorHotel:744000150005779",
@@ -252,7 +252,7 @@
         13
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-28T01:12:00.215926+00:00"
+      "retrieved_at": "2026-10-29T01:09:52.508613+00:00"
     },
     {
       "id": "AccorHotel:744000140647530",
@@ -273,7 +273,7 @@
         3
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-10-28T01:12:00.858017+00:00"
+      "retrieved_at": "2026-10-29T01:09:53.140660+00:00"
     },
     {
       "id": "greenhouse:agoda:8241893",
@@ -284,7 +284,7 @@
       "location": "Bangkok, Thailand",
       "country": "th",
       "published_at": null,
-      "modified_at": "2026-10-22T03:52:37-04:00",
+      "modified_at": "2026-10-28T14:00:02-04:00",
       "date_kind": "modified",
       "closes_at": null,
       "active": true,
@@ -295,7 +295,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-28T01:12:06.592817+00:00"
+      "retrieved_at": "2026-10-29T01:09:58.592609+00:00"
     },
     {
       "id": "greenhouse:agoda:6750678",
@@ -317,18 +317,18 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-28T01:12:06.593438+00:00"
+      "retrieved_at": "2026-10-29T01:09:58.593803+00:00"
     },
     {
       "id": "greenhouse:agoda:8305599",
-      "title": "Operational Excellence Coordinator/Senior Coordinator (10-month contract) (Bangkok-Based)",
+      "title": "Operational Excellence Coordinator/Senior Coordinator (10-month contract) (Bangkok-Based, No Visa Provided)",
       "company": "Agoda",
       "company_id": "greenhouse:agoda",
       "posting_id": "8305599",
       "location": "Bangkok, Thailand",
       "country": "th",
       "published_at": null,
-      "modified_at": "2026-10-27T00:49:39-04:00",
+      "modified_at": "2026-10-28T04:16:06-04:00",
       "date_kind": "modified",
       "closes_at": null,
       "active": true,
@@ -339,7 +339,7 @@
         28
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-28T01:12:06.594198+00:00"
+      "retrieved_at": "2026-10-29T01:09:58.595195+00:00"
     },
     {
       "id": "greenhouse:agoda:8059327",
@@ -361,7 +361,7 @@
         4
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-28T01:12:06.594454+00:00"
+      "retrieved_at": "2026-10-29T01:09:58.595649+00:00"
     },
     {
       "id": "greenhouse:agoda:8248603",
@@ -383,7 +383,7 @@
         27
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-28T01:12:06.594690+00:00"
+      "retrieved_at": "2026-10-29T01:09:58.596066+00:00"
     },
     {
       "id": "greenhouse:agoda:8280811",
@@ -405,7 +405,7 @@
         8
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-28T01:12:06.594736+00:00"
+      "retrieved_at": "2026-10-29T01:09:58.596154+00:00"
     },
     {
       "id": "greenhouse:agoda:7379324",
@@ -427,7 +427,7 @@
         19
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-28T01:12:06.595412+00:00"
+      "retrieved_at": "2026-10-29T01:09:58.597259+00:00"
     },
     {
       "id": "greenhouse:agoda:7962422",
@@ -449,7 +449,7 @@
         0
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-28T01:12:06.595442+00:00"
+      "retrieved_at": "2026-10-29T01:09:58.597316+00:00"
     },
     {
       "id": "greenhouse:agoda:8047686",
@@ -471,7 +471,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-28T01:12:06.595818+00:00"
+      "retrieved_at": "2026-10-29T01:09:58.598038+00:00"
     },
     {
       "id": "greenhouse:agoda:8173395",
@@ -493,7 +493,7 @@
         27
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-28T01:12:06.596179+00:00"
+      "retrieved_at": "2026-10-29T01:09:58.598713+00:00"
     },
     {
       "id": "greenhouse:agoda:7478051",
@@ -515,7 +515,7 @@
         27
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-28T01:12:06.596209+00:00"
+      "retrieved_at": "2026-10-29T01:09:58.598775+00:00"
     },
     {
       "id": "greenhouse:agoda:8224989",
@@ -537,7 +537,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-28T01:12:06.596759+00:00"
+      "retrieved_at": "2026-10-29T01:09:58.599693+00:00"
     },
     {
       "id": "greenhouse:agoda:7543802",
@@ -559,7 +559,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-28T01:12:06.597037+00:00"
+      "retrieved_at": "2026-10-29T01:09:58.600193+00:00"
     },
     {
       "id": "greenhouse:agoda:6750697",
@@ -581,7 +581,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-28T01:12:06.597065+00:00"
+      "retrieved_at": "2026-10-29T01:09:58.600248+00:00"
     },
     {
       "id": "greenhouse:sertis:8835632002",
@@ -603,7 +603,7 @@
         3
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-28T01:12:06.680296+00:00"
+      "retrieved_at": "2026-10-29T01:09:58.658244+00:00"
     },
     {
       "id": "greenhouse:sertis:8836384002",
@@ -625,7 +625,7 @@
         3
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-28T01:12:06.680355+00:00"
+      "retrieved_at": "2026-10-29T01:09:58.658319+00:00"
     },
     {
       "id": "greenhouse:sertis:8857527002",
@@ -647,7 +647,7 @@
         24
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-28T01:12:06.680485+00:00"
+      "retrieved_at": "2026-10-29T01:09:58.658617+00:00"
     },
     {
       "id": "greenhouse:acommerce:8200499",
@@ -669,7 +669,7 @@
         3
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-28T01:12:06.758332+00:00"
+      "retrieved_at": "2026-10-29T01:09:58.799853+00:00"
     },
     {
       "id": "greenhouse:acommerce:8324200",
@@ -691,7 +691,7 @@
         28
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-28T01:12:06.758378+00:00"
+      "retrieved_at": "2026-10-29T01:09:58.799932+00:00"
     },
     {
       "id": "greenhouse:acommerce:6480264",
@@ -713,7 +713,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-28T01:12:06.758748+00:00"
+      "retrieved_at": "2026-10-29T01:09:58.800651+00:00"
     },
     {
       "id": "greenhouse:acommerce:5399315",
@@ -735,7 +735,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-28T01:12:06.759050+00:00"
+      "retrieved_at": "2026-10-29T01:09:58.801182+00:00"
     },
     {
       "id": "greenhouse:acommerce:5589273",
@@ -757,7 +757,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-28T01:12:06.759174+00:00"
+      "retrieved_at": "2026-10-29T01:09:58.801405+00:00"
     },
     {
       "id": "greenhouse:acommerce:7869685",
@@ -779,7 +779,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-28T01:12:06.759290+00:00"
+      "retrieved_at": "2026-10-29T01:09:58.801635+00:00"
     },
     {
       "id": "greenhouse:acommerce:6897184",
@@ -802,7 +802,7 @@
         10
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-10-28T01:12:06.759571+00:00"
+      "retrieved_at": "2026-10-29T01:09:58.802119+00:00"
     }
   ],
   "sources": [
