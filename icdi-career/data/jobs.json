@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-03T01:17:31.150669+00:00",
-  "attempted_at": "2026-11-03T01:17:31.150669+00:00",
+  "updated_at": "2026-11-04T01:18:15.355773+00:00",
+  "attempted_at": "2026-11-04T01:18:15.355773+00:00",
   "jobs": [
     {
       "id": "BoschGroup:744000157965990",
@@ -21,7 +21,7 @@
         10
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-03T01:17:24.160065+00:00"
+      "retrieved_at": "2026-11-04T01:18:07.931977+00:00"
     },
     {
       "id": "BoschGroup:744000150586129",
@@ -42,7 +42,7 @@
         6
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-03T01:17:24.800599+00:00"
+      "retrieved_at": "2026-11-04T01:18:08.624818+00:00"
     },
     {
       "id": "BoschGroup:744000149286121",
@@ -63,7 +63,7 @@
         14
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-03T01:17:25.417407+00:00"
+      "retrieved_at": "2026-11-04T01:18:09.289511+00:00"
     },
     {
       "id": "BoschGroup:744000142837878",
@@ -84,7 +84,7 @@
         6
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-03T01:17:26.034912+00:00"
+      "retrieved_at": "2026-11-04T01:18:09.984065+00:00"
     },
     {
       "id": "BoschGroup:744000119536647",
@@ -105,7 +105,7 @@
         17
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-03T01:17:26.669614+00:00"
+      "retrieved_at": "2026-11-04T01:18:10.663772+00:00"
     },
     {
       "id": "BoschGroup:744000106788838",
@@ -126,7 +126,7 @@
         24
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-03T01:17:27.294103+00:00"
+      "retrieved_at": "2026-11-04T01:18:11.341949+00:00"
     },
     {
       "id": "BoschGroup:744000103637681",
@@ -147,7 +147,7 @@
         1
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-03T01:17:28.680000+00:00"
+      "retrieved_at": "2026-11-04T01:18:12.794229+00:00"
     },
     {
       "id": "BoschGroup:744000103638354",
@@ -168,7 +168,7 @@
         1
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-03T01:17:29.367031+00:00"
+      "retrieved_at": "2026-11-04T01:18:13.461885+00:00"
     },
     {
       "id": "BoschGroup:744000093625984",
@@ -189,7 +189,7 @@
         10
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-03T01:17:29.996253+00:00"
+      "retrieved_at": "2026-11-04T01:18:14.139000+00:00"
     },
     {
       "id": "BoschGroup:744000072359295",
@@ -210,7 +210,7 @@
         3
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-03T01:17:30.690298+00:00"
+      "retrieved_at": "2026-11-04T01:18:14.796024+00:00"
     },
     {
       "id": "WesternDigital:744000156697071",
@@ -231,7 +231,7 @@
         17
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-03T01:17:24.172451+00:00"
+      "retrieved_at": "2026-11-04T01:18:07.889261+00:00"
     },
     {
       "id": "AccorHotel:744000150005779",
@@ -252,7 +252,7 @@
         13
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-03T01:17:24.926556+00:00"
+      "retrieved_at": "2026-11-04T01:18:08.719257+00:00"
     },
     {
       "id": "greenhouse:agoda:8241893",
@@ -274,7 +274,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-03T01:17:31.034721+00:00"
+      "retrieved_at": "2026-11-04T01:18:15.167568+00:00"
     },
     {
       "id": "greenhouse:agoda:6750678",
@@ -296,7 +296,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-03T01:17:31.035985+00:00"
+      "retrieved_at": "2026-11-04T01:18:15.168554+00:00"
     },
     {
       "id": "greenhouse:agoda:8305599",
@@ -318,7 +318,7 @@
         28
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-03T01:17:31.037330+00:00"
+      "retrieved_at": "2026-11-04T01:18:15.169607+00:00"
     },
     {
       "id": "greenhouse:agoda:8059327",
@@ -340,7 +340,7 @@
         4
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-03T01:17:31.037853+00:00"
+      "retrieved_at": "2026-11-04T01:18:15.170009+00:00"
     },
     {
       "id": "greenhouse:agoda:8248603",
@@ -362,7 +362,7 @@
         27
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-03T01:17:31.038225+00:00"
+      "retrieved_at": "2026-11-04T01:18:15.170273+00:00"
     },
     {
       "id": "greenhouse:agoda:8280811",
@@ -384,7 +384,7 @@
         8
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-03T01:17:31.038314+00:00"
+      "retrieved_at": "2026-11-04T01:18:15.170339+00:00"
     },
     {
       "id": "greenhouse:agoda:7379324",
@@ -406,7 +406,7 @@
         19
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-03T01:17:31.039389+00:00"
+      "retrieved_at": "2026-11-04T01:18:15.171169+00:00"
     },
     {
       "id": "greenhouse:agoda:7962422",
@@ -428,7 +428,7 @@
         0
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-03T01:17:31.039489+00:00"
+      "retrieved_at": "2026-11-04T01:18:15.171243+00:00"
     },
     {
       "id": "greenhouse:agoda:8047686",
@@ -450,7 +450,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-03T01:17:31.040232+00:00"
+      "retrieved_at": "2026-11-04T01:18:15.171838+00:00"
     },
     {
       "id": "greenhouse:agoda:8173395",
@@ -472,7 +472,7 @@
         27
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-03T01:17:31.040886+00:00"
+      "retrieved_at": "2026-11-04T01:18:15.172342+00:00"
     },
     {
       "id": "greenhouse:agoda:7478051",
@@ -494,7 +494,7 @@
         27
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-03T01:17:31.040946+00:00"
+      "retrieved_at": "2026-11-04T01:18:15.172394+00:00"
     },
     {
       "id": "greenhouse:agoda:7543802",
@@ -516,7 +516,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-03T01:17:31.042111+00:00"
+      "retrieved_at": "2026-11-04T01:18:15.173343+00:00"
     },
     {
       "id": "greenhouse:agoda:6750697",
@@ -538,7 +538,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-03T01:17:31.042172+00:00"
+      "retrieved_at": "2026-11-04T01:18:15.173393+00:00"
     },
     {
       "id": "greenhouse:sertis:8835632002",
@@ -560,7 +560,7 @@
         3
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-03T01:17:31.094630+00:00"
+      "retrieved_at": "2026-11-04T01:18:15.258025+00:00"
     },
     {
       "id": "greenhouse:sertis:8836384002",
@@ -582,7 +582,7 @@
         3
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-03T01:17:31.094700+00:00"
+      "retrieved_at": "2026-11-04T01:18:15.258086+00:00"
     },
     {
       "id": "greenhouse:sertis:8857527002",
@@ -604,7 +604,7 @@
         24
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-03T01:17:31.094910+00:00"
+      "retrieved_at": "2026-11-04T01:18:15.258269+00:00"
     },
     {
       "id": "greenhouse:acommerce:8200499",
@@ -626,7 +626,7 @@
         3
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-03T01:17:31.148287+00:00"
+      "retrieved_at": "2026-11-04T01:18:15.353569+00:00"
     },
     {
       "id": "greenhouse:acommerce:8324200",
@@ -648,7 +648,7 @@
         28
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-03T01:17:31.148374+00:00"
+      "retrieved_at": "2026-11-04T01:18:15.353659+00:00"
     },
     {
       "id": "greenhouse:acommerce:6480264",
@@ -670,7 +670,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-03T01:17:31.149044+00:00"
+      "retrieved_at": "2026-11-04T01:18:15.354520+00:00"
     },
     {
       "id": "greenhouse:acommerce:5399315",
@@ -692,7 +692,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-03T01:17:31.149600+00:00"
+      "retrieved_at": "2026-11-04T01:18:15.354941+00:00"
     },
     {
       "id": "greenhouse:acommerce:5589273",
@@ -714,7 +714,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-03T01:17:31.149862+00:00"
+      "retrieved_at": "2026-11-04T01:18:15.355116+00:00"
     },
     {
       "id": "greenhouse:acommerce:7869685",
@@ -736,7 +736,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-03T01:17:31.150032+00:00"
+      "retrieved_at": "2026-11-04T01:18:15.355244+00:00"
     },
     {
       "id": "greenhouse:acommerce:6897184",
@@ -759,7 +759,7 @@
         10
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-03T01:17:31.150536+00:00"
+      "retrieved_at": "2026-11-04T01:18:15.355650+00:00"
     }
   ],
   "sources": [
