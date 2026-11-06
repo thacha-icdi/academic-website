@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-05T01:20:23.914380+00:00",
-  "attempted_at": "2026-11-05T01:20:23.914380+00:00",
+  "updated_at": "2026-11-06T01:22:36.681981+00:00",
+  "attempted_at": "2026-11-06T01:22:36.681981+00:00",
   "jobs": [
     {
       "id": "BoschGroup:744000157965990",
@@ -21,7 +21,7 @@
         10
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-05T01:20:16.687520+00:00"
+      "retrieved_at": "2026-11-06T01:22:28.823463+00:00"
     },
     {
       "id": "BoschGroup:744000150586129",
@@ -42,7 +42,7 @@
         6
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-05T01:20:17.362822+00:00"
+      "retrieved_at": "2026-11-06T01:22:29.541419+00:00"
     },
     {
       "id": "BoschGroup:744000149286121",
@@ -63,7 +63,7 @@
         14
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-05T01:20:17.971844+00:00"
+      "retrieved_at": "2026-11-06T01:22:30.232867+00:00"
     },
     {
       "id": "BoschGroup:744000142837878",
@@ -84,7 +84,7 @@
         6
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-05T01:20:18.625014+00:00"
+      "retrieved_at": "2026-11-06T01:22:31.099731+00:00"
     },
     {
       "id": "BoschGroup:744000119536647",
@@ -105,7 +105,7 @@
         17
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-05T01:20:19.313407+00:00"
+      "retrieved_at": "2026-11-06T01:22:31.826829+00:00"
     },
     {
       "id": "BoschGroup:744000106788838",
@@ -126,7 +126,7 @@
         24
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-05T01:20:19.991491+00:00"
+      "retrieved_at": "2026-11-06T01:22:32.711592+00:00"
     },
     {
       "id": "BoschGroup:744000103637681",
@@ -147,7 +147,7 @@
         1
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-05T01:20:21.382213+00:00"
+      "retrieved_at": "2026-11-06T01:22:34.077778+00:00"
     },
     {
       "id": "BoschGroup:744000103638354",
@@ -168,7 +168,7 @@
         1
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-05T01:20:22.013954+00:00"
+      "retrieved_at": "2026-11-06T01:22:34.700659+00:00"
     },
     {
       "id": "BoschGroup:744000093625984",
@@ -189,7 +189,7 @@
         10
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-05T01:20:22.643344+00:00"
+      "retrieved_at": "2026-11-06T01:22:35.415701+00:00"
     },
     {
       "id": "BoschGroup:744000072359295",
@@ -210,7 +210,7 @@
         3
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-05T01:20:23.273922+00:00"
+      "retrieved_at": "2026-11-06T01:22:36.074649+00:00"
     },
     {
       "id": "WesternDigital:744000156697071",
@@ -231,7 +231,7 @@
         17
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-05T01:20:16.542210+00:00"
+      "retrieved_at": "2026-11-06T01:22:28.794659+00:00"
     },
     {
       "id": "AccorHotel:744000150005779",
@@ -252,7 +252,7 @@
         13
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-05T01:20:17.220246+00:00"
+      "retrieved_at": "2026-11-06T01:22:29.803946+00:00"
     },
     {
       "id": "greenhouse:agoda:8241893",
@@ -274,7 +274,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-05T01:20:23.693961+00:00"
+      "retrieved_at": "2026-11-06T01:22:36.409817+00:00"
     },
     {
       "id": "greenhouse:agoda:6750678",
@@ -296,7 +296,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-05T01:20:23.694944+00:00"
+      "retrieved_at": "2026-11-06T01:22:36.410632+00:00"
     },
     {
       "id": "greenhouse:agoda:8305599",
@@ -318,7 +318,7 @@
         28
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-05T01:20:23.695992+00:00"
+      "retrieved_at": "2026-11-06T01:22:36.411438+00:00"
     },
     {
       "id": "greenhouse:agoda:8059327",
@@ -340,29 +340,7 @@
         4
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-05T01:20:23.696394+00:00"
-    },
-    {
-      "id": "greenhouse:agoda:8248603",
-      "title": "Product Designer L2 - Accommodation (Bangkok-Based)",
-      "company": "Agoda",
-      "company_id": "greenhouse:agoda",
-      "posting_id": "8248603",
-      "location": "Bangkok, Thailand",
-      "country": "th",
-      "published_at": null,
-      "modified_at": "2026-10-21T05:11:21-04:00",
-      "date_kind": "modified",
-      "closes_at": null,
-      "active": true,
-      "url": "https://job-boards.greenhouse.io/agoda/jobs/8248603",
-      "employment_type": "ดูที่ต้นทาง",
-      "level": "unspecified",
-      "role_ids": [
-        27
-      ],
-      "source": "Greenhouse",
-      "retrieved_at": "2026-11-05T01:20:23.696661+00:00"
+      "retrieved_at": "2026-11-06T01:22:36.411745+00:00"
     },
     {
       "id": "greenhouse:agoda:7379324",
@@ -384,7 +362,7 @@
         19
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-05T01:20:23.697506+00:00"
+      "retrieved_at": "2026-11-06T01:22:36.412648+00:00"
     },
     {
       "id": "greenhouse:agoda:7962422",
@@ -406,7 +384,7 @@
         0
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-05T01:20:23.697582+00:00"
+      "retrieved_at": "2026-11-06T01:22:36.412703+00:00"
     },
     {
       "id": "greenhouse:agoda:8047686",
@@ -428,7 +406,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-05T01:20:23.698176+00:00"
+      "retrieved_at": "2026-11-06T01:22:36.413140+00:00"
     },
     {
       "id": "greenhouse:agoda:8173395",
@@ -450,7 +428,7 @@
         27
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-05T01:20:23.698650+00:00"
+      "retrieved_at": "2026-11-06T01:22:36.413531+00:00"
     },
     {
       "id": "greenhouse:agoda:7543802",
@@ -472,7 +450,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-05T01:20:23.699641+00:00"
+      "retrieved_at": "2026-11-06T01:22:36.414288+00:00"
     },
     {
       "id": "greenhouse:agoda:6750697",
@@ -494,7 +472,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-05T01:20:23.699684+00:00"
+      "retrieved_at": "2026-11-06T01:22:36.414320+00:00"
     },
     {
       "id": "greenhouse:sertis:8835632002",
@@ -516,7 +494,7 @@
         3
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-05T01:20:23.811014+00:00"
+      "retrieved_at": "2026-11-06T01:22:36.496704+00:00"
     },
     {
       "id": "greenhouse:sertis:8836384002",
@@ -538,7 +516,7 @@
         3
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-05T01:20:23.811074+00:00"
+      "retrieved_at": "2026-11-06T01:22:36.496764+00:00"
     },
     {
       "id": "greenhouse:sertis:8857527002",
@@ -560,7 +538,7 @@
         24
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-05T01:20:23.811255+00:00"
+      "retrieved_at": "2026-11-06T01:22:36.496922+00:00"
     },
     {
       "id": "greenhouse:acommerce:8200499",
@@ -582,7 +560,7 @@
         3
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-05T01:20:23.912608+00:00"
+      "retrieved_at": "2026-11-06T01:22:36.680581+00:00"
     },
     {
       "id": "greenhouse:acommerce:8324200",
@@ -604,7 +582,29 @@
         28
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-05T01:20:23.912672+00:00"
+      "retrieved_at": "2026-11-06T01:22:36.680635+00:00"
+    },
+    {
+      "id": "greenhouse:acommerce:5399315",
+      "title": "Digital Marketing (Paid Performance Marketing/Biddable) - Specialist",
+      "company": "aCommerce",
+      "company_id": "greenhouse:acommerce",
+      "posting_id": "5399315",
+      "location": "Bangkok, Thailand",
+      "country": "th",
+      "published_at": null,
+      "modified_at": "2026-11-04T23:42:05-05:00",
+      "date_kind": "modified",
+      "closes_at": null,
+      "active": true,
+      "url": "https://job-boards.greenhouse.io/acommerce/jobs/5399315",
+      "employment_type": "ดูที่ต้นทาง",
+      "level": "unspecified",
+      "role_ids": [
+        13
+      ],
+      "source": "Greenhouse",
+      "retrieved_at": "2026-11-06T01:22:36.680792+00:00"
     },
     {
       "id": "greenhouse:acommerce:6480264",
@@ -626,29 +626,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-05T01:20:23.913172+00:00"
-    },
-    {
-      "id": "greenhouse:acommerce:5399315",
-      "title": "Paid Performance Marketing - Specialist",
-      "company": "aCommerce",
-      "company_id": "greenhouse:acommerce",
-      "posting_id": "5399315",
-      "location": "Bangkok, Thailand",
-      "country": "th",
-      "published_at": null,
-      "modified_at": "2026-10-21T03:11:35-04:00",
-      "date_kind": "modified",
-      "closes_at": null,
-      "active": true,
-      "url": "https://job-boards.greenhouse.io/acommerce/jobs/5399315",
-      "employment_type": "ดูที่ต้นทาง",
-      "level": "unspecified",
-      "role_ids": [
-        13
-      ],
-      "source": "Greenhouse",
-      "retrieved_at": "2026-11-05T01:20:23.913581+00:00"
+      "retrieved_at": "2026-11-06T01:22:36.681062+00:00"
     },
     {
       "id": "greenhouse:acommerce:5589273",
@@ -670,7 +648,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-05T01:20:23.913762+00:00"
+      "retrieved_at": "2026-11-06T01:22:36.681464+00:00"
     },
     {
       "id": "greenhouse:acommerce:7869685",
@@ -692,7 +670,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-05T01:20:23.913887+00:00"
+      "retrieved_at": "2026-11-06T01:22:36.681540+00:00"
     },
     {
       "id": "greenhouse:acommerce:6897184",
@@ -715,7 +693,7 @@
         10
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-05T01:20:23.914256+00:00"
+      "retrieved_at": "2026-11-06T01:22:36.681851+00:00"
     }
   ],
   "sources": [
@@ -752,7 +730,7 @@
     {
       "company": "greenhouse:agoda",
       "status": "ok",
-      "count": 11
+      "count": 10
     },
     {
       "company": "greenhouse:sertis",
