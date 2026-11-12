@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-11T01:18:13.834654+00:00",
-  "attempted_at": "2026-11-11T01:18:13.834654+00:00",
+  "updated_at": "2026-11-12T01:26:21.164772+00:00",
+  "attempted_at": "2026-11-12T01:26:21.164772+00:00",
   "jobs": [
     {
       "id": "BoschGroup:744000157965990",
@@ -21,7 +21,7 @@
         10
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-11T01:18:06.664297+00:00"
+      "retrieved_at": "2026-11-12T01:26:13.991829+00:00"
     },
     {
       "id": "BoschGroup:744000150586129",
@@ -42,7 +42,7 @@
         6
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-11T01:18:07.320212+00:00"
+      "retrieved_at": "2026-11-12T01:26:14.645051+00:00"
     },
     {
       "id": "BoschGroup:744000149286121",
@@ -63,7 +63,7 @@
         14
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-11T01:18:07.979444+00:00"
+      "retrieved_at": "2026-11-12T01:26:15.240467+00:00"
     },
     {
       "id": "BoschGroup:744000142837878",
@@ -84,7 +84,7 @@
         6
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-11T01:18:08.640125+00:00"
+      "retrieved_at": "2026-11-12T01:26:15.852279+00:00"
     },
     {
       "id": "BoschGroup:744000119536647",
@@ -105,7 +105,7 @@
         17
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-11T01:18:09.254942+00:00"
+      "retrieved_at": "2026-11-12T01:26:16.594482+00:00"
     },
     {
       "id": "BoschGroup:744000106788838",
@@ -126,7 +126,7 @@
         24
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-11T01:18:09.913118+00:00"
+      "retrieved_at": "2026-11-12T01:26:17.200143+00:00"
     },
     {
       "id": "BoschGroup:744000103637681",
@@ -147,7 +147,7 @@
         1
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-11T01:18:11.324557+00:00"
+      "retrieved_at": "2026-11-12T01:26:18.550679+00:00"
     },
     {
       "id": "BoschGroup:744000103638354",
@@ -168,7 +168,7 @@
         1
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-11T01:18:12.104086+00:00"
+      "retrieved_at": "2026-11-12T01:26:19.348845+00:00"
     },
     {
       "id": "BoschGroup:744000093625984",
@@ -189,7 +189,7 @@
         10
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-11T01:18:12.733173+00:00"
+      "retrieved_at": "2026-11-12T01:26:19.967818+00:00"
     },
     {
       "id": "BoschGroup:744000072359295",
@@ -210,7 +210,7 @@
         3
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-11T01:18:13.340978+00:00"
+      "retrieved_at": "2026-11-12T01:26:20.690255+00:00"
     },
     {
       "id": "WesternDigital:744000156697071",
@@ -231,7 +231,7 @@
         17
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-11T01:18:06.664084+00:00"
+      "retrieved_at": "2026-11-12T01:26:14.079042+00:00"
     },
     {
       "id": "AccorHotel:744000150005779",
@@ -252,7 +252,7 @@
         13
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-11T01:18:07.508584+00:00"
+      "retrieved_at": "2026-11-12T01:26:14.578076+00:00"
     },
     {
       "id": "greenhouse:agoda:8241893",
@@ -263,7 +263,7 @@
       "location": "Bangkok, Thailand",
       "country": "th",
       "published_at": null,
-      "modified_at": "2026-11-04T13:00:11-05:00",
+      "modified_at": "2026-11-11T13:00:04-05:00",
       "date_kind": "modified",
       "closes_at": null,
       "active": true,
@@ -274,29 +274,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-11T01:18:13.693823+00:00"
-    },
-    {
-      "id": "greenhouse:agoda:6750678",
-      "title": "Lead Software Engineer - Full Stack (Bangkok based, relocation provided)",
-      "company": "Agoda",
-      "company_id": "greenhouse:agoda",
-      "posting_id": "6750678",
-      "location": "Bangkok, Thailand",
-      "country": "th",
-      "published_at": null,
-      "modified_at": "2026-10-16T03:18:46-04:00",
-      "date_kind": "modified",
-      "closes_at": null,
-      "active": true,
-      "url": "https://job-boards.greenhouse.io/agoda/jobs/6750678",
-      "employment_type": "ดูที่ต้นทาง",
-      "level": "experienced",
-      "role_ids": [
-        25
-      ],
-      "source": "Greenhouse",
-      "retrieved_at": "2026-11-11T01:18:13.695093+00:00"
+      "retrieved_at": "2026-11-12T01:26:21.009167+00:00"
     },
     {
       "id": "greenhouse:agoda:8305599",
@@ -318,7 +296,7 @@
         28
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-11T01:18:13.696580+00:00"
+      "retrieved_at": "2026-11-12T01:26:21.011765+00:00"
     },
     {
       "id": "greenhouse:agoda:8059327",
@@ -340,7 +318,7 @@
         4
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-11T01:18:13.697214+00:00"
+      "retrieved_at": "2026-11-12T01:26:21.012332+00:00"
     },
     {
       "id": "greenhouse:agoda:7379324",
@@ -362,7 +340,7 @@
         19
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-11T01:18:13.698789+00:00"
+      "retrieved_at": "2026-11-12T01:26:21.014003+00:00"
     },
     {
       "id": "greenhouse:agoda:7962422",
@@ -384,7 +362,7 @@
         0
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-11T01:18:13.698883+00:00"
+      "retrieved_at": "2026-11-12T01:26:21.014104+00:00"
     },
     {
       "id": "greenhouse:agoda:8047686",
@@ -406,7 +384,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-11T01:18:13.699884+00:00"
+      "retrieved_at": "2026-11-12T01:26:21.015146+00:00"
     },
     {
       "id": "greenhouse:agoda:7543802",
@@ -428,7 +406,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-11T01:18:13.701928+00:00"
+      "retrieved_at": "2026-11-12T01:26:21.017281+00:00"
     },
     {
       "id": "greenhouse:agoda:6750697",
@@ -450,7 +428,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-11T01:18:13.701985+00:00"
+      "retrieved_at": "2026-11-12T01:26:21.017340+00:00"
     },
     {
       "id": "greenhouse:sertis:8835632002",
@@ -472,7 +450,7 @@
         3
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-11T01:18:13.750644+00:00"
+      "retrieved_at": "2026-11-12T01:26:21.056713+00:00"
     },
     {
       "id": "greenhouse:sertis:8836384002",
@@ -494,7 +472,7 @@
         3
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-11T01:18:13.750716+00:00"
+      "retrieved_at": "2026-11-12T01:26:21.056830+00:00"
     },
     {
       "id": "greenhouse:acommerce:8200499",
@@ -516,7 +494,7 @@
         3
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-11T01:18:13.831776+00:00"
+      "retrieved_at": "2026-11-12T01:26:21.162358+00:00"
     },
     {
       "id": "greenhouse:acommerce:8324200",
@@ -538,7 +516,7 @@
         28
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-11T01:18:13.831860+00:00"
+      "retrieved_at": "2026-11-12T01:26:21.162431+00:00"
     },
     {
       "id": "greenhouse:acommerce:5399315",
@@ -560,7 +538,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-11T01:18:13.832187+00:00"
+      "retrieved_at": "2026-11-12T01:26:21.162710+00:00"
     },
     {
       "id": "greenhouse:acommerce:6480264",
@@ -582,7 +560,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-11T01:18:13.832727+00:00"
+      "retrieved_at": "2026-11-12T01:26:21.163178+00:00"
     },
     {
       "id": "greenhouse:acommerce:5589273",
@@ -604,7 +582,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-11T01:18:13.833579+00:00"
+      "retrieved_at": "2026-11-12T01:26:21.163887+00:00"
     },
     {
       "id": "greenhouse:acommerce:7869685",
@@ -626,7 +604,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-11T01:18:13.833800+00:00"
+      "retrieved_at": "2026-11-12T01:26:21.164076+00:00"
     },
     {
       "id": "greenhouse:acommerce:6897184",
@@ -649,7 +627,7 @@
         10
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-11T01:18:13.834429+00:00"
+      "retrieved_at": "2026-11-12T01:26:21.164601+00:00"
     }
   ],
   "sources": [
@@ -686,7 +664,7 @@
     {
       "company": "greenhouse:agoda",
       "status": "ok",
-      "count": 9
+      "count": 8
     },
     {
       "company": "greenhouse:sertis",
