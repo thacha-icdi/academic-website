@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-17T01:26:01.326047+00:00",
-  "attempted_at": "2026-11-17T01:26:01.326047+00:00",
+  "updated_at": "2026-11-18T01:30:12.292871+00:00",
+  "attempted_at": "2026-11-18T01:30:12.292871+00:00",
   "jobs": [
     {
       "id": "BoschGroup:744000157965990",
@@ -21,7 +21,7 @@
         10
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-17T01:25:54.684473+00:00"
+      "retrieved_at": "2026-11-18T01:30:04.539959+00:00"
     },
     {
       "id": "BoschGroup:744000150586129",
@@ -42,7 +42,7 @@
         6
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-17T01:25:55.289791+00:00"
+      "retrieved_at": "2026-11-18T01:30:05.193439+00:00"
     },
     {
       "id": "BoschGroup:744000149286121",
@@ -63,7 +63,7 @@
         14
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-17T01:25:55.870677+00:00"
+      "retrieved_at": "2026-11-18T01:30:05.863119+00:00"
     },
     {
       "id": "BoschGroup:744000142837878",
@@ -84,7 +84,7 @@
         6
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-17T01:25:56.473169+00:00"
+      "retrieved_at": "2026-11-18T01:30:06.542569+00:00"
     },
     {
       "id": "BoschGroup:744000119536647",
@@ -105,7 +105,7 @@
         17
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-17T01:25:57.064338+00:00"
+      "retrieved_at": "2026-11-18T01:30:07.210941+00:00"
     },
     {
       "id": "BoschGroup:744000106788838",
@@ -126,7 +126,7 @@
         24
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-17T01:25:57.661847+00:00"
+      "retrieved_at": "2026-11-18T01:30:07.845093+00:00"
     },
     {
       "id": "BoschGroup:744000103637681",
@@ -147,7 +147,7 @@
         1
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-17T01:25:58.994379+00:00"
+      "retrieved_at": "2026-11-18T01:30:09.271125+00:00"
     },
     {
       "id": "BoschGroup:744000103638354",
@@ -168,7 +168,7 @@
         1
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-17T01:25:59.579981+00:00"
+      "retrieved_at": "2026-11-18T01:30:09.941350+00:00"
     },
     {
       "id": "BoschGroup:744000093625984",
@@ -189,7 +189,7 @@
         10
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-17T01:26:00.174308+00:00"
+      "retrieved_at": "2026-11-18T01:30:10.610618+00:00"
     },
     {
       "id": "BoschGroup:744000072359295",
@@ -210,7 +210,7 @@
         3
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-17T01:26:00.787408+00:00"
+      "retrieved_at": "2026-11-18T01:30:11.426159+00:00"
     },
     {
       "id": "WesternDigital:744000156697071",
@@ -231,7 +231,7 @@
         17
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-17T01:25:54.666956+00:00"
+      "retrieved_at": "2026-11-18T01:30:04.527932+00:00"
     },
     {
       "id": "AccorHotel:744000150005779",
@@ -252,7 +252,7 @@
         13
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-17T01:25:55.349905+00:00"
+      "retrieved_at": "2026-11-18T01:30:05.379886+00:00"
     },
     {
       "id": "greenhouse:agoda:8305599",
@@ -274,7 +274,7 @@
         28
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-17T01:26:01.144167+00:00"
+      "retrieved_at": "2026-11-18T01:30:12.065831+00:00"
     },
     {
       "id": "greenhouse:agoda:8059327",
@@ -296,7 +296,7 @@
         4
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-17T01:26:01.144803+00:00"
+      "retrieved_at": "2026-11-18T01:30:12.066331+00:00"
     },
     {
       "id": "greenhouse:agoda:7379324",
@@ -318,7 +318,7 @@
         19
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-17T01:26:01.146539+00:00"
+      "retrieved_at": "2026-11-18T01:30:12.067635+00:00"
     },
     {
       "id": "greenhouse:agoda:7962422",
@@ -340,7 +340,7 @@
         0
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-17T01:26:01.146639+00:00"
+      "retrieved_at": "2026-11-18T01:30:12.067714+00:00"
     },
     {
       "id": "greenhouse:agoda:7543802",
@@ -362,7 +362,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-17T01:26:01.149693+00:00"
+      "retrieved_at": "2026-11-18T01:30:12.070126+00:00"
     },
     {
       "id": "greenhouse:agoda:6750697",
@@ -384,29 +384,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-17T01:26:01.149754+00:00"
-    },
-    {
-      "id": "greenhouse:sertis:8835632002",
-      "title": "Business Development (Associate - Mid level)",
-      "company": "Sertis",
-      "company_id": "greenhouse:sertis",
-      "posting_id": "8835632002",
-      "location": "Bangkok, Bangkok Metropolis, Thailand",
-      "country": "th",
-      "published_at": null,
-      "modified_at": "2026-11-06T04:04:14-05:00",
-      "date_kind": "modified",
-      "closes_at": null,
-      "active": true,
-      "url": "https://job-boards.greenhouse.io/sertis/jobs/8835632002",
-      "employment_type": "ดูที่ต้นทาง",
-      "level": "entry",
-      "role_ids": [
-        3
-      ],
-      "source": "Greenhouse",
-      "retrieved_at": "2026-11-17T01:26:01.260339+00:00"
+      "retrieved_at": "2026-11-18T01:30:12.070179+00:00"
     },
     {
       "id": "greenhouse:sertis:8836384002",
@@ -428,7 +406,7 @@
         3
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-17T01:26:01.260429+00:00"
+      "retrieved_at": "2026-11-18T01:30:12.190458+00:00"
     },
     {
       "id": "greenhouse:acommerce:8200499",
@@ -450,7 +428,7 @@
         3
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-17T01:26:01.323422+00:00"
+      "retrieved_at": "2026-11-18T01:30:12.290855+00:00"
     },
     {
       "id": "greenhouse:acommerce:8324200",
@@ -472,7 +450,7 @@
         28
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-17T01:26:01.323533+00:00"
+      "retrieved_at": "2026-11-18T01:30:12.290920+00:00"
     },
     {
       "id": "greenhouse:acommerce:5399315",
@@ -494,7 +472,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-17T01:26:01.323899+00:00"
+      "retrieved_at": "2026-11-18T01:30:12.291229+00:00"
     },
     {
       "id": "greenhouse:acommerce:6480264",
@@ -516,7 +494,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-17T01:26:01.324529+00:00"
+      "retrieved_at": "2026-11-18T01:30:12.291609+00:00"
     },
     {
       "id": "greenhouse:acommerce:5589273",
@@ -538,7 +516,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-17T01:26:01.325235+00:00"
+      "retrieved_at": "2026-11-18T01:30:12.292188+00:00"
     },
     {
       "id": "greenhouse:acommerce:7869685",
@@ -560,7 +538,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-17T01:26:01.325404+00:00"
+      "retrieved_at": "2026-11-18T01:30:12.292319+00:00"
     },
     {
       "id": "greenhouse:acommerce:6897184",
@@ -583,7 +561,7 @@
         10
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-17T01:26:01.325867+00:00"
+      "retrieved_at": "2026-11-18T01:30:12.292715+00:00"
     }
   ],
   "sources": [
@@ -625,7 +603,7 @@
     {
       "company": "greenhouse:sertis",
       "status": "ok",
-      "count": 2
+      "count": 1
     },
     {
       "company": "greenhouse:acommerce",
