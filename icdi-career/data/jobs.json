@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-18T01:30:12.292871+00:00",
-  "attempted_at": "2026-11-18T01:30:12.292871+00:00",
+  "updated_at": "2026-11-19T07:27:50.504139+00:00",
+  "attempted_at": "2026-11-19T07:27:50.504139+00:00",
   "jobs": [
     {
       "id": "BoschGroup:744000157965990",
@@ -21,7 +21,7 @@
         10
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-18T01:30:04.539959+00:00"
+      "retrieved_at": "2026-11-19T07:27:43.529005+00:00"
     },
     {
       "id": "BoschGroup:744000150586129",
@@ -42,7 +42,7 @@
         6
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-18T01:30:05.193439+00:00"
+      "retrieved_at": "2026-11-19T07:27:44.500267+00:00"
     },
     {
       "id": "BoschGroup:744000149286121",
@@ -63,7 +63,7 @@
         14
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-18T01:30:05.863119+00:00"
+      "retrieved_at": "2026-11-19T07:27:45.108830+00:00"
     },
     {
       "id": "BoschGroup:744000142837878",
@@ -84,7 +84,7 @@
         6
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-18T01:30:06.542569+00:00"
+      "retrieved_at": "2026-11-19T07:27:45.689965+00:00"
     },
     {
       "id": "BoschGroup:744000119536647",
@@ -105,7 +105,7 @@
         17
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-18T01:30:07.210941+00:00"
+      "retrieved_at": "2026-11-19T07:27:46.306691+00:00"
     },
     {
       "id": "BoschGroup:744000106788838",
@@ -126,7 +126,7 @@
         24
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-18T01:30:07.845093+00:00"
+      "retrieved_at": "2026-11-19T07:27:46.901240+00:00"
     },
     {
       "id": "BoschGroup:744000103637681",
@@ -147,7 +147,7 @@
         1
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-18T01:30:09.271125+00:00"
+      "retrieved_at": "2026-11-19T07:27:48.221980+00:00"
     },
     {
       "id": "BoschGroup:744000103638354",
@@ -168,7 +168,7 @@
         1
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-18T01:30:09.941350+00:00"
+      "retrieved_at": "2026-11-19T07:27:48.839095+00:00"
     },
     {
       "id": "BoschGroup:744000093625984",
@@ -189,7 +189,7 @@
         10
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-18T01:30:10.610618+00:00"
+      "retrieved_at": "2026-11-19T07:27:49.460264+00:00"
     },
     {
       "id": "BoschGroup:744000072359295",
@@ -210,7 +210,7 @@
         3
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-18T01:30:11.426159+00:00"
+      "retrieved_at": "2026-11-19T07:27:50.069003+00:00"
     },
     {
       "id": "WesternDigital:744000156697071",
@@ -231,7 +231,7 @@
         17
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-18T01:30:04.527932+00:00"
+      "retrieved_at": "2026-11-19T07:27:43.505040+00:00"
     },
     {
       "id": "AccorHotel:744000150005779",
@@ -252,7 +252,7 @@
         13
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-18T01:30:05.379886+00:00"
+      "retrieved_at": "2026-11-19T07:27:44.261684+00:00"
     },
     {
       "id": "greenhouse:agoda:8305599",
@@ -274,7 +274,7 @@
         28
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-18T01:30:12.065831+00:00"
+      "retrieved_at": "2026-11-19T07:27:50.374618+00:00"
     },
     {
       "id": "greenhouse:agoda:8059327",
@@ -296,7 +296,7 @@
         4
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-18T01:30:12.066331+00:00"
+      "retrieved_at": "2026-11-19T07:27:50.375214+00:00"
     },
     {
       "id": "greenhouse:agoda:7379324",
@@ -318,7 +318,7 @@
         19
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-18T01:30:12.067635+00:00"
+      "retrieved_at": "2026-11-19T07:27:50.376802+00:00"
     },
     {
       "id": "greenhouse:agoda:7962422",
@@ -340,7 +340,7 @@
         0
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-18T01:30:12.067714+00:00"
+      "retrieved_at": "2026-11-19T07:27:50.376901+00:00"
     },
     {
       "id": "greenhouse:agoda:7543802",
@@ -362,7 +362,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-18T01:30:12.070126+00:00"
+      "retrieved_at": "2026-11-19T07:27:50.380025+00:00"
     },
     {
       "id": "greenhouse:agoda:6750697",
@@ -384,7 +384,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-18T01:30:12.070179+00:00"
+      "retrieved_at": "2026-11-19T07:27:50.380084+00:00"
     },
     {
       "id": "greenhouse:sertis:8836384002",
@@ -406,7 +406,7 @@
         3
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-18T01:30:12.190458+00:00"
+      "retrieved_at": "2026-11-19T07:27:50.464877+00:00"
     },
     {
       "id": "greenhouse:acommerce:8200499",
@@ -428,7 +428,7 @@
         3
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-18T01:30:12.290855+00:00"
+      "retrieved_at": "2026-11-19T07:27:50.501392+00:00"
     },
     {
       "id": "greenhouse:acommerce:8324200",
@@ -450,7 +450,7 @@
         28
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-18T01:30:12.290920+00:00"
+      "retrieved_at": "2026-11-19T07:27:50.501498+00:00"
     },
     {
       "id": "greenhouse:acommerce:5399315",
@@ -472,7 +472,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-18T01:30:12.291229+00:00"
+      "retrieved_at": "2026-11-19T07:27:50.501850+00:00"
     },
     {
       "id": "greenhouse:acommerce:6480264",
@@ -494,7 +494,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-18T01:30:12.291609+00:00"
+      "retrieved_at": "2026-11-19T07:27:50.502362+00:00"
     },
     {
       "id": "greenhouse:acommerce:5589273",
@@ -516,7 +516,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-18T01:30:12.292188+00:00"
+      "retrieved_at": "2026-11-19T07:27:50.503249+00:00"
     },
     {
       "id": "greenhouse:acommerce:7869685",
@@ -538,7 +538,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-18T01:30:12.292319+00:00"
+      "retrieved_at": "2026-11-19T07:27:50.503449+00:00"
     },
     {
       "id": "greenhouse:acommerce:6897184",
@@ -561,7 +561,7 @@
         10
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-18T01:30:12.292715+00:00"
+      "retrieved_at": "2026-11-19T07:27:50.503966+00:00"
     }
   ],
   "sources": [
