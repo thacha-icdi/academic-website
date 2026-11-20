@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-19T07:27:50.504139+00:00",
-  "attempted_at": "2026-11-19T07:27:50.504139+00:00",
+  "updated_at": "2026-11-20T07:18:21.812882+00:00",
+  "attempted_at": "2026-11-20T07:18:21.812882+00:00",
   "jobs": [
     {
       "id": "BoschGroup:744000157965990",
@@ -21,7 +21,7 @@
         10
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-19T07:27:43.529005+00:00"
+      "retrieved_at": "2026-11-20T07:18:14.067442+00:00"
     },
     {
       "id": "BoschGroup:744000150586129",
@@ -42,7 +42,7 @@
         6
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-19T07:27:44.500267+00:00"
+      "retrieved_at": "2026-11-20T07:18:14.663251+00:00"
     },
     {
       "id": "BoschGroup:744000149286121",
@@ -63,7 +63,7 @@
         14
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-19T07:27:45.108830+00:00"
+      "retrieved_at": "2026-11-20T07:18:15.268737+00:00"
     },
     {
       "id": "BoschGroup:744000142837878",
@@ -84,7 +84,7 @@
         6
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-19T07:27:45.689965+00:00"
+      "retrieved_at": "2026-11-20T07:18:15.873810+00:00"
     },
     {
       "id": "BoschGroup:744000119536647",
@@ -105,7 +105,7 @@
         17
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-19T07:27:46.306691+00:00"
+      "retrieved_at": "2026-11-20T07:18:16.489148+00:00"
     },
     {
       "id": "BoschGroup:744000106788838",
@@ -126,7 +126,7 @@
         24
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-19T07:27:46.901240+00:00"
+      "retrieved_at": "2026-11-20T07:18:17.089441+00:00"
     },
     {
       "id": "BoschGroup:744000103637681",
@@ -147,7 +147,7 @@
         1
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-19T07:27:48.221980+00:00"
+      "retrieved_at": "2026-11-20T07:18:18.428775+00:00"
     },
     {
       "id": "BoschGroup:744000103638354",
@@ -168,7 +168,7 @@
         1
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-19T07:27:48.839095+00:00"
+      "retrieved_at": "2026-11-20T07:18:19.038492+00:00"
     },
     {
       "id": "BoschGroup:744000093625984",
@@ -189,7 +189,7 @@
         10
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-19T07:27:49.460264+00:00"
+      "retrieved_at": "2026-11-20T07:18:19.649185+00:00"
     },
     {
       "id": "BoschGroup:744000072359295",
@@ -210,7 +210,7 @@
         3
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-19T07:27:50.069003+00:00"
+      "retrieved_at": "2026-11-20T07:18:20.248128+00:00"
     },
     {
       "id": "WesternDigital:744000156697071",
@@ -231,7 +231,7 @@
         17
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-19T07:27:43.505040+00:00"
+      "retrieved_at": "2026-11-20T07:18:14.128706+00:00"
     },
     {
       "id": "AccorHotel:744000150005779",
@@ -252,7 +252,7 @@
         13
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-19T07:27:44.261684+00:00"
+      "retrieved_at": "2026-11-20T07:18:14.784284+00:00"
     },
     {
       "id": "greenhouse:agoda:8305599",
@@ -263,7 +263,7 @@
       "location": "Bangkok, Thailand",
       "country": "th",
       "published_at": null,
-      "modified_at": "2026-11-12T00:08:02-05:00",
+      "modified_at": "2026-11-20T02:10:59-05:00",
       "date_kind": "modified",
       "closes_at": null,
       "active": true,
@@ -274,7 +274,7 @@
         28
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-19T07:27:50.374618+00:00"
+      "retrieved_at": "2026-11-20T07:18:21.696944+00:00"
     },
     {
       "id": "greenhouse:agoda:8059327",
@@ -285,7 +285,7 @@
       "location": "Bangkok, Thailand",
       "country": "th",
       "published_at": null,
-      "modified_at": "2026-10-21T23:27:23-04:00",
+      "modified_at": "2026-11-20T02:10:53-05:00",
       "date_kind": "modified",
       "closes_at": null,
       "active": true,
@@ -296,29 +296,7 @@
         4
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-19T07:27:50.375214+00:00"
-    },
-    {
-      "id": "greenhouse:agoda:7379324",
-      "title": "Senior BI Analyst (Supply Analytics, Bangkok-based)",
-      "company": "Agoda",
-      "company_id": "greenhouse:agoda",
-      "posting_id": "7379324",
-      "location": "Bangkok, Thailand",
-      "country": "th",
-      "published_at": null,
-      "modified_at": "2026-10-16T03:18:44-04:00",
-      "date_kind": "modified",
-      "closes_at": null,
-      "active": true,
-      "url": "https://job-boards.greenhouse.io/agoda/jobs/7379324",
-      "employment_type": "ดูที่ต้นทาง",
-      "level": "experienced",
-      "role_ids": [
-        19
-      ],
-      "source": "Greenhouse",
-      "retrieved_at": "2026-11-19T07:27:50.376802+00:00"
+      "retrieved_at": "2026-11-20T07:18:21.697563+00:00"
     },
     {
       "id": "greenhouse:agoda:7962422",
@@ -329,7 +307,7 @@
       "location": "Bangkok, Thailand",
       "country": "th",
       "published_at": null,
-      "modified_at": "2026-11-07T11:14:53-05:00",
+      "modified_at": "2026-11-20T02:10:50-05:00",
       "date_kind": "modified",
       "closes_at": null,
       "active": true,
@@ -340,7 +318,7 @@
         0
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-19T07:27:50.376901+00:00"
+      "retrieved_at": "2026-11-20T07:18:21.699183+00:00"
     },
     {
       "id": "greenhouse:agoda:7543802",
@@ -351,7 +329,7 @@
       "location": "Bangkok, Thailand",
       "country": "th",
       "published_at": null,
-      "modified_at": "2026-10-16T03:18:46-04:00",
+      "modified_at": "2026-11-20T02:10:46-05:00",
       "date_kind": "modified",
       "closes_at": null,
       "active": true,
@@ -362,7 +340,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-19T07:27:50.380025+00:00"
+      "retrieved_at": "2026-11-20T07:18:21.702418+00:00"
     },
     {
       "id": "greenhouse:agoda:6750697",
@@ -373,7 +351,7 @@
       "location": "Bangkok, Thailand",
       "country": "th",
       "published_at": null,
-      "modified_at": "2026-10-16T03:18:46-04:00",
+      "modified_at": "2026-11-20T02:10:46-05:00",
       "date_kind": "modified",
       "closes_at": null,
       "active": true,
@@ -384,7 +362,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-19T07:27:50.380084+00:00"
+      "retrieved_at": "2026-11-20T07:18:21.702481+00:00"
     },
     {
       "id": "greenhouse:sertis:8836384002",
@@ -406,7 +384,7 @@
         3
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-19T07:27:50.464877+00:00"
+      "retrieved_at": "2026-11-20T07:18:21.763898+00:00"
     },
     {
       "id": "greenhouse:acommerce:8200499",
@@ -428,7 +406,7 @@
         3
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-19T07:27:50.501392+00:00"
+      "retrieved_at": "2026-11-20T07:18:21.810144+00:00"
     },
     {
       "id": "greenhouse:acommerce:8324200",
@@ -450,7 +428,7 @@
         28
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-19T07:27:50.501498+00:00"
+      "retrieved_at": "2026-11-20T07:18:21.810219+00:00"
     },
     {
       "id": "greenhouse:acommerce:5399315",
@@ -472,7 +450,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-19T07:27:50.501850+00:00"
+      "retrieved_at": "2026-11-20T07:18:21.810581+00:00"
     },
     {
       "id": "greenhouse:acommerce:6480264",
@@ -494,7 +472,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-19T07:27:50.502362+00:00"
+      "retrieved_at": "2026-11-20T07:18:21.811118+00:00"
     },
     {
       "id": "greenhouse:acommerce:5589273",
@@ -516,7 +494,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-19T07:27:50.503249+00:00"
+      "retrieved_at": "2026-11-20T07:18:21.811985+00:00"
     },
     {
       "id": "greenhouse:acommerce:7869685",
@@ -538,7 +516,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-19T07:27:50.503449+00:00"
+      "retrieved_at": "2026-11-20T07:18:21.812176+00:00"
     },
     {
       "id": "greenhouse:acommerce:6897184",
@@ -561,7 +539,7 @@
         10
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-19T07:27:50.503966+00:00"
+      "retrieved_at": "2026-11-20T07:18:21.812702+00:00"
     }
   ],
   "sources": [
@@ -598,7 +576,7 @@
     {
       "company": "greenhouse:agoda",
       "status": "ok",
-      "count": 6
+      "count": 5
     },
     {
       "company": "greenhouse:sertis",
