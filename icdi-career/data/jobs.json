@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-20T07:18:21.812882+00:00",
-  "attempted_at": "2026-11-20T07:18:21.812882+00:00",
+  "updated_at": "2026-11-21T07:10:22.070431+00:00",
+  "attempted_at": "2026-11-21T07:10:22.070431+00:00",
   "jobs": [
     {
       "id": "BoschGroup:744000157965990",
@@ -21,7 +21,7 @@
         10
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-20T07:18:14.067442+00:00"
+      "retrieved_at": "2026-11-21T07:10:14.539043+00:00"
     },
     {
       "id": "BoschGroup:744000150586129",
@@ -42,7 +42,7 @@
         6
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-20T07:18:14.663251+00:00"
+      "retrieved_at": "2026-11-21T07:10:15.213300+00:00"
     },
     {
       "id": "BoschGroup:744000149286121",
@@ -63,7 +63,7 @@
         14
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-20T07:18:15.268737+00:00"
+      "retrieved_at": "2026-11-21T07:10:15.855892+00:00"
     },
     {
       "id": "BoschGroup:744000142837878",
@@ -84,7 +84,7 @@
         6
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-20T07:18:15.873810+00:00"
+      "retrieved_at": "2026-11-21T07:10:16.513955+00:00"
     },
     {
       "id": "BoschGroup:744000119536647",
@@ -105,7 +105,7 @@
         17
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-20T07:18:16.489148+00:00"
+      "retrieved_at": "2026-11-21T07:10:17.192721+00:00"
     },
     {
       "id": "BoschGroup:744000106788838",
@@ -126,7 +126,7 @@
         24
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-20T07:18:17.089441+00:00"
+      "retrieved_at": "2026-11-21T07:10:17.857693+00:00"
     },
     {
       "id": "BoschGroup:744000103637681",
@@ -147,7 +147,7 @@
         1
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-20T07:18:18.428775+00:00"
+      "retrieved_at": "2026-11-21T07:10:19.446182+00:00"
     },
     {
       "id": "BoschGroup:744000103638354",
@@ -168,7 +168,7 @@
         1
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-20T07:18:19.038492+00:00"
+      "retrieved_at": "2026-11-21T07:10:20.106028+00:00"
     },
     {
       "id": "BoschGroup:744000093625984",
@@ -189,7 +189,7 @@
         10
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-20T07:18:19.649185+00:00"
+      "retrieved_at": "2026-11-21T07:10:20.766590+00:00"
     },
     {
       "id": "BoschGroup:744000072359295",
@@ -210,7 +210,7 @@
         3
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-20T07:18:20.248128+00:00"
+      "retrieved_at": "2026-11-21T07:10:21.433842+00:00"
     },
     {
       "id": "WesternDigital:744000156697071",
@@ -231,7 +231,7 @@
         17
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-20T07:18:14.128706+00:00"
+      "retrieved_at": "2026-11-21T07:10:14.485697+00:00"
     },
     {
       "id": "AccorHotel:744000150005779",
@@ -252,7 +252,7 @@
         13
       ],
       "source": "SmartRecruiters",
-      "retrieved_at": "2026-11-20T07:18:14.784284+00:00"
+      "retrieved_at": "2026-11-21T07:10:15.328683+00:00"
     },
     {
       "id": "greenhouse:agoda:8305599",
@@ -274,7 +274,7 @@
         28
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-20T07:18:21.696944+00:00"
+      "retrieved_at": "2026-11-21T07:10:21.831134+00:00"
     },
     {
       "id": "greenhouse:agoda:8059327",
@@ -296,7 +296,7 @@
         4
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-20T07:18:21.697563+00:00"
+      "retrieved_at": "2026-11-21T07:10:21.831485+00:00"
     },
     {
       "id": "greenhouse:agoda:7962422",
@@ -318,7 +318,7 @@
         0
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-20T07:18:21.699183+00:00"
+      "retrieved_at": "2026-11-21T07:10:21.832399+00:00"
     },
     {
       "id": "greenhouse:agoda:7543802",
@@ -340,7 +340,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-20T07:18:21.702418+00:00"
+      "retrieved_at": "2026-11-21T07:10:21.834258+00:00"
     },
     {
       "id": "greenhouse:agoda:6750697",
@@ -362,7 +362,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-20T07:18:21.702481+00:00"
+      "retrieved_at": "2026-11-21T07:10:21.834290+00:00"
     },
     {
       "id": "greenhouse:sertis:8836384002",
@@ -384,7 +384,7 @@
         3
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-20T07:18:21.763898+00:00"
+      "retrieved_at": "2026-11-21T07:10:21.936567+00:00"
     },
     {
       "id": "greenhouse:acommerce:8200499",
@@ -406,7 +406,7 @@
         3
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-20T07:18:21.810144+00:00"
+      "retrieved_at": "2026-11-21T07:10:22.068705+00:00"
     },
     {
       "id": "greenhouse:acommerce:8324200",
@@ -428,7 +428,7 @@
         28
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-20T07:18:21.810219+00:00"
+      "retrieved_at": "2026-11-21T07:10:22.068746+00:00"
     },
     {
       "id": "greenhouse:acommerce:5399315",
@@ -450,7 +450,29 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-20T07:18:21.810581+00:00"
+      "retrieved_at": "2026-11-21T07:10:22.068965+00:00"
+    },
+    {
+      "id": "greenhouse:acommerce:8405713",
+      "title": "E-commerce Operations Specialist (KAM Support) ",
+      "company": "aCommerce",
+      "company_id": "greenhouse:acommerce",
+      "posting_id": "8405713",
+      "location": "Bangkok, Thailand",
+      "country": "th",
+      "published_at": null,
+      "modified_at": "2026-11-20T07:59:54-05:00",
+      "date_kind": "modified",
+      "closes_at": null,
+      "active": true,
+      "url": "https://job-boards.greenhouse.io/acommerce/jobs/8405713",
+      "employment_type": "ดูที่ต้นทาง",
+      "level": "unspecified",
+      "role_ids": [
+        10
+      ],
+      "source": "Greenhouse",
+      "retrieved_at": "2026-11-21T07:10:22.069119+00:00"
     },
     {
       "id": "greenhouse:acommerce:6480264",
@@ -472,7 +494,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-20T07:18:21.811118+00:00"
+      "retrieved_at": "2026-11-21T07:10:22.069422+00:00"
     },
     {
       "id": "greenhouse:acommerce:5589273",
@@ -494,7 +516,7 @@
         13
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-20T07:18:21.811985+00:00"
+      "retrieved_at": "2026-11-21T07:10:22.069899+00:00"
     },
     {
       "id": "greenhouse:acommerce:7869685",
@@ -516,7 +538,7 @@
         25
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-20T07:18:21.812176+00:00"
+      "retrieved_at": "2026-11-21T07:10:22.070033+00:00"
     },
     {
       "id": "greenhouse:acommerce:6897184",
@@ -539,7 +561,7 @@
         10
       ],
       "source": "Greenhouse",
-      "retrieved_at": "2026-11-20T07:18:21.812702+00:00"
+      "retrieved_at": "2026-11-21T07:10:22.070324+00:00"
     }
   ],
   "sources": [
@@ -586,7 +608,7 @@
     {
       "company": "greenhouse:acommerce",
       "status": "ok",
-      "count": 7
+      "count": 8
     }
   ]
 }
